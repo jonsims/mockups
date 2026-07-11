@@ -161,20 +161,118 @@
       });
     });
 
-    /* event filters */
-    var pills = document.querySelectorAll(".pill");
-    pills.forEach(function (pill) {
+    /* ---------- events: one dataset drives ticker, calendar, list ---------- */
+    var EVENTS = [
+      { m: 7, days: [1, 2], date: "1–2 Jul", title: "Practical insights into negotiating and structuring licensing deals", desc: "Key terms of licence agreements, deal structuring and negotiating tactics.", tag: "Virtual course" },
+      { m: 7, days: [9], date: "9 Jul", title: "Open Research in Practice", desc: "Data management, sharing, transparency and new models of scholarly communication, hosted by COP-ROOI.", tag: "Virtual course" },
+      { m: 7, days: [21], date: "21 Jul", title: "Introduction to IP, Technology Transfer & Commercialisation", desc: "Six-week accredited short course; 12 IPRC training points.", tag: "Short course" },
+      { m: 7, days: [23], date: "23 Jul", title: "Strategic Portfolio Design for Research and Innovation Synergy", desc: "Aligning institutional research portfolios with innovation priorities, in two parts.", tag: "Masterclass" },
+      { m: 7, days: [27, 28], date: "27–28 Jul", title: "Biosafety and Environmental Ethics Symposium 2026", desc: "Two days of shared practice across the region's biosafety and ethics community.", tag: "Symposium" },
+      { m: 7, days: [29], date: "29 Jul", title: "Data, Decisions and Discovery: building an AI-ready research ecosystem", desc: "Infrastructure, data literacy and cross-functional strategy for AI across the research lifecycle.", tag: "Webinar" },
+      { m: 8, days: [12], date: "12 Aug", title: "Know how to manage your know-how", desc: "Tacit knowledge as intellectual property in technology transfer.", tag: "Virtual course" },
+      { m: 8, days: [18], date: "18 Aug", title: "Programme Evaluation", desc: "Conceptual frameworks, metrics and indicators, evaluation analytics and communicating results.", tag: "Short course" },
+      { m: 9, days: [8, 9, 10, 11], date: "8–11 Sep", title: "SARIMA Conference 2026, Johannesburg", desc: "The region's annual gathering of research and innovation management practitioners.", tag: "Conference" },
+      { m: 9, days: [22], date: "22 Sep", title: "IPRC Professionalisation webinar", desc: "The routes, the portfolio of evidence and how professional recognition works.", tag: "Webinar" }
+    ];
+    var MONTHS = { 7: "July", 8: "August", 9: "September" };
+    var FIRST_DOW = { 7: 2, 8: 5, 9: 1 }; /* Mon-start: Jul 1 Wed, Aug 1 Sat, Sep 1 Tue */
+    var DAYS_IN = { 7: 31, 8: 31, 9: 30 };
+    var now = new Date();
+    var todayM = now.getFullYear() === 2026 ? now.getMonth() + 1 : 0;
+    var todayD = now.getDate();
+
+    var calEl = document.getElementById("cal");
+    var listEl = document.getElementById("event-list");
+
+    function renderMonth(m) {
+      listEl.innerHTML = "";
+      var monthEvents = EVENTS.filter(function (e) { return e.m === m; });
+      monthEvents.forEach(function (e) {
+        var li = document.createElement("li");
+        li.className = "event";
+        li.setAttribute("data-day", e.days[0]);
+        li.innerHTML = '<span class="ev-date"></span><div><h3></h3><p></p></div><span class="ev-tag"></span>';
+        li.querySelector(".ev-date").innerHTML = e.date.replace(" ", "<br>");
+        li.querySelector("h3").textContent = e.title;
+        li.querySelector("p").textContent = e.desc;
+        li.querySelector(".ev-tag").textContent = e.tag;
+        listEl.appendChild(li);
+      });
+
+      var evDays = {};
+      monthEvents.forEach(function (e) { e.days.forEach(function (d) { evDays[d] = e; }); });
+      var html = '<p class="cal-head">' + MONTHS[m] + ' 2026</p><div class="cal-grid">';
+      ["M", "T", "W", "T", "F", "S", "S"].forEach(function (w) { html += '<span class="cal-dow" aria-hidden="true">' + w + "</span>"; });
+      for (var b = 0; b < FIRST_DOW[m]; b++) html += "<span class='cal-blank'></span>";
+      for (var d = 1; d <= DAYS_IN[m]; d++) {
+        var ev = evDays[d];
+        var today = m === todayM && d === todayD ? " is-today" : "";
+        if (ev) {
+          var past = todayM && (m < todayM || (m === todayM && d < todayD)) ? " is-past" : "";
+          html += '<button class="cal-day has-ev' + today + past + '" data-day="' + ev.days[0] +
+            '" aria-label="' + d + " " + MONTHS[m] + ": " + ev.title.replace(/"/g, "&quot;") + '">' + d + "</button>";
+        } else {
+          html += '<span class="cal-day' + today + '"' + (today ? ' aria-label="Today"' : "") + ">" + d + "</span>";
+        }
+      }
+      html += "</div>";
+      calEl.innerHTML = html;
+      calEl.querySelectorAll("button.cal-day").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var li = listEl.querySelector('[data-day="' + btn.getAttribute("data-day") + '"]');
+          if (!li) return;
+          li.scrollIntoView({ block: "nearest", behavior: reduced ? "auto" : "smooth" });
+          li.classList.remove("flash");
+          void li.offsetWidth;
+          li.classList.add("flash");
+        });
+      });
+    }
+    renderMonth(7);
+    var monthPills = document.querySelectorAll("#month-tabs .pill");
+    monthPills.forEach(function (pill) {
       pill.addEventListener("click", function () {
-        pills.forEach(function (p) {
+        monthPills.forEach(function (p) {
           p.classList.toggle("is-active", p === pill);
           p.setAttribute("aria-pressed", p === pill ? "true" : "false");
         });
-        var f = pill.getAttribute("data-filter");
-        document.querySelectorAll("#event-list .event").forEach(function (ev) {
-          ev.classList.toggle("hide", f !== "all" && ev.getAttribute("data-cat") !== f);
-        });
+        renderMonth(parseInt(pill.getAttribute("data-month"), 10));
       });
     });
+
+    /* hero ticker — future events, gentle rotation */
+    var upcoming = EVENTS.filter(function (e) {
+      return !todayM || e.m > todayM || (e.m === todayM && e.days[e.days.length - 1] >= todayD);
+    });
+    if (!upcoming.length) upcoming = EVENTS;
+    var tIdx = 0;
+    var tDate = document.getElementById("tick-date");
+    var tTitle = document.getElementById("tick-title");
+    var tItem = document.getElementById("ticker-item");
+    function showTick(i, instant) {
+      tIdx = (i + upcoming.length) % upcoming.length;
+      function apply() {
+        tDate.textContent = upcoming[tIdx].date;
+        tTitle.textContent = upcoming[tIdx].title;
+        tItem.classList.remove("is-fading");
+      }
+      if (instant || reduced) { apply(); return; }
+      tItem.classList.add("is-fading");
+      setTimeout(apply, 250);
+    }
+    showTick(0, true);
+    var tickTimer = null;
+    function startTick() {
+      if (reduced || tickTimer) return;
+      tickTimer = setInterval(function () { showTick(tIdx + 1); }, 5000);
+    }
+    function stopTick() { clearInterval(tickTimer); tickTimer = null; }
+    startTick();
+    var tickerEl = document.querySelector(".ticker");
+    ["mouseenter", "focusin"].forEach(function (evn) { tickerEl.addEventListener(evn, stopTick); });
+    ["mouseleave", "focusout"].forEach(function (evn) { tickerEl.addEventListener(evn, startTick); });
+    document.getElementById("tick-prev").addEventListener("click", function () { showTick(tIdx - 1); });
+    document.getElementById("tick-next").addEventListener("click", function () { showTick(tIdx + 1); });
 
     /* ---------- modal manager ---------- */
     var modal = document.getElementById("modal");

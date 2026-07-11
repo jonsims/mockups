@@ -114,6 +114,13 @@
       <figcaption>One network across the Southern African Development Community (SADC). Nodes mark home bases of the current committee and programmes.</figcaption>
     </figure>
   </div>
+  <div class="ticker" aria-label="Upcoming events">
+    <span class="ticker-label">Upcoming</span>
+    <button class="tick-nav" id="tick-prev" aria-label="Previous event">&#8249;</button>
+    <a class="ticker-item" id="ticker-item" href="#events"><strong id="tick-date"></strong><span id="tick-title"></span></a>
+    <button class="tick-nav" id="tick-next" aria-label="Next event">&#8250;</button>
+    <a class="ticker-cal" href="#events">Full calendar</a>
+  </div>
   <div class="hero-stats">
     <div class="stat"><span class="stat-n" data-count="20" data-suffix="+">0</span><span class="stat-l">years serving the region</span></div>
     <div class="stat"><span class="stat-n" data-count="3">0</span><span class="stat-l">strategic focus areas</span></div>
@@ -303,24 +310,15 @@
       <p class="eyebrow">Upcoming events</p>
       <h2>Learn together, in season.</h2>
     </div>
-    <div class="filters reveal" role="group" aria-label="Filter events">
-      <button class="pill is-active" aria-pressed="true" data-filter="all">All</button>
-      <button class="pill" aria-pressed="false" data-filter="training">Training courses</button>
-      <button class="pill" aria-pressed="false" data-filter="webinar">Webinars</button>
-      <button class="pill" aria-pressed="false" data-filter="network">Networking &amp; conferences</button>
+    <div class="filters reveal" role="group" aria-label="Choose a month" id="month-tabs">
+      <button class="pill is-active" aria-pressed="true" data-month="7">July 2026</button>
+      <button class="pill" aria-pressed="false" data-month="8">August 2026</button>
+      <button class="pill" aria-pressed="false" data-month="9">September 2026</button>
     </div>
-    <ul class="event-list" id="event-list">
-      <li class="event reveal" data-cat="training"><span class="ev-date">1–2 Jul<br>2026</span><div><h3>Practical insights into negotiating and structuring licensing deals</h3><p>Key terms of licence agreements, deal structuring and negotiating tactics.</p></div><span class="ev-tag">Virtual course</span></li>
-      <li class="event reveal" data-cat="training"><span class="ev-date">9 Jul<br>2026</span><div><h3>Open Research in Practice</h3><p>Data management, sharing, transparency and new models of scholarly communication, hosted by COP-ROOI.</p></div><span class="ev-tag">Virtual course</span></li>
-      <li class="event reveal" data-cat="training"><span class="ev-date">21 Jul<br>2026</span><div><h3>Introduction to IP, Technology Transfer &amp; Commercialisation</h3><p>Six-week accredited short course; 12 IPRC training points.</p></div><span class="ev-tag">Short course</span></li>
-      <li class="event reveal" data-cat="training"><span class="ev-date">23 Jul<br>2026</span><div><h3>Strategic Portfolio Design for Research and Innovation Synergy</h3><p>Aligning institutional research portfolios with innovation priorities, in two parts.</p></div><span class="ev-tag">Masterclass</span></li>
-      <li class="event reveal" data-cat="network"><span class="ev-date">27–28 Jul<br>2026</span><div><h3>Biosafety and Environmental Ethics Symposium 2026</h3><p>Two days of shared practice across the region's biosafety and ethics community.</p></div><span class="ev-tag">Symposium</span></li>
-      <li class="event reveal" data-cat="webinar"><span class="ev-date">29 Jul<br>2026</span><div><h3>Data, Decisions and Discovery: building an AI-ready research ecosystem</h3><p>Infrastructure, data literacy and cross-functional strategy for AI across the research lifecycle.</p></div><span class="ev-tag">Webinar</span></li>
-      <li class="event reveal" data-cat="training"><span class="ev-date">12 Aug<br>2026</span><div><h3>Know how to manage your know-how</h3><p>Tacit knowledge as intellectual property in technology transfer.</p></div><span class="ev-tag">Virtual course</span></li>
-      <li class="event reveal" data-cat="training"><span class="ev-date">18 Aug<br>2026</span><div><h3>Programme Evaluation</h3><p>Conceptual frameworks, metrics and indicators, evaluation analytics and communicating results.</p></div><span class="ev-tag">Short course</span></li>
-      <li class="event reveal" data-cat="network"><span class="ev-date">8–11 Sep<br>2026</span><div><h3>SARIMA Conference 2026, Johannesburg</h3><p>The region's annual gathering of research and innovation management practitioners.</p></div><span class="ev-tag">Conference</span></li>
-      <li class="event reveal" data-cat="webinar"><span class="ev-date">22 Sep<br>2026</span><div><h3>IPRC Professionalisation webinar</h3><p>The routes, the portfolio of evidence and how professional recognition works.</p></div><span class="ev-tag">Webinar</span></li>
-    </ul>
+    <div class="cal-wrap reveal">
+      <div class="cal" id="cal" aria-label="Event calendar"></div>
+      <ul class="event-list compact" id="event-list"></ul>
+    </div>
     <div class="more-events reveal">
       <p><strong>Also on the calendar:</strong> Gender in Science, Technology &amp; Innovation (short course) ·
         Marketing University Innovations · Collaborating with Machines: AI as a Partner in Research Management ·
