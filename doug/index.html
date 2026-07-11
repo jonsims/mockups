@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>SARIMA — design concept</title>
+<link rel="icon" href="assets/logo-square.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ======================= PASSWORD GATE ======================= -->
+<div id="gate" class="gate">
+  <div class="gate-card">
+    <svg class="gate-mark" viewBox="0 0 48 48" aria-hidden="true">
+      <rect x="6" y="19" width="36" height="10" rx="2" fill="#9AA5B1" transform="rotate(-45 24 24)"/>
+      <rect x="6" y="19" width="36" height="10" rx="2" fill="#1B5AA6" transform="rotate(45 24 24)"/>
+    </svg>
+    <p class="gate-eyebrow">Private design concept</p>
+    <h1>A new face for SARIMA</h1>
+    <p class="gate-sub">This page is a design mockup shared for review. Enter the password to view it.</p>
+    <form id="gate-form" autocomplete="off">
+      <input id="gate-input" type="password" placeholder="Password" aria-label="Password" autofocus>
+      <button type="submit">View the concept</button>
+    </form>
+    <p id="gate-msg" class="gate-msg" role="alert"></p>
+  </div>
+</div>
+
+<!-- ======================= SITE ======================= -->
+<div id="site" class="site" hidden>
+
+<header id="topnav" class="topnav">
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="SARIMA home">
+      <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+        <rect x="6" y="19" width="36" height="10" rx="2" class="mk-a" transform="rotate(-45 24 24)"/>
+        <rect x="6" y="19" width="36" height="10" rx="2" class="mk-b" transform="rotate(45 24 24)"/>
+      </svg>
+      <span class="brand-name">SARIMA</span>
+    </a>
+    <nav class="nav-links" id="nav-links" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#focus">Focus areas</a>
+      <a href="#professionalisation">Professionalisation</a>
+      <a href="#courses">Courses</a>
+      <a href="#events">Events</a>
+      <a href="#projects">Projects</a>
+      <a href="#people">People</a>
+      <a href="#membership">Membership</a>
+    </nav>
+    <a class="nav-cta" href="#membership">Join / Renew</a>
+    <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ======================= HERO ======================= -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow gold">Southern African Research &amp; Innovation Management Association</p>
+      <h1 class="hero-h1">Where research<br>becomes <em>innovation.</em></h1>
+      <p class="hero-sub">SARIMA is the membership organisation of research and innovation management
+        practitioners in the SADC region: the people who carry new knowledge from the lab
+        to spin-offs, products and services that answer societal needs.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-gold" href="#membership">Join SARIMA / Renew</a>
+        <a class="btn btn-ghost" href="#events">Explore events</a>
+      </div>
+    </div>
+    <figure class="hero-map" aria-label="Map of the SADC region showing the SARIMA practitioner network">
+      <svg viewBox="0 0 420 341" role="img">
+        <path class="map-dots" d="M24.8 13.6h.01M31.0 13.6h.01M37.2 13.6h.01M43.4 13.6h.01M49.6 13.6h.01M55.8 13.6h.01M62.0 13.6h.01M68.2 13.6h.01M74.4 13.6h.01M80.6 13.6h.01M86.8 13.6h.01M93.0 13.6h.01M99.2 13.6h.01M105.4 13.6h.01M111.6 13.6h.01M117.8 13.6h.01M124.0 13.6h.01M130.2 13.6h.01M136.4 13.6h.01M142.6 13.6h.01M148.8 13.6h.01M155.0 13.6h.01M161.2 13.6h.01M167.4 13.6h.01M173.6 13.6h.01M179.8 13.6h.01M186.0 13.6h.01M192.2 13.6h.01M198.4 13.6h.01M204.6 13.6h.01M210.8 13.6h.01M217.0 13.6h.01M223.2 13.6h.01M229.4 13.6h.01M235.6 13.6h.01M241.8 13.6h.01M248.0 13.6h.01M254.2 13.6h.01M260.4 13.6h.01M266.6 13.6h.01M272.8 13.6h.01M279.0 13.6h.01M285.2 13.6h.01M291.4 13.6h.01M24.8 20.5h.01M31.0 20.5h.01M37.2 20.5h.01M43.4 20.5h.01M49.6 20.5h.01M55.8 20.5h.01M62.0 20.5h.01M68.2 20.5h.01M74.4 20.5h.01M80.6 20.5h.01M86.8 20.5h.01M93.0 20.5h.01M99.2 20.5h.01M105.4 20.5h.01M111.6 20.5h.01M117.8 20.5h.01M124.0 20.5h.01M130.2 20.5h.01M136.4 20.5h.01M142.6 20.5h.01M148.8 20.5h.01M155.0 20.5h.01M161.2 20.5h.01M167.4 20.5h.01M173.6 20.5h.01M179.8 20.5h.01M186.0 20.5h.01M192.2 20.5h.01M198.4 20.5h.01M204.6 20.5h.01M210.8 20.5h.01M217.0 20.5h.01M223.2 20.5h.01M229.4 20.5h.01M235.6 20.5h.01M241.8 20.5h.01M248.0 20.5h.01M254.2 20.5h.01M260.4 20.5h.01M266.6 20.5h.01M272.8 20.5h.01M279.0 20.5h.01M285.2 20.5h.01M291.4 20.5h.01M31.0 27.3h.01M37.2 27.3h.01M43.4 27.3h.01M49.6 27.3h.01M55.8 27.3h.01M62.0 27.3h.01M68.2 27.3h.01M74.4 27.3h.01M80.6 27.3h.01M86.8 27.3h.01M93.0 27.3h.01M99.2 27.3h.01M105.4 27.3h.01M111.6 27.3h.01M117.8 27.3h.01M124.0 27.3h.01M130.2 27.3h.01M136.4 27.3h.01M142.6 27.3h.01M148.8 27.3h.01M155.0 27.3h.01M161.2 27.3h.01M167.4 27.3h.01M173.6 27.3h.01M179.8 27.3h.01M186.0 27.3h.01M192.2 27.3h.01M198.4 27.3h.01M204.6 27.3h.01M210.8 27.3h.01M217.0 27.3h.01M223.2 27.3h.01M229.4 27.3h.01M235.6 27.3h.01M241.8 27.3h.01M248.0 27.3h.01M254.2 27.3h.01M260.4 27.3h.01M266.6 27.3h.01M272.8 27.3h.01M279.0 27.3h.01M285.2 27.3h.01M291.4 27.3h.01M31.0 34.1h.01M37.2 34.1h.01M43.4 34.1h.01M49.6 34.1h.01M55.8 34.1h.01M62.0 34.1h.01M68.2 34.1h.01M74.4 34.1h.01M80.6 34.1h.01M86.8 34.1h.01M93.0 34.1h.01M99.2 34.1h.01M105.4 34.1h.01M111.6 34.1h.01M117.8 34.1h.01M124.0 34.1h.01M130.2 34.1h.01M136.4 34.1h.01M142.6 34.1h.01M148.8 34.1h.01M155.0 34.1h.01M161.2 34.1h.01M167.4 34.1h.01M173.6 34.1h.01M179.8 34.1h.01M186.0 34.1h.01M192.2 34.1h.01M198.4 34.1h.01M204.6 34.1h.01M210.8 34.1h.01M217.0 34.1h.01M223.2 34.1h.01M229.4 34.1h.01M235.6 34.1h.01M241.8 34.1h.01M248.0 34.1h.01M254.2 34.1h.01M260.4 34.1h.01M266.6 34.1h.01M272.8 34.1h.01M279.0 34.1h.01M285.2 34.1h.01M291.4 34.1h.01M297.6 34.1h.01M37.2 40.9h.01M43.4 40.9h.01M49.6 40.9h.01M55.8 40.9h.01M62.0 40.9h.01M68.2 40.9h.01M74.4 40.9h.01M80.6 40.9h.01M86.8 40.9h.01M93.0 40.9h.01M99.2 40.9h.01M105.4 40.9h.01M111.6 40.9h.01M117.8 40.9h.01M124.0 40.9h.01M130.2 40.9h.01M136.4 40.9h.01M142.6 40.9h.01M148.8 40.9h.01M155.0 40.9h.01M161.2 40.9h.01M167.4 40.9h.01M173.6 40.9h.01M179.8 40.9h.01M186.0 40.9h.01M192.2 40.9h.01M198.4 40.9h.01M204.6 40.9h.01M210.8 40.9h.01M217.0 40.9h.01M223.2 40.9h.01M229.4 40.9h.01M235.6 40.9h.01M241.8 40.9h.01M248.0 40.9h.01M254.2 40.9h.01M260.4 40.9h.01M266.6 40.9h.01M272.8 40.9h.01M279.0 40.9h.01M285.2 40.9h.01M291.4 40.9h.01M297.6 40.9h.01M37.2 47.7h.01M43.4 47.7h.01M49.6 47.7h.01M55.8 47.7h.01M62.0 47.7h.01M68.2 47.7h.01M74.4 47.7h.01M80.6 47.7h.01M86.8 47.7h.01M93.0 47.7h.01M99.2 47.7h.01M105.4 47.7h.01M111.6 47.7h.01M117.8 47.7h.01M124.0 47.7h.01M130.2 47.7h.01M136.4 47.7h.01M142.6 47.7h.01M148.8 47.7h.01M155.0 47.7h.01M161.2 47.7h.01M167.4 47.7h.01M173.6 47.7h.01M179.8 47.7h.01M186.0 47.7h.01M192.2 47.7h.01M198.4 47.7h.01M204.6 47.7h.01M210.8 47.7h.01M217.0 47.7h.01M223.2 47.7h.01M229.4 47.7h.01M235.6 47.7h.01M241.8 47.7h.01M248.0 47.7h.01M254.2 47.7h.01M260.4 47.7h.01M266.6 47.7h.01M272.8 47.7h.01M279.0 47.7h.01M285.2 47.7h.01M291.4 47.7h.01M297.6 47.7h.01M37.2 54.6h.01M43.4 54.6h.01M49.6 54.6h.01M55.8 54.6h.01M62.0 54.6h.01M68.2 54.6h.01M74.4 54.6h.01M80.6 54.6h.01M86.8 54.6h.01M93.0 54.6h.01M99.2 54.6h.01M105.4 54.6h.01M111.6 54.6h.01M117.8 54.6h.01M124.0 54.6h.01M130.2 54.6h.01M136.4 54.6h.01M142.6 54.6h.01M148.8 54.6h.01M155.0 54.6h.01M161.2 54.6h.01M167.4 54.6h.01M173.6 54.6h.01M179.8 54.6h.01M186.0 54.6h.01M192.2 54.6h.01M198.4 54.6h.01M204.6 54.6h.01M210.8 54.6h.01M217.0 54.6h.01M223.2 54.6h.01M229.4 54.6h.01M235.6 54.6h.01M241.8 54.6h.01M248.0 54.6h.01M254.2 54.6h.01M260.4 54.6h.01M266.6 54.6h.01M272.8 54.6h.01M279.0 54.6h.01M285.2 54.6h.01M291.4 54.6h.01M297.6 54.6h.01M31.0 61.4h.01M37.2 61.4h.01M43.4 61.4h.01M49.6 61.4h.01M55.8 61.4h.01M62.0 61.4h.01M68.2 61.4h.01M74.4 61.4h.01M80.6 61.4h.01M86.8 61.4h.01M93.0 61.4h.01M99.2 61.4h.01M105.4 61.4h.01M111.6 61.4h.01M117.8 61.4h.01M124.0 61.4h.01M130.2 61.4h.01M136.4 61.4h.01M142.6 61.4h.01M148.8 61.4h.01M155.0 61.4h.01M161.2 61.4h.01M167.4 61.4h.01M173.6 61.4h.01M179.8 61.4h.01M186.0 61.4h.01M192.2 61.4h.01M198.4 61.4h.01M204.6 61.4h.01M210.8 61.4h.01M217.0 61.4h.01M223.2 61.4h.01M229.4 61.4h.01M235.6 61.4h.01M241.8 61.4h.01M248.0 61.4h.01M254.2 61.4h.01M260.4 61.4h.01M266.6 61.4h.01M272.8 61.4h.01M279.0 61.4h.01M285.2 61.4h.01M291.4 61.4h.01M297.6 61.4h.01M31.0 68.2h.01M37.2 68.2h.01M43.4 68.2h.01M49.6 68.2h.01M55.8 68.2h.01M62.0 68.2h.01M68.2 68.2h.01M74.4 68.2h.01M80.6 68.2h.01M86.8 68.2h.01M93.0 68.2h.01M99.2 68.2h.01M105.4 68.2h.01M111.6 68.2h.01M117.8 68.2h.01M124.0 68.2h.01M130.2 68.2h.01M136.4 68.2h.01M142.6 68.2h.01M148.8 68.2h.01M155.0 68.2h.01M161.2 68.2h.01M167.4 68.2h.01M173.6 68.2h.01M179.8 68.2h.01M186.0 68.2h.01M192.2 68.2h.01M198.4 68.2h.01M204.6 68.2h.01M210.8 68.2h.01M217.0 68.2h.01M223.2 68.2h.01M229.4 68.2h.01M235.6 68.2h.01M241.8 68.2h.01M248.0 68.2h.01M254.2 68.2h.01M260.4 68.2h.01M266.6 68.2h.01M272.8 68.2h.01M279.0 68.2h.01M285.2 68.2h.01M291.4 68.2h.01M297.6 68.2h.01M31.0 75.0h.01M37.2 75.0h.01M43.4 75.0h.01M49.6 75.0h.01M55.8 75.0h.01M62.0 75.0h.01M68.2 75.0h.01M74.4 75.0h.01M80.6 75.0h.01M86.8 75.0h.01M93.0 75.0h.01M99.2 75.0h.01M105.4 75.0h.01M111.6 75.0h.01M117.8 75.0h.01M124.0 75.0h.01M130.2 75.0h.01M136.4 75.0h.01M142.6 75.0h.01M148.8 75.0h.01M155.0 75.0h.01M161.2 75.0h.01M167.4 75.0h.01M173.6 75.0h.01M179.8 75.0h.01M186.0 75.0h.01M192.2 75.0h.01M198.4 75.0h.01M204.6 75.0h.01M210.8 75.0h.01M217.0 75.0h.01M223.2 75.0h.01M229.4 75.0h.01M235.6 75.0h.01M241.8 75.0h.01M248.0 75.0h.01M254.2 75.0h.01M260.4 75.0h.01M266.6 75.0h.01M272.8 75.0h.01M279.0 75.0h.01M285.2 75.0h.01M291.4 75.0h.01M297.6 75.0h.01M31.0 81.8h.01M37.2 81.8h.01M43.4 81.8h.01M49.6 81.8h.01M55.8 81.8h.01M62.0 81.8h.01M68.2 81.8h.01M74.4 81.8h.01M80.6 81.8h.01M86.8 81.8h.01M93.0 81.8h.01M99.2 81.8h.01M105.4 81.8h.01M111.6 81.8h.01M117.8 81.8h.01M124.0 81.8h.01M130.2 81.8h.01M136.4 81.8h.01M142.6 81.8h.01M148.8 81.8h.01M155.0 81.8h.01M161.2 81.8h.01M167.4 81.8h.01M173.6 81.8h.01M179.8 81.8h.01M186.0 81.8h.01M192.2 81.8h.01M198.4 81.8h.01M204.6 81.8h.01M210.8 81.8h.01M217.0 81.8h.01M223.2 81.8h.01M229.4 81.8h.01M235.6 81.8h.01M241.8 81.8h.01M248.0 81.8h.01M254.2 81.8h.01M260.4 81.8h.01M266.6 81.8h.01M272.8 81.8h.01M279.0 81.8h.01M285.2 81.8h.01M291.4 81.8h.01M297.6 81.8h.01M390.6 81.8h.01M24.8 88.7h.01M31.0 88.7h.01M37.2 88.7h.01M43.4 88.7h.01M49.6 88.7h.01M55.8 88.7h.01M62.0 88.7h.01M68.2 88.7h.01M74.4 88.7h.01M80.6 88.7h.01M86.8 88.7h.01M93.0 88.7h.01M99.2 88.7h.01M105.4 88.7h.01M111.6 88.7h.01M117.8 88.7h.01M124.0 88.7h.01M130.2 88.7h.01M136.4 88.7h.01M142.6 88.7h.01M148.8 88.7h.01M155.0 88.7h.01M161.2 88.7h.01M167.4 88.7h.01M173.6 88.7h.01M179.8 88.7h.01M186.0 88.7h.01M192.2 88.7h.01M198.4 88.7h.01M204.6 88.7h.01M210.8 88.7h.01M217.0 88.7h.01M223.2 88.7h.01M229.4 88.7h.01M235.6 88.7h.01M241.8 88.7h.01M248.0 88.7h.01M254.2 88.7h.01M260.4 88.7h.01M266.6 88.7h.01M272.8 88.7h.01M279.0 88.7h.01M285.2 88.7h.01M291.4 88.7h.01M297.6 88.7h.01M303.8 88.7h.01M378.2 88.7h.01M384.4 88.7h.01M390.6 88.7h.01M24.8 95.5h.01M31.0 95.5h.01M37.2 95.5h.01M43.4 95.5h.01M49.6 95.5h.01M55.8 95.5h.01M62.0 95.5h.01M68.2 95.5h.01M74.4 95.5h.01M80.6 95.5h.01M86.8 95.5h.01M93.0 95.5h.01M99.2 95.5h.01M105.4 95.5h.01M111.6 95.5h.01M117.8 95.5h.01M124.0 95.5h.01M130.2 95.5h.01M136.4 95.5h.01M142.6 95.5h.01M148.8 95.5h.01M155.0 95.5h.01M161.2 95.5h.01M167.4 95.5h.01M173.6 95.5h.01M179.8 95.5h.01M186.0 95.5h.01M192.2 95.5h.01M198.4 95.5h.01M204.6 95.5h.01M210.8 95.5h.01M217.0 95.5h.01M223.2 95.5h.01M229.4 95.5h.01M235.6 95.5h.01M241.8 95.5h.01M248.0 95.5h.01M254.2 95.5h.01M260.4 95.5h.01M266.6 95.5h.01M272.8 95.5h.01M279.0 95.5h.01M285.2 95.5h.01M291.4 95.5h.01M297.6 95.5h.01M303.8 95.5h.01M365.8 95.5h.01M372.0 95.5h.01M378.2 95.5h.01M384.4 95.5h.01M390.6 95.5h.01M396.8 95.5h.01M24.8 102.3h.01M31.0 102.3h.01M37.2 102.3h.01M43.4 102.3h.01M49.6 102.3h.01M55.8 102.3h.01M62.0 102.3h.01M68.2 102.3h.01M74.4 102.3h.01M80.6 102.3h.01M86.8 102.3h.01M93.0 102.3h.01M99.2 102.3h.01M105.4 102.3h.01M111.6 102.3h.01M117.8 102.3h.01M124.0 102.3h.01M130.2 102.3h.01M136.4 102.3h.01M142.6 102.3h.01M148.8 102.3h.01M155.0 102.3h.01M161.2 102.3h.01M167.4 102.3h.01M173.6 102.3h.01M179.8 102.3h.01M186.0 102.3h.01M192.2 102.3h.01M198.4 102.3h.01M204.6 102.3h.01M210.8 102.3h.01M217.0 102.3h.01M223.2 102.3h.01M229.4 102.3h.01M235.6 102.3h.01M241.8 102.3h.01M248.0 102.3h.01M254.2 102.3h.01M260.4 102.3h.01M266.6 102.3h.01M272.8 102.3h.01M279.0 102.3h.01M285.2 102.3h.01M291.4 102.3h.01M297.6 102.3h.01M303.8 102.3h.01M359.6 102.3h.01M365.8 102.3h.01M372.0 102.3h.01M378.2 102.3h.01M384.4 102.3h.01M390.6 102.3h.01M396.8 102.3h.01M24.8 109.1h.01M31.0 109.1h.01M37.2 109.1h.01M43.4 109.1h.01M49.6 109.1h.01M55.8 109.1h.01M62.0 109.1h.01M68.2 109.1h.01M74.4 109.1h.01M80.6 109.1h.01M86.8 109.1h.01M93.0 109.1h.01M99.2 109.1h.01M105.4 109.1h.01M111.6 109.1h.01M117.8 109.1h.01M124.0 109.1h.01M130.2 109.1h.01M136.4 109.1h.01M142.6 109.1h.01M148.8 109.1h.01M155.0 109.1h.01M161.2 109.1h.01M167.4 109.1h.01M173.6 109.1h.01M179.8 109.1h.01M186.0 109.1h.01M192.2 109.1h.01M198.4 109.1h.01M204.6 109.1h.01M210.8 109.1h.01M217.0 109.1h.01M223.2 109.1h.01M229.4 109.1h.01M235.6 109.1h.01M241.8 109.1h.01M248.0 109.1h.01M254.2 109.1h.01M260.4 109.1h.01M266.6 109.1h.01M272.8 109.1h.01M279.0 109.1h.01M285.2 109.1h.01M291.4 109.1h.01M297.6 109.1h.01M303.8 109.1h.01M353.4 109.1h.01M359.6 109.1h.01M365.8 109.1h.01M372.0 109.1h.01M378.2 109.1h.01M384.4 109.1h.01M390.6 109.1h.01M396.8 109.1h.01M18.6 115.9h.01M24.8 115.9h.01M31.0 115.9h.01M37.2 115.9h.01M43.4 115.9h.01M49.6 115.9h.01M55.8 115.9h.01M62.0 115.9h.01M68.2 115.9h.01M74.4 115.9h.01M80.6 115.9h.01M86.8 115.9h.01M93.0 115.9h.01M99.2 115.9h.01M105.4 115.9h.01M111.6 115.9h.01M117.8 115.9h.01M124.0 115.9h.01M130.2 115.9h.01M136.4 115.9h.01M142.6 115.9h.01M148.8 115.9h.01M155.0 115.9h.01M161.2 115.9h.01M167.4 115.9h.01M173.6 115.9h.01M179.8 115.9h.01M186.0 115.9h.01M192.2 115.9h.01M198.4 115.9h.01M204.6 115.9h.01M210.8 115.9h.01M217.0 115.9h.01M223.2 115.9h.01M229.4 115.9h.01M235.6 115.9h.01M241.8 115.9h.01M248.0 115.9h.01M254.2 115.9h.01M260.4 115.9h.01M266.6 115.9h.01M272.8 115.9h.01M279.0 115.9h.01M285.2 115.9h.01M291.4 115.9h.01M347.2 115.9h.01M353.4 115.9h.01M359.6 115.9h.01M365.8 115.9h.01M372.0 115.9h.01M378.2 115.9h.01M384.4 115.9h.01M390.6 115.9h.01M396.8 115.9h.01M24.8 122.8h.01M31.0 122.8h.01M37.2 122.8h.01M43.4 122.8h.01M49.6 122.8h.01M55.8 122.8h.01M62.0 122.8h.01M68.2 122.8h.01M74.4 122.8h.01M80.6 122.8h.01M86.8 122.8h.01M93.0 122.8h.01M99.2 122.8h.01M105.4 122.8h.01M111.6 122.8h.01M117.8 122.8h.01M124.0 122.8h.01M130.2 122.8h.01M136.4 122.8h.01M142.6 122.8h.01M148.8 122.8h.01M155.0 122.8h.01M161.2 122.8h.01M167.4 122.8h.01M173.6 122.8h.01M179.8 122.8h.01M186.0 122.8h.01M192.2 122.8h.01M198.4 122.8h.01M204.6 122.8h.01M210.8 122.8h.01M217.0 122.8h.01M223.2 122.8h.01M229.4 122.8h.01M235.6 122.8h.01M241.8 122.8h.01M248.0 122.8h.01M254.2 122.8h.01M260.4 122.8h.01M266.6 122.8h.01M272.8 122.8h.01M279.0 122.8h.01M285.2 122.8h.01M341.0 122.8h.01M347.2 122.8h.01M353.4 122.8h.01M359.6 122.8h.01M365.8 122.8h.01M372.0 122.8h.01M378.2 122.8h.01M384.4 122.8h.01M390.6 122.8h.01M396.8 122.8h.01M24.8 129.6h.01M31.0 129.6h.01M37.2 129.6h.01M43.4 129.6h.01M49.6 129.6h.01M55.8 129.6h.01M62.0 129.6h.01M68.2 129.6h.01M74.4 129.6h.01M80.6 129.6h.01M86.8 129.6h.01M93.0 129.6h.01M99.2 129.6h.01M105.4 129.6h.01M111.6 129.6h.01M117.8 129.6h.01M124.0 129.6h.01M130.2 129.6h.01M136.4 129.6h.01M142.6 129.6h.01M148.8 129.6h.01M155.0 129.6h.01M161.2 129.6h.01M167.4 129.6h.01M173.6 129.6h.01M179.8 129.6h.01M186.0 129.6h.01M192.2 129.6h.01M198.4 129.6h.01M204.6 129.6h.01M210.8 129.6h.01M217.0 129.6h.01M223.2 129.6h.01M229.4 129.6h.01M235.6 129.6h.01M241.8 129.6h.01M248.0 129.6h.01M254.2 129.6h.01M260.4 129.6h.01M266.6 129.6h.01M272.8 129.6h.01M279.0 129.6h.01M341.0 129.6h.01M347.2 129.6h.01M353.4 129.6h.01M359.6 129.6h.01M365.8 129.6h.01M372.0 129.6h.01M378.2 129.6h.01M384.4 129.6h.01M390.6 129.6h.01M396.8 129.6h.01M31.0 136.4h.01M37.2 136.4h.01M43.4 136.4h.01M49.6 136.4h.01M55.8 136.4h.01M62.0 136.4h.01M68.2 136.4h.01M74.4 136.4h.01M80.6 136.4h.01M86.8 136.4h.01M93.0 136.4h.01M99.2 136.4h.01M105.4 136.4h.01M111.6 136.4h.01M117.8 136.4h.01M124.0 136.4h.01M130.2 136.4h.01M136.4 136.4h.01M142.6 136.4h.01M148.8 136.4h.01M155.0 136.4h.01M161.2 136.4h.01M167.4 136.4h.01M173.6 136.4h.01M179.8 136.4h.01M186.0 136.4h.01M192.2 136.4h.01M198.4 136.4h.01M204.6 136.4h.01M210.8 136.4h.01M217.0 136.4h.01M223.2 136.4h.01M229.4 136.4h.01M235.6 136.4h.01M241.8 136.4h.01M248.0 136.4h.01M254.2 136.4h.01M260.4 136.4h.01M266.6 136.4h.01M341.0 136.4h.01M347.2 136.4h.01M353.4 136.4h.01M359.6 136.4h.01M365.8 136.4h.01M372.0 136.4h.01M378.2 136.4h.01M384.4 136.4h.01M390.6 136.4h.01M31.0 143.2h.01M37.2 143.2h.01M43.4 143.2h.01M49.6 143.2h.01M55.8 143.2h.01M62.0 143.2h.01M68.2 143.2h.01M74.4 143.2h.01M80.6 143.2h.01M86.8 143.2h.01M93.0 143.2h.01M99.2 143.2h.01M105.4 143.2h.01M111.6 143.2h.01M117.8 143.2h.01M124.0 143.2h.01M130.2 143.2h.01M136.4 143.2h.01M142.6 143.2h.01M148.8 143.2h.01M155.0 143.2h.01M161.2 143.2h.01M167.4 143.2h.01M173.6 143.2h.01M179.8 143.2h.01M186.0 143.2h.01M192.2 143.2h.01M198.4 143.2h.01M204.6 143.2h.01M210.8 143.2h.01M217.0 143.2h.01M223.2 143.2h.01M229.4 143.2h.01M235.6 143.2h.01M241.8 143.2h.01M248.0 143.2h.01M254.2 143.2h.01M260.4 143.2h.01M341.0 143.2h.01M347.2 143.2h.01M353.4 143.2h.01M359.6 143.2h.01M365.8 143.2h.01M372.0 143.2h.01M378.2 143.2h.01M384.4 143.2h.01M390.6 143.2h.01M31.0 150.0h.01M37.2 150.0h.01M43.4 150.0h.01M49.6 150.0h.01M55.8 150.0h.01M62.0 150.0h.01M68.2 150.0h.01M74.4 150.0h.01M80.6 150.0h.01M86.8 150.0h.01M93.0 150.0h.01M99.2 150.0h.01M105.4 150.0h.01M111.6 150.0h.01M117.8 150.0h.01M124.0 150.0h.01M130.2 150.0h.01M136.4 150.0h.01M142.6 150.0h.01M148.8 150.0h.01M155.0 150.0h.01M161.2 150.0h.01M167.4 150.0h.01M173.6 150.0h.01M179.8 150.0h.01M186.0 150.0h.01M192.2 150.0h.01M198.4 150.0h.01M204.6 150.0h.01M210.8 150.0h.01M217.0 150.0h.01M223.2 150.0h.01M229.4 150.0h.01M235.6 150.0h.01M241.8 150.0h.01M248.0 150.0h.01M254.2 150.0h.01M334.8 150.0h.01M341.0 150.0h.01M347.2 150.0h.01M353.4 150.0h.01M359.6 150.0h.01M365.8 150.0h.01M372.0 150.0h.01M378.2 150.0h.01M384.4 150.0h.01M390.6 150.0h.01M37.2 156.9h.01M43.4 156.9h.01M49.6 156.9h.01M55.8 156.9h.01M62.0 156.9h.01M68.2 156.9h.01M74.4 156.9h.01M80.6 156.9h.01M86.8 156.9h.01M93.0 156.9h.01M99.2 156.9h.01M105.4 156.9h.01M111.6 156.9h.01M117.8 156.9h.01M124.0 156.9h.01M130.2 156.9h.01M136.4 156.9h.01M142.6 156.9h.01M148.8 156.9h.01M155.0 156.9h.01M161.2 156.9h.01M167.4 156.9h.01M173.6 156.9h.01M179.8 156.9h.01M186.0 156.9h.01M192.2 156.9h.01M198.4 156.9h.01M204.6 156.9h.01M210.8 156.9h.01M217.0 156.9h.01M223.2 156.9h.01M229.4 156.9h.01M235.6 156.9h.01M241.8 156.9h.01M248.0 156.9h.01M334.8 156.9h.01M341.0 156.9h.01M347.2 156.9h.01M353.4 156.9h.01M359.6 156.9h.01M365.8 156.9h.01M372.0 156.9h.01M378.2 156.9h.01M384.4 156.9h.01M390.6 156.9h.01M37.2 163.7h.01M43.4 163.7h.01M49.6 163.7h.01M55.8 163.7h.01M62.0 163.7h.01M68.2 163.7h.01M74.4 163.7h.01M80.6 163.7h.01M86.8 163.7h.01M93.0 163.7h.01M99.2 163.7h.01M105.4 163.7h.01M111.6 163.7h.01M117.8 163.7h.01M124.0 163.7h.01M130.2 163.7h.01M136.4 163.7h.01M142.6 163.7h.01M148.8 163.7h.01M155.0 163.7h.01M161.2 163.7h.01M167.4 163.7h.01M173.6 163.7h.01M179.8 163.7h.01M186.0 163.7h.01M192.2 163.7h.01M198.4 163.7h.01M204.6 163.7h.01M210.8 163.7h.01M217.0 163.7h.01M223.2 163.7h.01M229.4 163.7h.01M235.6 163.7h.01M241.8 163.7h.01M334.8 163.7h.01M341.0 163.7h.01M347.2 163.7h.01M353.4 163.7h.01M359.6 163.7h.01M365.8 163.7h.01M372.0 163.7h.01M378.2 163.7h.01M384.4 163.7h.01M43.4 170.5h.01M49.6 170.5h.01M55.8 170.5h.01M62.0 170.5h.01M68.2 170.5h.01M74.4 170.5h.01M80.6 170.5h.01M86.8 170.5h.01M93.0 170.5h.01M99.2 170.5h.01M105.4 170.5h.01M111.6 170.5h.01M117.8 170.5h.01M124.0 170.5h.01M130.2 170.5h.01M136.4 170.5h.01M142.6 170.5h.01M148.8 170.5h.01M155.0 170.5h.01M161.2 170.5h.01M167.4 170.5h.01M173.6 170.5h.01M179.8 170.5h.01M186.0 170.5h.01M192.2 170.5h.01M198.4 170.5h.01M204.6 170.5h.01M210.8 170.5h.01M217.0 170.5h.01M223.2 170.5h.01M229.4 170.5h.01M235.6 170.5h.01M241.8 170.5h.01M248.0 170.5h.01M334.8 170.5h.01M341.0 170.5h.01M347.2 170.5h.01M353.4 170.5h.01M359.6 170.5h.01M365.8 170.5h.01M372.0 170.5h.01M378.2 170.5h.01M384.4 170.5h.01M43.4 177.3h.01M49.6 177.3h.01M55.8 177.3h.01M62.0 177.3h.01M68.2 177.3h.01M74.4 177.3h.01M80.6 177.3h.01M86.8 177.3h.01M93.0 177.3h.01M99.2 177.3h.01M105.4 177.3h.01M111.6 177.3h.01M117.8 177.3h.01M124.0 177.3h.01M130.2 177.3h.01M136.4 177.3h.01M142.6 177.3h.01M148.8 177.3h.01M155.0 177.3h.01M161.2 177.3h.01M167.4 177.3h.01M173.6 177.3h.01M179.8 177.3h.01M186.0 177.3h.01M192.2 177.3h.01M198.4 177.3h.01M204.6 177.3h.01M210.8 177.3h.01M217.0 177.3h.01M223.2 177.3h.01M229.4 177.3h.01M235.6 177.3h.01M241.8 177.3h.01M248.0 177.3h.01M341.0 177.3h.01M347.2 177.3h.01M353.4 177.3h.01M359.6 177.3h.01M365.8 177.3h.01M372.0 177.3h.01M378.2 177.3h.01M49.6 184.1h.01M55.8 184.1h.01M62.0 184.1h.01M68.2 184.1h.01M74.4 184.1h.01M80.6 184.1h.01M86.8 184.1h.01M93.0 184.1h.01M99.2 184.1h.01M105.4 184.1h.01M111.6 184.1h.01M117.8 184.1h.01M124.0 184.1h.01M130.2 184.1h.01M136.4 184.1h.01M142.6 184.1h.01M148.8 184.1h.01M155.0 184.1h.01M161.2 184.1h.01M167.4 184.1h.01M173.6 184.1h.01M179.8 184.1h.01M186.0 184.1h.01M192.2 184.1h.01M198.4 184.1h.01M204.6 184.1h.01M210.8 184.1h.01M217.0 184.1h.01M223.2 184.1h.01M229.4 184.1h.01M235.6 184.1h.01M241.8 184.1h.01M248.0 184.1h.01M341.0 184.1h.01M347.2 184.1h.01M353.4 184.1h.01M359.6 184.1h.01M365.8 184.1h.01M372.0 184.1h.01M378.2 184.1h.01M49.6 191.0h.01M55.8 191.0h.01M62.0 191.0h.01M68.2 191.0h.01M74.4 191.0h.01M80.6 191.0h.01M86.8 191.0h.01M93.0 191.0h.01M99.2 191.0h.01M105.4 191.0h.01M111.6 191.0h.01M117.8 191.0h.01M124.0 191.0h.01M130.2 191.0h.01M136.4 191.0h.01M142.6 191.0h.01M148.8 191.0h.01M155.0 191.0h.01M161.2 191.0h.01M167.4 191.0h.01M173.6 191.0h.01M179.8 191.0h.01M186.0 191.0h.01M192.2 191.0h.01M198.4 191.0h.01M204.6 191.0h.01M210.8 191.0h.01M217.0 191.0h.01M223.2 191.0h.01M229.4 191.0h.01M235.6 191.0h.01M241.8 191.0h.01M248.0 191.0h.01M341.0 191.0h.01M347.2 191.0h.01M353.4 191.0h.01M359.6 191.0h.01M365.8 191.0h.01M372.0 191.0h.01M378.2 191.0h.01M49.6 197.8h.01M55.8 197.8h.01M62.0 197.8h.01M68.2 197.8h.01M74.4 197.8h.01M80.6 197.8h.01M86.8 197.8h.01M93.0 197.8h.01M99.2 197.8h.01M105.4 197.8h.01M111.6 197.8h.01M117.8 197.8h.01M124.0 197.8h.01M130.2 197.8h.01M136.4 197.8h.01M142.6 197.8h.01M148.8 197.8h.01M155.0 197.8h.01M161.2 197.8h.01M167.4 197.8h.01M173.6 197.8h.01M179.8 197.8h.01M186.0 197.8h.01M192.2 197.8h.01M198.4 197.8h.01M204.6 197.8h.01M210.8 197.8h.01M217.0 197.8h.01M223.2 197.8h.01M229.4 197.8h.01M235.6 197.8h.01M241.8 197.8h.01M248.0 197.8h.01M347.2 197.8h.01M353.4 197.8h.01M359.6 197.8h.01M365.8 197.8h.01M372.0 197.8h.01M49.6 204.6h.01M55.8 204.6h.01M62.0 204.6h.01M68.2 204.6h.01M74.4 204.6h.01M80.6 204.6h.01M86.8 204.6h.01M93.0 204.6h.01M99.2 204.6h.01M105.4 204.6h.01M111.6 204.6h.01M117.8 204.6h.01M124.0 204.6h.01M130.2 204.6h.01M136.4 204.6h.01M142.6 204.6h.01M148.8 204.6h.01M155.0 204.6h.01M161.2 204.6h.01M167.4 204.6h.01M173.6 204.6h.01M179.8 204.6h.01M186.0 204.6h.01M192.2 204.6h.01M198.4 204.6h.01M204.6 204.6h.01M210.8 204.6h.01M217.0 204.6h.01M223.2 204.6h.01M229.4 204.6h.01M235.6 204.6h.01M241.8 204.6h.01M248.0 204.6h.01M254.2 204.6h.01M347.2 204.6h.01M353.4 204.6h.01M359.6 204.6h.01M365.8 204.6h.01M372.0 204.6h.01M49.6 211.4h.01M55.8 211.4h.01M62.0 211.4h.01M68.2 211.4h.01M74.4 211.4h.01M80.6 211.4h.01M86.8 211.4h.01M93.0 211.4h.01M99.2 211.4h.01M105.4 211.4h.01M111.6 211.4h.01M117.8 211.4h.01M124.0 211.4h.01M130.2 211.4h.01M136.4 211.4h.01M142.6 211.4h.01M148.8 211.4h.01M155.0 211.4h.01M161.2 211.4h.01M167.4 211.4h.01M173.6 211.4h.01M179.8 211.4h.01M186.0 211.4h.01M192.2 211.4h.01M198.4 211.4h.01M204.6 211.4h.01M210.8 211.4h.01M217.0 211.4h.01M223.2 211.4h.01M229.4 211.4h.01M235.6 211.4h.01M241.8 211.4h.01M248.0 211.4h.01M347.2 211.4h.01M353.4 211.4h.01M359.6 211.4h.01M365.8 211.4h.01M372.0 211.4h.01M49.6 218.2h.01M55.8 218.2h.01M62.0 218.2h.01M68.2 218.2h.01M74.4 218.2h.01M80.6 218.2h.01M86.8 218.2h.01M93.0 218.2h.01M99.2 218.2h.01M105.4 218.2h.01M111.6 218.2h.01M117.8 218.2h.01M124.0 218.2h.01M130.2 218.2h.01M136.4 218.2h.01M142.6 218.2h.01M148.8 218.2h.01M155.0 218.2h.01M161.2 218.2h.01M167.4 218.2h.01M173.6 218.2h.01M179.8 218.2h.01M186.0 218.2h.01M192.2 218.2h.01M198.4 218.2h.01M204.6 218.2h.01M210.8 218.2h.01M217.0 218.2h.01M223.2 218.2h.01M229.4 218.2h.01M235.6 218.2h.01M241.8 218.2h.01M353.4 218.2h.01M359.6 218.2h.01M365.8 218.2h.01M49.6 225.1h.01M55.8 225.1h.01M62.0 225.1h.01M68.2 225.1h.01M74.4 225.1h.01M80.6 225.1h.01M86.8 225.1h.01M93.0 225.1h.01M99.2 225.1h.01M105.4 225.1h.01M111.6 225.1h.01M117.8 225.1h.01M124.0 225.1h.01M130.2 225.1h.01M136.4 225.1h.01M142.6 225.1h.01M148.8 225.1h.01M155.0 225.1h.01M161.2 225.1h.01M167.4 225.1h.01M173.6 225.1h.01M179.8 225.1h.01M186.0 225.1h.01M192.2 225.1h.01M198.4 225.1h.01M204.6 225.1h.01M210.8 225.1h.01M217.0 225.1h.01M223.2 225.1h.01M229.4 225.1h.01M235.6 225.1h.01M353.4 225.1h.01M49.6 231.9h.01M55.8 231.9h.01M62.0 231.9h.01M68.2 231.9h.01M74.4 231.9h.01M80.6 231.9h.01M86.8 231.9h.01M93.0 231.9h.01M99.2 231.9h.01M105.4 231.9h.01M111.6 231.9h.01M117.8 231.9h.01M124.0 231.9h.01M130.2 231.9h.01M136.4 231.9h.01M142.6 231.9h.01M148.8 231.9h.01M155.0 231.9h.01M161.2 231.9h.01M167.4 231.9h.01M173.6 231.9h.01M179.8 231.9h.01M186.0 231.9h.01M192.2 231.9h.01M198.4 231.9h.01M204.6 231.9h.01M210.8 231.9h.01M217.0 231.9h.01M223.2 231.9h.01M229.4 231.9h.01M49.6 238.7h.01M55.8 238.7h.01M62.0 238.7h.01M68.2 238.7h.01M74.4 238.7h.01M80.6 238.7h.01M86.8 238.7h.01M93.0 238.7h.01M99.2 238.7h.01M105.4 238.7h.01M111.6 238.7h.01M117.8 238.7h.01M124.0 238.7h.01M130.2 238.7h.01M136.4 238.7h.01M142.6 238.7h.01M148.8 238.7h.01M155.0 238.7h.01M161.2 238.7h.01M167.4 238.7h.01M173.6 238.7h.01M179.8 238.7h.01M186.0 238.7h.01M192.2 238.7h.01M198.4 238.7h.01M204.6 238.7h.01M210.8 238.7h.01M217.0 238.7h.01M223.2 238.7h.01M55.8 245.5h.01M62.0 245.5h.01M68.2 245.5h.01M74.4 245.5h.01M80.6 245.5h.01M86.8 245.5h.01M93.0 245.5h.01M99.2 245.5h.01M105.4 245.5h.01M111.6 245.5h.01M117.8 245.5h.01M124.0 245.5h.01M130.2 245.5h.01M136.4 245.5h.01M142.6 245.5h.01M148.8 245.5h.01M155.0 245.5h.01M161.2 245.5h.01M167.4 245.5h.01M173.6 245.5h.01M179.8 245.5h.01M186.0 245.5h.01M192.2 245.5h.01M198.4 245.5h.01M204.6 245.5h.01M210.8 245.5h.01M217.0 245.5h.01M223.2 245.5h.01M62.0 252.3h.01M68.2 252.3h.01M74.4 252.3h.01M80.6 252.3h.01M86.8 252.3h.01M93.0 252.3h.01M99.2 252.3h.01M105.4 252.3h.01M111.6 252.3h.01M117.8 252.3h.01M124.0 252.3h.01M130.2 252.3h.01M136.4 252.3h.01M142.6 252.3h.01M148.8 252.3h.01M155.0 252.3h.01M161.2 252.3h.01M167.4 252.3h.01M173.6 252.3h.01M179.8 252.3h.01M186.0 252.3h.01M192.2 252.3h.01M198.4 252.3h.01M204.6 252.3h.01M210.8 252.3h.01M217.0 252.3h.01M223.2 252.3h.01M68.2 259.2h.01M74.4 259.2h.01M80.6 259.2h.01M86.8 259.2h.01M93.0 259.2h.01M99.2 259.2h.01M105.4 259.2h.01M111.6 259.2h.01M117.8 259.2h.01M124.0 259.2h.01M130.2 259.2h.01M136.4 259.2h.01M142.6 259.2h.01M148.8 259.2h.01M155.0 259.2h.01M161.2 259.2h.01M167.4 259.2h.01M173.6 259.2h.01M179.8 259.2h.01M186.0 259.2h.01M192.2 259.2h.01M198.4 259.2h.01M204.6 259.2h.01M210.8 259.2h.01M217.0 259.2h.01M223.2 259.2h.01M68.2 266.0h.01M74.4 266.0h.01M80.6 266.0h.01M86.8 266.0h.01M93.0 266.0h.01M99.2 266.0h.01M105.4 266.0h.01M111.6 266.0h.01M117.8 266.0h.01M124.0 266.0h.01M130.2 266.0h.01M136.4 266.0h.01M142.6 266.0h.01M148.8 266.0h.01M155.0 266.0h.01M161.2 266.0h.01M167.4 266.0h.01M173.6 266.0h.01M179.8 266.0h.01M186.0 266.0h.01M192.2 266.0h.01M198.4 266.0h.01M204.6 266.0h.01M210.8 266.0h.01M217.0 266.0h.01M74.4 272.8h.01M80.6 272.8h.01M86.8 272.8h.01M93.0 272.8h.01M99.2 272.8h.01M105.4 272.8h.01M111.6 272.8h.01M117.8 272.8h.01M124.0 272.8h.01M130.2 272.8h.01M136.4 272.8h.01M142.6 272.8h.01M148.8 272.8h.01M155.0 272.8h.01M161.2 272.8h.01M167.4 272.8h.01M173.6 272.8h.01M179.8 272.8h.01M186.0 272.8h.01M192.2 272.8h.01M198.4 272.8h.01M204.6 272.8h.01M210.8 272.8h.01M74.4 279.6h.01M80.6 279.6h.01M86.8 279.6h.01M93.0 279.6h.01M99.2 279.6h.01M105.4 279.6h.01M111.6 279.6h.01M117.8 279.6h.01M124.0 279.6h.01M130.2 279.6h.01M136.4 279.6h.01M142.6 279.6h.01M148.8 279.6h.01M155.0 279.6h.01M161.2 279.6h.01M167.4 279.6h.01M173.6 279.6h.01M179.8 279.6h.01M186.0 279.6h.01M192.2 279.6h.01M198.4 279.6h.01M204.6 279.6h.01M80.6 286.4h.01M86.8 286.4h.01M93.0 286.4h.01M99.2 286.4h.01M105.4 286.4h.01M111.6 286.4h.01M117.8 286.4h.01M124.0 286.4h.01M130.2 286.4h.01M136.4 286.4h.01M142.6 286.4h.01M148.8 286.4h.01M155.0 286.4h.01M161.2 286.4h.01M167.4 286.4h.01M173.6 286.4h.01M179.8 286.4h.01M186.0 286.4h.01M192.2 286.4h.01M198.4 286.4h.01M86.8 293.3h.01M93.0 293.3h.01M99.2 293.3h.01M105.4 293.3h.01M111.6 293.3h.01M117.8 293.3h.01M124.0 293.3h.01M130.2 293.3h.01M136.4 293.3h.01M142.6 293.3h.01M148.8 293.3h.01M155.0 293.3h.01M161.2 293.3h.01M167.4 293.3h.01M173.6 293.3h.01M179.8 293.3h.01M186.0 293.3h.01M192.2 293.3h.01M86.8 300.1h.01M93.0 300.1h.01M99.2 300.1h.01M105.4 300.1h.01M111.6 300.1h.01M117.8 300.1h.01M124.0 300.1h.01M130.2 300.1h.01M136.4 300.1h.01M142.6 300.1h.01M148.8 300.1h.01M155.0 300.1h.01M161.2 300.1h.01M167.4 300.1h.01M173.6 300.1h.01M179.8 300.1h.01M186.0 300.1h.01M86.8 306.9h.01M93.0 306.9h.01M99.2 306.9h.01M105.4 306.9h.01M111.6 306.9h.01M117.8 306.9h.01M124.0 306.9h.01M130.2 306.9h.01M136.4 306.9h.01M142.6 306.9h.01M148.8 306.9h.01M155.0 306.9h.01M161.2 306.9h.01M167.4 306.9h.01M173.6 306.9h.01M179.8 306.9h.01M86.8 313.7h.01M93.0 313.7h.01M99.2 313.7h.01M105.4 313.7h.01M111.6 313.7h.01M117.8 313.7h.01M124.0 313.7h.01M130.2 313.7h.01M136.4 313.7h.01M142.6 313.7h.01M148.8 313.7h.01M155.0 313.7h.01M161.2 313.7h.01M86.8 320.5h.01M93.0 320.5h.01M99.2 320.5h.01M105.4 320.5h.01M111.6 320.5h.01M117.8 320.5h.01M99.2 327.4h.01"/>
+        <g class="map-net" fill="none">
+          <path class="net-line" d="M181.5 230.4 Q120 200 70.8 193.3"/>
+          <path class="net-line" d="M181.5 230.4 Q170 220 159.2 216.1"/>
+          <path class="net-line" d="M181.5 230.4 Q192 192 198.2 158.9"/>
+          <path class="net-line" d="M181.5 230.4 Q218 160 237.7 98.8"/>
+          <path class="net-line" d="M181.5 230.4 Q222 196 248.5 163.2"/>
+          <path class="net-line" d="M181.5 230.4 Q204 234 225.8 230.7"/>
+          <path class="net-line" d="M181.5 230.4 Q166 276 156 318.6"/>
+          <path class="net-line" d="M181.5 230.4 Q170 248 162.1 265.3"/>
+        </g>
+        <g class="map-nodes">
+          <circle class="node" cx="70.8" cy="193.3" r="4"/>
+          <circle class="node" cx="159.2" cy="216.1" r="4"/>
+          <circle class="node" cx="198.2" cy="158.9" r="4"/>
+          <circle class="node" cx="237.7" cy="98.8" r="4"/>
+          <circle class="node" cx="248.5" cy="163.2" r="4"/>
+          <circle class="node" cx="225.8" cy="230.7" r="4"/>
+          <circle class="node" cx="156" cy="318.6" r="4"/>
+          <circle class="node" cx="162.1" cy="265.3" r="4"/>
+          <circle class="node hub" cx="181.5" cy="230.4" r="6"/>
+        </g>
+        <g class="map-labels">
+          <text x="62" y="182">Windhoek</text>
+          <text x="247" y="92">Lilongwe</text>
+          <text x="258" y="167">Beira</text>
+          <text x="234" y="234">Maputo</text>
+          <text x="173" y="254" text-anchor="end">SARIMA Secretariat</text>
+        </g>
+      </svg>
+      <figcaption>One association, one network of practitioners across the SADC region.</figcaption>
+    </figure>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><span class="stat-n" data-count="20" data-suffix="+">0</span><span class="stat-l">years serving the region</span></div>
+    <div class="stat"><span class="stat-n" data-count="3">0</span><span class="stat-l">strategic focus areas</span></div>
+    <div class="stat"><span class="stat-n" data-count="6">0</span><span class="stat-l">accredited online short courses</span></div>
+    <div class="stat"><span class="stat-n" data-count="112">0</span><span class="stat-l">IPRC training points on offer</span></div>
+  </div>
+</section>
+
+<main class="main" id="main">
+  <div class="thread" aria-hidden="true">
+    <span class="thread-label thread-top">Research</span>
+    <span class="thread-track"><span class="thread-fill" id="thread-fill"></span></span>
+    <span class="thread-label thread-bottom">Innovation</span>
+  </div>
+
+  <!-- ======================= ABOUT ======================= -->
+  <section class="section" id="about">
+    <div class="sec-head reveal">
+      <p class="eyebrow">About SARIMA</p>
+      <h2>A professional home for the people behind the research.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <p class="lede">SARIMA is a registered not-for-profit company that brings together research and
+          innovation management practitioners to strengthen these disciplines and institutional
+          capabilities across the SADC region.</p>
+        <p>It operates at an individual, institutional, national and international level, across the
+          continuum from research, where new knowledge that can drive innovation is created, through
+          to innovation, which translates that knowledge into spin-offs, products and services.
+          SARIMA has anchored itself as a key role player in the SADC regional system of research
+          and innovation: providing thought leadership and advocacy, a platform for best practice,
+          and championing efforts to build capacity within institutions and for individual practitioners.</p>
+        <p>Behind it stands a vast network of strategic partners and funders within Africa and abroad,
+          passionate volunteer committee members, and a small but dedicated operational and project team.</p>
+      </div>
+      <ul class="about-chips reveal" aria-label="What SARIMA does">
+        <li><svg viewBox="0 0 24 24"><path d="M12 3 2 8l10 5 8-4v6h2V8L12 3zM6 12.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-3.5l-6 3-6-3z"/></svg>Customised training &amp; professional development</li>
+        <li><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.4 1.2 4.5 3 5.7V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.3c1.8-1.2 3-3.3 3-5.7a7 7 0 0 0-7-7zm-3 18h6v2H9v-2z"/></svg>Thought leadership</li>
+        <li><svg viewBox="0 0 24 24"><path d="M18 8h-1V6a5 5 0 0 0-10 0v2H6v2h1v8a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-8h1V8zm-9-2a3 3 0 0 1 6 0v2H9V6z" transform="rotate(180 12 13)"/><path d="M4 11h3v2H4zm13 0h3v2h-3zM11 3h2v3h-2z"/></svg>Advocacy</li>
+        <li><svg viewBox="0 0 24 24"><path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm-7 15a7 7 0 0 1 14 0v1H5v-1z"/></svg>Awareness campaigns</li>
+        <li><svg viewBox="0 0 24 24"><path d="M7 5a3 3 0 1 1-.01 6.01A3 3 0 0 1 7 5zm10 8a3 3 0 1 1-.01 6.01A3 3 0 0 1 17 13zM8.4 10.6l7.2 2.8-.7 1.9-7.2-2.8.7-1.9z"/></svg>Networking &amp; knowledge exchange</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ======================= FOCUS AREAS ======================= -->
+  <section class="section" id="focus">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Focus areas</p>
+      <h2>Three portfolios, one continuum.</h2>
+    </div>
+    <div class="focus-grid">
+      <article class="focus-card reveal">
+        <h3>Research Management</h3>
+        <p class="focus-vp"><span>Vice-President</span>Nnenesi Kgabi</p>
+        <p>Developing capacity and elevating the profession of research management in the region and globally.</p>
+        <details>
+          <summary>Key activities</summary>
+          <ul>
+            <li>Extend SARIMA's professionalisation programmes into the rest of Africa and beyond</li>
+            <li>Promote integration of the Professional Competency Framework in the workplace</li>
+            <li>Move from face-to-face courses to technology-driven training platforms</li>
+            <li>Implement regional RM forums for up-coming to mid-level research managers</li>
+          </ul>
+        </details>
+      </article>
+      <article class="focus-card reveal">
+        <h3>Innovation &amp; Technology Transfer</h3>
+        <p class="focus-vp"><span>Vice-President</span>Mandy-Lee Pietersen</p>
+        <p>Developing capacity and elevating the profession of technology transfer in the region and globally.</p>
+        <details>
+          <summary>Key activities</summary>
+          <ul>
+            <li>Facilitate professionalisation of the I&amp;TT discipline in the region</li>
+            <li>Design and implement capacity development initiatives</li>
+            <li>Facilitate knowledge exchange among I&amp;TT professionals</li>
+            <li>Support commercialisation of technologies and monitor I&amp;TT in the region</li>
+          </ul>
+        </details>
+      </article>
+      <article class="focus-card reveal">
+        <h3>Africa Engagement</h3>
+        <p class="focus-vp"><span>Vice-President</span>Sidney Engelbrecht</p>
+        <p>Promoting and strengthening R&amp;I management throughout Africa, leveraging the RM and I&amp;TT portfolios.</p>
+        <details>
+          <summary>Key activities</summary>
+          <ul>
+            <li>Strengthen the SADC Focal Points initiative</li>
+            <li>Professional development and capacity building across the region</li>
+            <li>Create awareness and promote best practice in R&amp;I management</li>
+            <li>Encourage local R&amp;I knowledge networks for exchange</li>
+          </ul>
+        </details>
+      </article>
+    </div>
+  </section>
+
+  <!-- ======================= PROFESSIONALISATION ======================= -->
+  <section class="section" id="professionalisation">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Professionalisation</p>
+      <h2>Recognition that travels with you.</h2>
+      <p class="sec-sub">SARIMA developed competency frameworks for research management and innovation management,
+        and partners with international peer bodies so practitioners can earn accredited professional status,
+        recognised locally and internationally.</p>
+    </div>
+    <div class="tabs reveal" role="tablist" aria-label="Professional recognition routes">
+      <button class="tab is-active" id="tab-rm" role="tab" aria-selected="true" aria-controls="panel-rm">Research Management <span>IPRC</span></button>
+      <button class="tab" id="tab-tt" role="tab" aria-selected="false" aria-controls="panel-tt">Technology Transfer <span>ATTP</span></button>
+    </div>
+    <div class="panel is-active" id="panel-rm" role="tabpanel" aria-labelledby="tab-rm">
+      <div class="route-grid">
+        <article class="route">
+          <p class="route-tier">Entry</p>
+          <h3>RAP</h3>
+          <p class="route-name">Research Administration Professional</p>
+          <p>New entrants, or practitioners with 3+ years in a research management role who do not yet meet RMP requirements.</p>
+          <p class="route-cost">R3 000 Africa · R6 000 outside Africa</p>
+        </article>
+        <article class="route">
+          <p class="route-tier">Mid to advanced</p>
+          <h3>RMP</h3>
+          <p class="route-name">Research Management Professional</p>
+          <p>Mid- to advanced-career research managers employed in a research management position (3 to 5 years).</p>
+          <p class="route-cost">R5 000 Africa · R10 000 outside Africa</p>
+        </article>
+        <article class="route">
+          <p class="route-tier">Senior</p>
+          <h3>SRMP</h3>
+          <p class="route-name">Senior Research Management Professional</p>
+          <p>Senior research managers serving in a leadership or strategic role (more than 5 years).</p>
+          <p class="route-cost">R8 000 Africa · R16 000 outside Africa</p>
+        </article>
+      </div>
+      <p class="panel-note">Accreditation body: International Professional Recognition Council (IPRC).
+        Calls are announced by SARIMA and on the <a href="https://iprcouncil.com" target="_blank" rel="noopener">IPRC website</a>. Fees exclude VAT.</p>
+    </div>
+    <div class="panel" id="panel-tt" role="tabpanel" aria-labelledby="tab-tt" hidden>
+      <div class="route-grid two">
+        <article class="route">
+          <p class="route-tier">Established</p>
+          <h3>RTTP</h3>
+          <p class="route-name">Registered Technology Transfer Professional</p>
+          <p>For practitioners with the core competencies and an established track record of more than 3 years.</p>
+          <p class="route-cost">US $300</p>
+        </article>
+        <article class="route">
+          <p class="route-tier">Aspiring</p>
+          <h3>Candidate RTTP</h3>
+          <p class="route-name">Candidate Technology Transfer Professional</p>
+          <p>For new entrants (6 months and up) intending to apply for full RTTP status after 3 years.</p>
+          <p class="route-cost">US $50</p>
+        </article>
+      </div>
+      <p class="panel-note">Accreditation body: Alliance of Technology Transfer Professionals (ATTP).
+        Apply at <a href="https://attp.info" target="_blank" rel="noopener">attp.info/register</a>.</p>
+    </div>
+  </section>
+
+  <!-- ======================= COURSES ======================= -->
+  <section class="section" id="courses">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Online short courses</p>
+      <h2>Six courses. <span class="gold-num" data-count="112">112</span> training points.</h2>
+      <p class="sec-sub">Accredited, digitised short courses that build skills and earn IPRC training points,
+        usable when applying for, renewing or upgrading a professional designation. Complete all six and
+        the IPRC issues a Certificate of Completion.</p>
+    </div>
+    <div class="course-grid">
+      <article class="course reveal"><span class="pts">20 pts</span><h3>Fundamentals of Research Management</h3><p>A range of knowledge and experiences that promote the value of the research management profession.</p></article>
+      <article class="course reveal"><span class="pts">20 pts</span><h3>Research Grants &amp; Contracts Management</h3><p>How post-award management fits into the grant process, and how to run projects to budget and funder expectations.</p></article>
+      <article class="course reveal"><span class="pts">20 pts</span><h3>Research Ethics &amp; Integrity</h3><p>Promote, foster and support research ethics, integrity, compliance and responsible conduct.</p></article>
+      <article class="course reveal"><span class="pts">12 pts</span><h3>Intro to IP, Technology Transfer &amp; Commercialisation</h3><p>A foundation for managing intellectual property, technology transfer and commercialisation in a public research organisation.</p></article>
+      <article class="course reveal"><span class="pts">20 pts</span><h3>Research Programme Evaluation</h3><p>Design, guide and implement effective programme evaluation with confidence.</p></article>
+      <article class="course reveal"><span class="pts">20 pts</span><h3>Gender in Science, Technology &amp; Innovation</h3><p>The mutual shaping of gender and STI in Africa's national systems of innovation.</p></article>
+    </div>
+  </section>
+
+  <!-- ======================= EVENTS ======================= -->
+  <section class="section" id="events">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Upcoming events</p>
+      <h2>Learn together, in season.</h2>
+    </div>
+    <div class="filters reveal" role="group" aria-label="Filter events">
+      <button class="pill is-active" data-filter="all">All</button>
+      <button class="pill" data-filter="training">Training courses</button>
+      <button class="pill" data-filter="webinar">Webinars</button>
+      <button class="pill" data-filter="network">Networking &amp; conferences</button>
+    </div>
+    <ul class="event-list" id="event-list">
+      <li class="event reveal" data-cat="training"><span class="ev-date">1–2 Jul<br>2026</span><div><h3>Practical insights into negotiating and structuring licensing deals</h3><p>Key terms of licence agreements, deal structuring and negotiating tactics.</p></div><span class="ev-tag">Virtual course</span></li>
+      <li class="event reveal" data-cat="training"><span class="ev-date">9 Jul<br>2026</span><div><h3>Open Research in Practice</h3><p>Data management, sharing, transparency and new models of scholarly communication, hosted by COP-ROOI.</p></div><span class="ev-tag">Virtual course</span></li>
+      <li class="event reveal" data-cat="training"><span class="ev-date">21 Jul<br>2026</span><div><h3>Introduction to IP, Technology Transfer &amp; Commercialisation</h3><p>Six-week accredited short course; 12 IPRC training points.</p></div><span class="ev-tag">Short course</span></li>
+      <li class="event reveal" data-cat="training"><span class="ev-date">23 Jul<br>2026</span><div><h3>Strategic Portfolio Design for Research and Innovation Synergy</h3><p>Aligning institutional research portfolios with innovation priorities, in two parts.</p></div><span class="ev-tag">Masterclass</span></li>
+      <li class="event reveal" data-cat="network"><span class="ev-date">27–28 Jul<br>2026</span><div><h3>Biosafety and Environmental Ethics Symposium 2026</h3><p>Two days of shared practice across the region's biosafety and ethics community.</p></div><span class="ev-tag">Symposium</span></li>
+      <li class="event reveal" data-cat="webinar"><span class="ev-date">29 Jul<br>2026</span><div><h3>Data, Decisions and Discovery: building an AI-ready research ecosystem</h3><p>Infrastructure, data literacy and cross-functional strategy for AI across the research lifecycle.</p></div><span class="ev-tag">Webinar</span></li>
+      <li class="event reveal" data-cat="training"><span class="ev-date">12 Aug<br>2026</span><div><h3>Know how to manage your know-how</h3><p>Tacit knowledge as intellectual property in technology transfer.</p></div><span class="ev-tag">Virtual course</span></li>
+      <li class="event reveal" data-cat="training"><span class="ev-date">18 Aug<br>2026</span><div><h3>Programme Evaluation</h3><p>Conceptual frameworks, metrics and indicators, evaluation analytics and communicating results.</p></div><span class="ev-tag">Short course</span></li>
+      <li class="event reveal" data-cat="network"><span class="ev-date">Save<br>the date</span><div><h3>SARIMA Conference 2026, Johannesburg</h3><p>The region's annual gathering of research and innovation management practitioners.</p></div><span class="ev-tag">Conference</span></li>
+      <li class="event reveal" data-cat="webinar"><span class="ev-date">Date<br>TBA</span><div><h3>IPRC Professionalisation webinar</h3><p>The routes, the portfolio of evidence and how professional recognition works.</p></div><span class="ev-tag">Webinar</span></li>
+    </ul>
+  </section>
+
+  <!-- ======================= PROJECTS ======================= -->
+  <section class="section wide" id="projects">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Projects</p>
+      <h2>A growing portfolio of multilateral programmes.</h2>
+      <p class="sec-sub">Drag or scroll sideways.</p>
+    </div>
+    <div class="proj-scroll reveal" id="proj-scroll" tabindex="0" aria-label="Project cards, scroll horizontally">
+      <article class="proj"><h3>Building It Forward for Research (Management) Leadership</h3><p>Strengthening Research Support Offices in Southern African universities to drive research excellence and attract external funding.</p></article>
+      <article class="proj"><h3>South African Technology Transfer Survey (SATTS-3)</h3><p>The third national survey of IP and technology transfer metrics, on behalf of DSTI and NIPMO.</p></article>
+      <article class="proj"><h3>Professional Recognition of Research Managers</h3><p>Establishing the IPRC as an autonomous body and rolling out a Pan-African professional recognition programme.</p></article>
+      <article class="proj"><h3>Science Granting Councils Initiative (SGCI I &amp; II)</h3><p>Building sustainable research and grants management capacity in science granting councils across Sub-Saharan Africa.</p></article>
+      <article class="proj"><h3>Strengthening Research &amp; Innovation Management II (SRIM II)</h3><p>SADC-wide programme with the SADC Secretariat and member states, funded by the South African DSI.</p></article>
+      <article class="proj"><h3>Pathways to Technology Commercialisation, Botswana</h3><p>A bespoke capacity-building programme for institutions establishing technology transfer functions.</p></article>
+      <article class="proj"><h3>Africa Europe Innovation Partnership</h3><p>Accelerating innovation collaboration between African and European ecosystems.</p></article>
+      <article class="proj"><h3>BRECcIA: water &amp; food security research capacity</h3><p>Self-sustaining research capacity for food and water security in the drylands of Sub-Saharan Africa.</p></article>
+      <article class="proj"><h3>SToRM: collaboration &amp; professionalisation in RM</h3><p>Strengthening research management capacity and collaboration across SADC and EU higher education institutions.</p></article>
+    </div>
+  </section>
+
+  <!-- ======================= PEOPLE ======================= -->
+  <section class="section" id="people">
+    <div class="sec-head reveal">
+      <p class="eyebrow">People</p>
+      <h2>Led by volunteers, run with care.</h2>
+      <p class="sec-sub">The committee are volunteers elected by the membership to provide strategic direction
+        and oversight, so the organisation creates value for members and the broader R&amp;I community in the SADC region.</p>
+    </div>
+    <div class="people-grid">
+      <figure class="person lead reveal"><img src="assets/people/anna.jpg" alt="Anna Matros-Goreses" loading="lazy"><figcaption><strong>Anna Matros-Goreses</strong><em class="role gold-role">President</em><span>Namibia University of Science and Technology, Namibia</span></figcaption></figure>
+      <figure class="person lead reveal"><img src="assets/people/doug.jpg" alt="Doug Sanyahumbi" loading="lazy"><figcaption><strong>Doug Sanyahumbi</strong><em class="role gold-role">President-Elect</em><span>Independent, Malawi</span></figcaption></figure>
+      <figure class="person lead reveal"><img src="assets/people/emilia.png" alt="Emilia Afonso Nhalevilo" loading="lazy"><figcaption><strong>Emilia Afonso Nhalevilo</strong><em class="role gold-role">Past-President</em><span>Pungue University, Mozambique</span></figcaption></figure>
+      <figure class="person reveal"><img src="assets/people/nnenesi.jpg" alt="Nnenesi Kgabi" loading="lazy"><figcaption><strong>Nnenesi Kgabi</strong><em class="role">VP · Research Management</em><span>North-West University, South Africa</span></figcaption></figure>
+      <figure class="person reveal"><img src="assets/people/mandylee.jpg" alt="Mandy-Lee Pietersen" loading="lazy"><figcaption><strong>Mandy-Lee Pietersen</strong><em class="role">VP · Innovation &amp; Technology Transfer</em><span>University of the Witwatersrand, South Africa</span></figcaption></figure>
+      <figure class="person reveal"><img src="assets/people/sidney.webp" alt="Sidney Engelbrecht" loading="lazy"><figcaption><strong>Sidney Engelbrecht</strong><em class="role">VP · Africa Engagement</em><span>North-West University, South Africa</span></figcaption></figure>
+      <figure class="person reveal"><img src="assets/people/retha.png" alt="Retha Visagie" loading="lazy"><figcaption><strong>Retha Visagie</strong><em class="role">Committee Member</em><span>University of South Africa</span></figcaption></figure>
+      <figure class="person reveal"><img src="assets/people/eleni.jpg" alt="Eleni Flack-Davison" loading="lazy"><figcaption><strong>Eleni Flack-Davison</strong><em class="role">Committee Member</em><span>University of the Witwatersrand, South Africa</span></figcaption></figure>
+      <figure class="person reveal"><img src="assets/people/thato.jpg" alt="Thato Tantsi" loading="lazy"><figcaption><strong>Thato Tantsi</strong><em class="role">Committee Member</em><span>Nelson Mandela University, South Africa</span></figcaption></figure>
+      <figure class="person reveal"><img src="assets/people/ruwaida.jpg" alt="Ruwaida Mohideen" loading="lazy"><figcaption><strong>Ruwaida Mohideen</strong><em class="role">Committee Member</em><span>University of Johannesburg, South Africa</span></figcaption></figure>
+      <figure class="person reveal"><img src="assets/people/gift.jpg" alt="Gift Mehlana" loading="lazy"><figcaption><strong>Gift Mehlana</strong><em class="role">Committee Member</em><span>Midlands State University, Zimbabwe</span></figcaption></figure>
+      <figure class="person reveal"><img src="assets/people/dineo.jpg" alt="Dineo Masokoane" loading="lazy"><figcaption><strong>Dineo Masokoane</strong><em class="role">Committee Member</em><span>University of the Witwatersrand, South Africa</span></figcaption></figure>
+      <figure class="person reveal"><img src="assets/people/chrispin.png" alt="Chrispin Kaphaika" loading="lazy"><figcaption><strong>Chrispin Kaphaika</strong><em class="role">Committee Member</em><span>Lilongwe University of Agriculture and Natural Resources, Malawi</span></figcaption></figure>
+      <figure class="person reveal"><img src="assets/people/mandyj.jpg" alt="Mandy Jampies" loading="lazy"><figcaption><strong>Mandy Jampies</strong><em class="role">Co-opted Member</em><span>University of the Free State, South Africa</span></figcaption></figure>
+    </div>
+    <h3 class="team-head reveal">Project &amp; operations team</h3>
+    <div class="team-row reveal">
+      <figure class="mini"><img src="assets/people/nelisha.png" alt="Nelisha Naidoo" loading="lazy"><figcaption><strong>Nelisha Naidoo</strong><span>General Manager</span></figcaption></figure>
+      <figure class="mini"><img src="assets/people/kim.png" alt="Kim Bonaconsa" loading="lazy"><figcaption><strong>Kim Bonaconsa</strong><span>Operations Manager</span></figcaption></figure>
+      <figure class="mini"><img src="assets/people/edgar.png" alt="Edgar Mutemararo" loading="lazy"><figcaption><strong>Edgar Mutemararo</strong><span>Finance Manager</span></figcaption></figure>
+      <figure class="mini"><img src="assets/people/zimasa.png" alt="Zimasa Sobuza" loading="lazy"><figcaption><strong>Zimasa Sobuza</strong><span>Project Manager</span></figcaption></figure>
+      <figure class="mini"><img src="assets/people/prenitha.jpg" alt="Prenitha Sewnarain" loading="lazy"><figcaption><strong>Prenitha Sewnarain</strong><span>Project Manager</span></figcaption></figure>
+      <figure class="mini"><img src="assets/people/armand.jpeg" alt="Armand Barnard" loading="lazy"><figcaption><strong>Armand Barnard</strong><span>Digital Communications</span></figcaption></figure>
+      <figure class="mini"><img src="assets/people/karin.jpg" alt="Karin Dyason" loading="lazy"><figcaption><strong>Karin Dyason</strong><span>Project Manager</span></figcaption></figure>
+    </div>
+  </section>
+
+  <!-- ======================= MEMBERSHIP ======================= -->
+  <section class="section band" id="membership">
+    <div class="band-inner">
+      <div class="band-copy reveal">
+        <p class="eyebrow gold">Membership</p>
+        <h2>Join the network that knows your work.</h2>
+        <ul class="benefits">
+          <li>International recognition as a Research Management or Technology Transfer professional</li>
+          <li>Alerts to strategic funding and training opportunities</li>
+          <li>Mobility, mentorship and funding opportunities abroad</li>
+          <li>Access to SARIMA's network of mentors, trainers and facilitators</li>
+          <li>Discounts on conferences, workshops and training events</li>
+          <li>A vote in the BGM and in electing the Executive Committee</li>
+        </ul>
+        <a class="btn btn-gold" href="https://www.sarima.co.za/membership-fees/" target="_blank" rel="noopener">Join / Renew on sarima.co.za</a>
+      </div>
+      <div class="calc reveal" aria-label="Membership fee calculator">
+        <h3>What would membership cost?</h3>
+        <div class="calc-row" role="group" aria-label="Membership type">
+          <button class="seg is-active" data-type="regular">Individual</button>
+          <button class="seg" data-type="student">Student</button>
+          <button class="seg" data-type="org">Organisation</button>
+        </div>
+        <div class="calc-row" id="term-row" role="group" aria-label="Term">
+          <button class="seg small is-active" data-term="1">1-year</button>
+          <button class="seg small" data-term="3">3-year</button>
+        </div>
+        <div class="calc-row" id="size-row" role="group" aria-label="Organisation size" hidden>
+          <button class="seg small is-active" data-size="10">10 members</button>
+          <button class="seg small" data-size="15">15</button>
+          <button class="seg small" data-size="20">20</button>
+        </div>
+        <p class="calc-price"><span id="calc-amount">R 985.14</span><span class="calc-excl">excl. VAT</span></p>
+        <p class="calc-note" id="calc-note">Regular individual membership, per year.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= NEWS ======================= -->
+  <section class="section" id="news">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Latest</p>
+      <h2>From the secretariat.</h2>
+    </div>
+    <div class="news-grid">
+      <a class="news-card reveal" href="https://www.sarima.co.za/" target="_blank" rel="noopener"><span class="news-k">Newsletter</span><h3>April 2026 edition</h3><p>The latest round-up of association news, opportunities and member stories.</p><span class="news-go">Read it</span></a>
+      <a class="news-card reveal" href="https://www.sarima.co.za/events/" target="_blank" rel="noopener"><span class="news-k">Symposium</span><h3>Biosafety &amp; environmental ethics 2026</h3><p>27 to 28 July 2026. Registration open.</p><span class="news-go">Details</span></a>
+      <a class="news-card reveal" href="https://www.sarima.co.za/sarima-online-short-courses/" target="_blank" rel="noopener"><span class="news-k">Short course</span><h3>Intro to IP, TT &amp; Commercialisation</h3><p>Next cohort starts 21 July 2026. 12 IPRC points.</p><span class="news-go">Enrol</span></a>
+      <a class="news-card reveal" href="https://www.sarima.co.za/wp-content/uploads/2022/08/SARIMA-20-YEAR-CELEBRATION-REPORT-WEB-FINAL.pdf" target="_blank" rel="noopener"><span class="news-k">Milestone</span><h3>20-year celebration report</h3><p>Two decades of building the profession, with keynotes from McLean Sibanda and Jacqueline Barnett.</p><span class="news-go">View the report</span></a>
+    </div>
+  </section>
+
+  <!-- ======================= CONTACT / FOOTER ======================= -->
+  <footer class="footer" id="contact">
+    <div class="foot-grid">
+      <div>
+        <svg class="brand-mark big" viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="6" y="19" width="36" height="10" rx="2" fill="#9AA5B1" transform="rotate(-45 24 24)"/>
+          <rect x="6" y="19" width="36" height="10" rx="2" fill="#E8A33D" transform="rotate(45 24 24)"/>
+        </svg>
+        <p class="foot-name">SARIMA</p>
+        <p class="foot-tag">Southern African Research &amp; Innovation Management Association</p>
+      </div>
+      <div>
+        <h3>Secretariat</h3>
+        <p><a href="mailto:sarima@sarima.co.za">sarima@sarima.co.za</a><br>+27 (0)87 265 0871</p>
+        <p>Building E, Cambridge Office Park<br>5 Bauhinia St, Highveld Techno Park<br>Centurion, 0169, South Africa</p>
+      </div>
+      <div>
+        <h3>Postal</h3>
+        <p>PostNet Suite 310<br>Private Bag X25<br>Lynnwood Ridge, 0040<br>Pretoria, South Africa</p>
+      </div>
+      <div>
+        <h3>Connect</h3>
+        <p><a href="https://twitter.com/SARIMA20" target="_blank" rel="noopener">X / Twitter</a><br>
+        <a href="https://www.linkedin.com/company/southern-african-research-and-innovation-management-association/" target="_blank" rel="noopener">LinkedIn</a><br>
+        <a href="https://www.sarima.co.za/" target="_blank" rel="noopener">sarima.co.za</a></p>
+      </div>
+    </div>
+    <p class="foot-note">Design concept for review. This is not the live SARIMA website; all content belongs to SARIMA and appears here as placeholder material. Visit <a href="https://www.sarima.co.za/" target="_blank" rel="noopener">www.sarima.co.za</a> for the real thing.</p>
+  </footer>
+</main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
