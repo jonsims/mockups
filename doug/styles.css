@@ -8,7 +8,9 @@
   --navy-2: #10304F;
   --gold: #E8A33D;
   --gold-soft: #F3C77F;
+  --gold-ink: #8A6112;   /* gold for small text on white — 5.5:1 */
   --silver: #9AA5B1;
+  --silver-ink: #5C6B7A; /* silver for small text on white — 5.4:1 */
   --line: #E2E6EB;
   --paper: #FCFCFA;
   --card: #FFFFFF;
@@ -189,7 +191,7 @@ button { font-family: var(--body); cursor: pointer; }
   font-family: var(--body); font-size: 9.5px; fill: #8FA6BD; font-weight: 600;
 }
 .hero-map figcaption {
-  margin-top: 0.8rem; font-size: 0.82rem; color: #7E93A9; text-align: center;
+  margin-top: 0.8rem; font-size: 0.82rem; color: #8FA6BD; text-align: center;
 }
 
 .hero-stats {
@@ -223,7 +225,7 @@ button { font-family: var(--body); cursor: pointer; }
   font-size: 0.62rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
   padding: 0.28rem 0.6rem; border-radius: 999px; white-space: nowrap;
 }
-.thread-top { top: 0; background: var(--paper); color: #B07A17; border: 1px solid var(--gold); }
+.thread-top { top: 0; background: var(--paper); color: var(--gold-ink); border: 1px solid var(--gold); }
 .thread-bottom { bottom: 0; background: var(--ink); color: var(--gold); border: 1px solid #ffffff2e; }
 
 .section { max-width: 68rem; margin: 0 auto; padding: 5.5rem 1.4rem 2rem; }
@@ -231,7 +233,7 @@ button { font-family: var(--body); cursor: pointer; }
 .sec-head { max-width: 46rem; margin-bottom: 2.6rem; }
 .sec-head h2 { font-size: clamp(1.9rem, 3.4vw, 2.7rem); font-weight: 800; }
 .sec-sub { margin-top: 1rem; color: var(--ink-soft); }
-.gold-num { color: var(--gold); }
+.gold-num { color: #C87E1B; } /* gold for display digits on white — 3.2:1, passes large-text */
 
 /* reveals */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.6s, transform 0.6s; }
@@ -260,7 +262,7 @@ button { font-family: var(--body); cursor: pointer; }
 .focus-vp { font-size: 0.85rem; color: var(--ink-soft); }
 .focus-vp span {
   display: block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
-  text-transform: uppercase; color: var(--silver);
+  text-transform: uppercase; color: var(--silver-ink);
 }
 .focus-card > p:not(.focus-vp) { color: var(--ink-soft); font-size: 0.95rem; flex: 1; }
 .focus-card details { border-top: 1px solid var(--line); padding-top: 0.8rem; }
@@ -279,11 +281,11 @@ button { font-family: var(--body); cursor: pointer; }
   padding: 0.65rem 1.3rem; font-weight: 700; font-size: 0.95rem; color: var(--ink-soft);
 }
 .tab span {
-  font-size: 0.72rem; font-weight: 700; color: var(--silver); margin-left: 0.4rem;
+  font-size: 0.72rem; font-weight: 700; color: var(--silver-ink); margin-left: 0.4rem;
   letter-spacing: 0.08em;
 }
 .tab.is-active { background: var(--brand); border-color: var(--brand); color: #fff; }
-.tab.is-active span { color: #BFD4EE; }
+.tab.is-active span { color: #D6E4F5; }
 .panel { display: none; }
 .panel.is-active { display: block; }
 .route-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
@@ -294,7 +296,7 @@ button { font-family: var(--body); cursor: pointer; }
 }
 .route-tier {
   font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 0.5rem;
+  color: var(--gold-ink); margin-bottom: 0.5rem;
 }
 .route h3 { font-size: 1.9rem; font-weight: 800; color: var(--brand); }
 .route-name { font-weight: 700; font-size: 0.92rem; margin: 0.2rem 0 0.6rem; }
@@ -314,7 +316,7 @@ button { font-family: var(--body); cursor: pointer; }
 .course:hover { transform: translateY(-3px); box-shadow: 0 10px 26px #0b1b2b14; }
 .course .pts {
   position: absolute; top: 1.1rem; right: 1.1rem;
-  background: #FBF1DE; color: #9A6A14; border-radius: 999px;
+  background: #FBF1DE; color: #7A5410; border-radius: 999px;
   font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.7rem;
 }
 .course h3 { font-size: 1.08rem; margin-bottom: 0.5rem; padding-right: 4rem; }
@@ -343,7 +345,7 @@ button { font-family: var(--body); cursor: pointer; }
 .event p { font-size: 0.86rem; color: var(--ink-soft); margin-top: 0.15rem; }
 .ev-tag {
   font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--silver); white-space: nowrap;
+  color: var(--silver-ink); white-space: nowrap;
 }
 
 /* ============ Projects ============ */
@@ -376,7 +378,7 @@ button { font-family: var(--body); cursor: pointer; }
 .person figcaption { margin-top: 0.6rem; font-size: 0.85rem; }
 .person strong { display: block; font-size: 0.95rem; }
 .person .role { display: block; font-style: normal; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.04em; color: var(--brand); margin: 0.15rem 0; text-transform: uppercase; }
-.person .gold-role { color: #B07A17; }
+.person .gold-role { color: var(--gold-ink); }
 .person span { color: var(--ink-soft); font-size: 0.78rem; line-height: 1.35; display: block; }
 .person.lead img { border: 3px solid var(--gold); }
 .team-head { margin: 3rem 0 1.2rem; font-size: 1.2rem; }
@@ -433,7 +435,7 @@ button { font-family: var(--body); cursor: pointer; }
 .news-card:hover { transform: translateY(-3px); box-shadow: 0 10px 26px #0b1b2b14; }
 .news-k {
   font-size: 0.7rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 .news-card h3 { font-size: 1.05rem; }
 .news-card p { font-size: 0.85rem; color: var(--ink-soft); flex: 1; }
@@ -446,7 +448,7 @@ button { font-family: var(--body); cursor: pointer; }
 }
 .foot-grid {
   max-width: 68rem; margin: 0 auto 2.5rem;
-  display: grid; grid-template-columns: 1.3fr 1fr 1fr 0.8fr; gap: 2.5rem;
+  display: grid; grid-template-columns: 1.2fr 1fr 0.9fr 1fr 0.7fr; gap: 2.2rem;
 }
 .brand-mark.big { width: 40px; height: 40px; margin-bottom: 0.8rem; }
 .foot-name { font-family: var(--disp); font-weight: 800; font-size: 1.3rem; color: #fff; }
@@ -458,9 +460,13 @@ button { font-family: var(--body); cursor: pointer; }
 .footer p { font-size: 0.9rem; margin-bottom: 0.8rem; }
 .footer a { color: #DCE6F1; }
 .footer a:hover { color: var(--gold); }
+.foot-legal {
+  max-width: 68rem; margin: 0 auto 0.9rem; padding-top: 1.6rem;
+  border-top: 1px solid #ffffff1f; font-size: 0.8rem;
+}
+.foot-legal a { color: #B9C6D4; }
 .foot-note {
-  max-width: 68rem; margin: 0 auto; padding-top: 1.6rem;
-  border-top: 1px solid #ffffff1f; font-size: 0.8rem; color: #7E93A9;
+  max-width: 68rem; margin: 0 auto; font-size: 0.8rem; color: #8FA6BD;
 }
 
 /* ============ Responsive ============ */

@@ -165,7 +165,10 @@
     var pills = document.querySelectorAll(".pill");
     pills.forEach(function (pill) {
       pill.addEventListener("click", function () {
-        pills.forEach(function (p) { p.classList.toggle("is-active", p === pill); });
+        pills.forEach(function (p) {
+          p.classList.toggle("is-active", p === pill);
+          p.setAttribute("aria-pressed", p === pill ? "true" : "false");
+        });
         var f = pill.getAttribute("data-filter");
         document.querySelectorAll("#event-list .event").forEach(function (ev) {
           ev.classList.toggle("hide", f !== "all" && ev.getAttribute("data-cat") !== f);
@@ -224,26 +227,20 @@
       }
       requestAnimationFrame(step);
     }
-    document.querySelectorAll(".seg[data-type]").forEach(function (b) {
-      b.addEventListener("click", function () {
-        document.querySelectorAll(".seg[data-type]").forEach(function (x) { x.classList.toggle("is-active", x === b); });
-        state.type = b.getAttribute("data-type");
-        renderCalc();
+    function segGroup(attr, key) {
+      document.querySelectorAll(".seg[data-" + attr + "]").forEach(function (b) {
+        b.addEventListener("click", function () {
+          document.querySelectorAll(".seg[data-" + attr + "]").forEach(function (x) {
+            x.classList.toggle("is-active", x === b);
+            x.setAttribute("aria-pressed", x === b ? "true" : "false");
+          });
+          state[key] = b.getAttribute("data-" + attr);
+          renderCalc();
+        });
       });
-    });
-    document.querySelectorAll(".seg[data-term]").forEach(function (b) {
-      b.addEventListener("click", function () {
-        document.querySelectorAll(".seg[data-term]").forEach(function (x) { x.classList.toggle("is-active", x === b); });
-        state.term = b.getAttribute("data-term");
-        renderCalc();
-      });
-    });
-    document.querySelectorAll(".seg[data-size]").forEach(function (b) {
-      b.addEventListener("click", function () {
-        document.querySelectorAll(".seg[data-size]").forEach(function (x) { x.classList.toggle("is-active", x === b); });
-        state.size = b.getAttribute("data-size");
-        renderCalc();
-      });
-    });
+    }
+    segGroup("type", "type");
+    segGroup("term", "term");
+    segGroup("size", "size");
   }
 })();
