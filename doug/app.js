@@ -176,6 +176,140 @@
       });
     });
 
+    /* ---------- modal manager ---------- */
+    var modal = document.getElementById("modal");
+    var modalTitle = document.getElementById("modal-title");
+    var modalBody = document.getElementById("modal-body");
+    var lastFocus = null;
+    function openModal(title, buildBody) {
+      lastFocus = document.activeElement;
+      modalTitle.textContent = title;
+      modalBody.className = "modal-body";
+      modalBody.innerHTML = "";
+      var extra = modal.querySelector(".modal-openfull");
+      if (extra) extra.remove();
+      buildBody(modalBody);
+      modal.hidden = false;
+      document.body.classList.add("modal-open");
+      modal.querySelector(".modal-x").focus();
+    }
+    function closeModal() {
+      modal.hidden = true;
+      document.body.classList.remove("modal-open");
+      var f = modalBody.querySelector("iframe");
+      if (f) f.src = "about:blank";
+      if (lastFocus) lastFocus.focus();
+    }
+    modal.addEventListener("click", function (e) {
+      if (e.target.hasAttribute("data-close")) closeModal();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !modal.hidden) closeModal();
+    });
+
+    /* project detail modals */
+    var PROJECTS = [
+      { t: "Building It Forward for Research (Management) Leadership in Southern Africa",
+        b: ["Recognising the critical role that strong institutional research management capacity plays in driving research excellence and attracting external funding, this project specifically targets the advancement of Research Support Offices (RSOs) in universities within the region.", "The project aims to substantially strengthen the research management capacity within these universities, enhancing the overall research ecosystem of the region."] },
+      { t: "South African Technology Transfer Survey (SATTS-3)",
+        b: ["A South African survey of metrics related to intellectual property and technology transfer at publicly financed research institutions has been conducted twice before. SARIMA has been appointed to conduct the third survey on behalf of the Department of Science, Technology and Innovation (DSTI) and the National Intellectual Property Management Office (NIPMO).", "The data and reports provide insight into the impact of the IPR-PFRD Act and the performance of the Offices of Technology Transfer established in terms of the Act."] },
+      { t: "Building the Profession of Research Management Through the Professional Recognition of Research Managers Programme",
+        b: ["SARIMA has established the International Professional Recognition Council (IPRC) as an autonomous body to award professional recognition, developed a Pan-African professional recognition programme for research managers, and implemented the initial stages of the programme with the support of various funding partners."] },
+      { t: "Science Granting Councils Initiative (SGCI, Phases I and II)",
+        b: ["Phase I built sustainable research management capacity in science granting councils in Sub-Saharan Africa.", "Phase II strengthens the practices and resilience of science granting councils in Sub-Saharan Africa in research and grants management."] },
+      { t: "Strengthening Research and Innovation Management II (SRIM II) in SADC",
+        b: ["The SRIM II Programme follows on from the first SRIM Programme (SRIM I, 2014 to 2017), which was funded by the South African Department of Science and Innovation (DSI), endorsed by the SADC Ministers responsible for Science and Technology, and implemented in partnership with SARIMA, the SADC Secretariat and the SADC Member States."] },
+      { t: "Capacity Building Programme: Pathways to Technology Commercialisation",
+        b: ["SARIMA is tasked to deliver a bespoke programme for the training of personnel involved in establishing technology transfer functions at various institutions in Botswana."] },
+      { t: "Africa Europe Innovation Partnership (AEIP)",
+        b: ["The Africa Europe Innovation Partnership is an initiative that aims to accelerate innovation across Africa and Europe."] },
+      { t: "Building Research Capacity for sustainable water and food security in drylands of sub-Saharan Africa (BRECcIA)",
+        b: ["Developing research capacity across research institutions that is self-sustaining and aimed at improving food and water security for the poorest of society."] },
+      { t: "Strengthening of Collaboration, Leadership and Professionalisation in Research Management in SADC and EU Higher Education Institutions (SToRM)",
+        b: ["Strengthening research management capacity and collaborations in higher education institutions within the EU and SADC regions."] }
+    ];
+    document.querySelectorAll(".proj-open").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var p = PROJECTS[parseInt(btn.getAttribute("data-proj"), 10)];
+        openModal(p.t, function (body) {
+          p.b.forEach(function (par) {
+            var el = document.createElement("p");
+            el.textContent = par;
+            body.appendChild(el);
+          });
+          var link = document.createElement("p");
+          link.innerHTML = '<a class="modal-link" href="https://www.sarima.co.za/projects/" target="_blank" rel="noopener">Full project details on sarima.co.za</a>';
+          body.appendChild(link);
+        });
+      });
+    });
+
+    /* newsletter reader modals */
+    document.querySelectorAll(".js-newsletter").forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+        var src = a.getAttribute("href");
+        openModal(a.getAttribute("data-title"), function (body) {
+          body.classList.add("frame");
+          var f = document.createElement("iframe");
+          f.src = src;
+          f.title = a.getAttribute("data-title");
+          body.appendChild(f);
+          var full = document.createElement("a");
+          full.className = "modal-openfull";
+          full.href = src;
+          full.target = "_blank";
+          full.rel = "noopener";
+          full.textContent = "Open full page";
+          body.parentNode.appendChild(full);
+        });
+      });
+    });
+
+    /* newsletter signup (demo) */
+    document.querySelectorAll(".js-signup").forEach(function (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var input = form.querySelector("input[type=email]");
+        if (!input.value || input.value.indexOf("@") < 1) {
+          input.focus();
+          return;
+        }
+        var done = document.createElement("p");
+        done.className = "signup-done";
+        done.setAttribute("role", "status");
+        done.innerHTML = "<strong>You're on the list.</strong> The next quarterly edition lands in your inbox." +
+          '<span class="fine">Design demo: no address was stored. The production build would connect to SARIMA’s mailing platform.</span>';
+        form.replaceWith(done);
+        sessionStorage.setItem("nl-signed", "1");
+        var nudge = document.getElementById("nudge");
+        if (nudge) nudge.hidden = true;
+      });
+    });
+
+    /* newsletter nudge — appears mid-scroll, once per session */
+    var nudge = document.getElementById("nudge");
+    function maybeNudge() {
+      if (sessionStorage.getItem("nudge-done") || sessionStorage.getItem("nl-signed")) return;
+      var doc = document.documentElement;
+      var progress = (window.scrollY) / (doc.scrollHeight - window.innerHeight);
+      if (progress > 0.45) {
+        nudge.hidden = false;
+        window.removeEventListener("scroll", maybeNudge);
+      }
+    }
+    if (nudge) {
+      window.addEventListener("scroll", maybeNudge, { passive: true });
+      document.getElementById("nudge-x").addEventListener("click", function () {
+        nudge.hidden = true;
+        sessionStorage.setItem("nudge-done", "1");
+      });
+      document.getElementById("nudge-go").addEventListener("click", function () {
+        nudge.hidden = true;
+        sessionStorage.setItem("nudge-done", "1");
+      });
+    }
+
     /* continuum thread waypoints — one dot per section, lit once passed */
     var thread = document.querySelector(".thread");
     var dots = [];

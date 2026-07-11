@@ -383,6 +383,13 @@ button { font-family: var(--body); cursor: pointer; }
 }
 .proj h3 { color: #fff; font-size: 1.12rem; }
 .proj p { font-size: 0.88rem; color: #B7C7D8; }
+.proj-open {
+  align-self: flex-start; margin-top: auto;
+  background: none; border: 0; padding: 0;
+  color: var(--gold-soft); font-weight: 700; font-size: 0.85rem;
+  text-decoration: underline; text-underline-offset: 3px;
+}
+.proj-open:hover { color: var(--gold); }
 .proj-more {
   background: none; border: 2px dashed var(--silver); color: var(--ink);
   text-decoration: none; position: relative; transition: border-color 0.15s;
@@ -496,6 +503,88 @@ button { font-family: var(--body); cursor: pointer; }
 .news-card p { font-size: 0.85rem; color: var(--ink-soft); flex: 1; }
 .news-go { font-size: 0.85rem; font-weight: 700; color: var(--brand); }
 
+/* ============ Newsletter signup ============ */
+.signup-band {
+  max-width: none; margin-top: 3rem; padding: 4.5rem 1.4rem;
+  background: linear-gradient(150deg, var(--brand-deep), var(--brand));
+  color: #EAF0F6;
+}
+.signup-inner {
+  max-width: 68rem; margin: 0 auto;
+  display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3rem; align-items: center;
+}
+.signup-band h2 { color: #fff; font-size: clamp(1.7rem, 3vw, 2.4rem); margin-bottom: 0.9rem; }
+.signup-copy > p { color: #C9DAEE; max-width: 30rem; }
+.signup-samples { margin-top: 0.9rem; font-size: 0.92rem; }
+.signup-samples a { color: var(--gold-soft); font-weight: 700; cursor: pointer; }
+.signup-form { background: #ffffff12; border: 1px solid #ffffff2e; border-radius: 18px; padding: 1.7rem 1.6rem; }
+.signup-label {
+  display: block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: #BCD2EA; margin-bottom: 0.6rem;
+}
+.signup-row { display: flex; gap: 0.6rem; }
+.signup-row input {
+  flex: 1; min-width: 0; padding: 0.85rem 1rem; border-radius: 10px;
+  border: 1px solid #ffffff42; background: #ffffff18; color: #fff;
+  font-size: 1rem; font-family: var(--body);
+}
+.signup-row input::placeholder { color: #9FB6CE; }
+.signup-row .btn { white-space: nowrap; }
+.signup-fine { margin-top: 0.8rem; font-size: 0.8rem; color: #B3C8DF; }
+.signup-done { font-size: 1rem; color: #fff; }
+.signup-done strong { color: var(--gold-soft); }
+.signup-done .fine { display: block; margin-top: 0.5rem; font-size: 0.8rem; color: #B3C8DF; }
+
+/* ============ Newsletter nudge ============ */
+.nudge {
+  position: fixed; right: 1.2rem; bottom: 1.2rem; z-index: 60;
+  width: min(21rem, calc(100vw - 2.4rem));
+  background: var(--navy); color: #DCE6F1; border: 1px solid #ffffff2b;
+  border-radius: 16px; padding: 1.2rem 1.3rem; box-shadow: 0 18px 44px #0b1b2b59;
+  animation: nudge-in 0.45s ease-out;
+}
+@keyframes nudge-in { from { transform: translateY(20px); opacity: 0; } }
+.nudge p { font-size: 0.88rem; margin-bottom: 0.8rem; padding-right: 1.2rem; }
+.nudge strong { color: #fff; }
+.nudge-btn { display: block; text-align: center; font-size: 0.88rem; padding: 0.7rem 1rem; }
+.nudge-x {
+  position: absolute; top: 0.5rem; right: 0.7rem;
+  background: none; border: 0; color: #8FA6BD; font-size: 1.3rem; line-height: 1;
+}
+.nudge-x:hover { color: #fff; }
+
+/* ============ Modal ============ */
+.modal { position: fixed; inset: 0; z-index: 80; display: grid; place-items: center; padding: 1.2rem; }
+.modal[hidden] { display: none; }
+.modal-backdrop { position: absolute; inset: 0; background: #0b1b2bcc; }
+.modal-card {
+  position: relative; width: min(46rem, 100%); max-height: min(88vh, 60rem);
+  background: var(--card); border-radius: 16px; overflow: hidden;
+  display: flex; flex-direction: column;
+  animation: modal-in 0.25s ease-out;
+}
+@keyframes modal-in { from { transform: translateY(14px); opacity: 0; } }
+.modal-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 1.1rem 1.4rem; border-bottom: 1px solid var(--line);
+}
+.modal-head h3 { font-size: 1.15rem; }
+.modal-x {
+  background: none; border: 0; font-size: 1.6rem; line-height: 1; color: var(--ink-soft);
+  padding: 0.2rem 0.4rem;
+}
+.modal-x:hover { color: var(--ink); }
+.modal-body { overflow-y: auto; padding: 1.4rem; }
+.modal-body p { margin-bottom: 0.9rem; color: var(--ink-soft); font-size: 0.95rem; }
+.modal-body .modal-link { font-weight: 700; }
+.modal-body.frame { padding: 0; background: #EDF0F3; }
+.modal-body.frame iframe { width: 100%; height: min(70vh, 46rem); border: 0; display: block; }
+.modal-openfull {
+  display: block; padding: 0.7rem 1.4rem; font-size: 0.85rem; font-weight: 700;
+  border-top: 1px solid var(--line); background: var(--card);
+}
+body.modal-open { overflow: hidden; }
+
 /* ============ Footer ============ */
 .footer {
   background: var(--ink); color: #B9C6D4; margin-top: 5rem;
@@ -532,7 +621,7 @@ button { font-family: var(--body); cursor: pointer; }
   .hero-inner { grid-template-columns: minmax(0, 1fr); gap: 2.4rem; }
   .hero-map { max-width: 30rem; }
   .hero-stats { grid-template-columns: repeat(2, 1fr); }
-  .about-grid, .band-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .about-grid, .band-inner, .signup-inner { grid-template-columns: 1fr; gap: 2rem; }
   .focus-grid, .course-grid, .route-grid { grid-template-columns: 1fr 1fr; }
   .news-grid, .news-grid.three, .proj-grid { grid-template-columns: 1fr 1fr; }
   .foot-grid { grid-template-columns: 1fr 1fr; }
@@ -557,7 +646,7 @@ button { font-family: var(--body); cursor: pointer; }
   .hero { padding-top: 6rem; }
   .section { padding-top: 4rem; }
   .gate-card { padding: 2rem 1.4rem; }
-  #gate-form { flex-direction: column; }
+  #gate-form, .signup-row { flex-direction: column; }
 }
 
 /* ============ Reduced motion ============ */
@@ -567,4 +656,5 @@ button { font-family: var(--body); cursor: pointer; }
   .net-line { animation: none; stroke-dashoffset: 0; }
   .map-nodes .node { animation: none; }
   .course, .news-card, .btn { transition: none; }
+  .modal-card, .nudge { animation: none; }
 }
