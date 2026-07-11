@@ -2,6 +2,12 @@
 (function () {
   "use strict";
 
+  /* the gate needs a secure context (crypto.subtle) */
+  if (location.protocol === "http:" && !/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) {
+    location.replace("https://" + location.host + location.pathname + location.search + location.hash);
+    return;
+  }
+
   var PASS_HASH = "accc048499b8418b697201ef3cb7162f6a901238ce0fff79555adb86e96b962b";
   var gate = document.getElementById("gate");
   var site = document.getElementById("site");
