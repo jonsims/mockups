@@ -176,19 +176,28 @@
       });
     });
 
-    /* projects drag-scroll */
-    var strip = document.getElementById("proj-scroll");
-    var dragging = false, startX = 0, startL = 0;
-    strip.addEventListener("pointerdown", function (e) {
-      dragging = true; startX = e.clientX; startL = strip.scrollLeft;
-      strip.setPointerCapture(e.pointerId);
-    });
-    strip.addEventListener("pointermove", function (e) {
-      if (dragging) strip.scrollLeft = startL - (e.clientX - startX);
-    });
-    ["pointerup", "pointercancel"].forEach(function (evn) {
-      strip.addEventListener(evn, function () { dragging = false; });
-    });
+    /* continuum thread waypoints — one dot per section, lit once passed */
+    var thread = document.querySelector(".thread");
+    var dots = [];
+    if (thread) {
+      sections.forEach(function (s) {
+        if (!s.closest("main")) return;
+        var d = document.createElement("span");
+        d.className = "thread-dot";
+        thread.appendChild(d);
+        dots.push({ el: d, sec: s });
+      });
+    }
+    function placeDots() {
+      dots.forEach(function (d) {
+        d.el.style.top = (d.sec.offsetTop + 96) + "px";
+        d.el.classList.toggle("on", d.sec.getBoundingClientRect().top < window.innerHeight * 0.45);
+      });
+    }
+    placeDots();
+    window.addEventListener("scroll", placeDots, { passive: true });
+    window.addEventListener("resize", placeDots);
+    window.addEventListener("load", placeDots);
 
     /* membership calculator */
     var FEES = {
@@ -205,6 +214,12 @@
     var noteEl = document.getElementById("calc-note");
     var termRow = document.getElementById("term-row");
     var sizeRow = document.getElementById("size-row");
+    var ctaEl = document.getElementById("calc-cta");
+    var CTA_LABELS = {
+      regular: "Join as an Individual",
+      student: "Join as a Student",
+      org: "Set up organisational membership"
+    };
 
     function fmt(n) {
       return "R " + n.toLocaleString("en-ZA", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -213,6 +228,7 @@
       var entry = state.type === "org" ? FEES.org[state.size] : FEES[state.type][state.term];
       var target = entry[0];
       noteEl.textContent = entry[1];
+      if (ctaEl) ctaEl.textContent = CTA_LABELS[state.type];
       termRow.hidden = state.type === "org";
       sizeRow.hidden = state.type !== "org";
       if (reduced) { amountEl.textContent = fmt(target); return; }
