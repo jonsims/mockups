@@ -1,0 +1,418 @@
+{
+  "_schema": "Specialty Labs. Fields: id (stable, referenced by events/news/people), slug (URL path under /labs/), name, short_name, tagline (verbatim from live site), focus_questions[] (verbatim), impacts[] (verbatim), leader_ids[] -> people.json, initiatives[{title, body}] (verbatim, condensed), artifacts[{title, type, url|null}], intern_roles[{title, body}] (verbatim from live intern page, may be empty), get_involved (plain-English student/faculty join path), pin_position (editorial display order - NOT activity volume; keeps Ethics & Work Futures in the top row per design spec), contact_person_id, last_updated.",
+  "last_updated": "2026-07-13",
+  "labs": [
+    {
+      "id": "ai-entrepreneurship",
+      "slug": "ai-entrepreneurship-and-business-innovation",
+      "name": "AI Entrepreneurship & Business Innovation",
+      "short_name": "AI Entrepreneurship",
+      "tagline": "Igniting Entrepreneurship & Innovation in the AI-Age",
+      "pin_position": 1,
+      "focus_questions": [
+        "How can AI support entrepreneurs to explore, evaluate, and seize entrepreneurial opportunities?",
+        "How can AI technologies accelerate the launch and scaling of tech startups?",
+        "What defines and distinguishes entrepreneurial leadership in the AI-age?"
+      ],
+      "impacts": [
+        "New AI-courses",
+        "Cutting-edge industry research",
+        "Pedagogical innovation",
+        "Groundbreaking scholarly research",
+        "Babson AI capability-building",
+        "Industry partnerships",
+        "Theme leadership at the Babson AI Generator Annual Conference"
+      ],
+      "leader_ids": [
+        "erik-noyes",
+        "ruth-gilleran",
+        "vicky-zhu"
+      ],
+      "initiatives": [
+        {
+          "title": "Second Annual Entrepreneurship & AI Buildathon",
+          "body": "The second annual Entrepreneurship & AI Buildathon (April 2025) attracted over 220 students from twelve universities — including MIT, Harvard, Northeastern, and Stanford — forming more than 40 teams, co-hosted with Microsoft Research. The winning team, Terraflex, developed an AI-powered prosthetic foot attachment that dynamically adapts to uneven terrain, winning the $2,500 first-place prize and the $60,000 Nature-Inspired Design Prize."
+        },
+        {
+          "title": "Research program on multimodal AI in entrepreneurship",
+          "body": "A research initiative studying how entrepreneurs leverage AI that processes and integrates text, images, audio, and video to create innovative business solutions — identifying emerging opportunities, challenges, and best practices as multimodal AI reshapes how new ventures are conceived, developed, and scaled."
+        },
+        {
+          "title": "15+ events at the intersection of AI and entrepreneurship",
+          "body": "Workshops, panels, networking sessions, and interactive demonstrations bringing together innovators, founders, researchers, and industry leaders to examine how AI is reshaping the entrepreneurial landscape."
+        }
+      ],
+      "artifacts": [
+        {
+          "title": "Entrepreneurship Education at the Dawn of Generative Artificial Intelligence (EE&P)",
+          "type": "paper",
+          "url": null
+        },
+        {
+          "title": "Buildathon 2 recap — Terraflex and 40+ teams",
+          "type": "writeup",
+          "url": null
+        }
+      ],
+      "intern_roles": [
+        {
+          "title": "Generator Multilingual AI Models Intern",
+          "body": "Will lead the Generator on understanding multilingual AI translation capabilities, including voice-to-voice, text-to-voice, and voice-to-text; will lead converting key Generator content to the world's most spoken languages."
+        },
+        {
+          "title": "Generator Social Media Intern",
+          "body": "Will support Erik Noyes with social media strategy and communications/posting for the lab."
+        }
+      ],
+      "get_involved": "Students: apply for a lab internship, join a Buildathon team, or apply for AI Credits to fund a venture. Faculty and partners: contact the lab about research collaborations and industry partnerships.",
+      "contact_person_id": "erik-noyes",
+      "last_updated": "2026-07-13",
+      "image": "assets/live/motion-2-450x450.jpg",
+      "icon": "assets/babson/icons/icon-20.svg"
+    },
+    {
+      "id": "ai-ethics-society",
+      "slug": "ai-ethics-and-society",
+      "name": "AI Ethics & Society",
+      "short_name": "Ethics & Society",
+      "tagline": "Navigating the Ethical Frontiers of AI for a Future of Complexity",
+      "pin_position": 2,
+      "focus_questions": [
+        "How will AI help construct new visions of society, culture, and world in the future?",
+        "What are the creative and destructive consequences of entering an age of virtual reality, digital culture, and metaverses?",
+        "How might AI either intensify totalitarianism or propel resistance movements in an age of surveillance, empire, and cyber-warfare?",
+        "Should post-human entities (clones, cyborgs, avatars) be given human rights — and what are the ethical implications of AI's potential threat to cause human extinction?",
+        "How will AI transform our relation to nature in ecology, consciousness, and the body?"
+      ],
+      "impacts": [
+        "New AI Courses and Creative Events",
+        "Cutting-edge projects",
+        "Pedagogical innovation",
+        "Groundbreaking scholarly research",
+        "Ethical counsel for Babson, its programs, and faculty",
+        "Theme leadership at the Babson AI Generator Annual Conference"
+      ],
+      "leader_ids": [
+        "jason-mohaghegh"
+      ],
+      "initiatives": [
+        {
+          "title": "Republic 2.0 — a hypothetical city of the future",
+          "body": "A large-scale creative research project constructing a hypothetical city of the future that traces the most radical transformations in society, technology, and culture on the horizon — designed with faculty and students and showcased in a public exhibition."
+        }
+      ],
+      "artifacts": [
+        {
+          "title": "AI Ethics and Society Lab (Trailer) — Republic 2.0 project video",
+          "type": "video",
+          "url": null
+        }
+      ],
+      "intern_roles": [
+        {
+          "title": "Generator AI and Society (Future Cities) Research and Design Intern",
+          "body": "Will explore creative research for Republic 2.0, a hypothetical city of the future, and help design images and visual diagrams for a public showcase."
+        }
+      ],
+      "get_involved": "This lab asks the hard questions — surveillance, existential risk, post-human rights, AI and nature. Students and faculty from any discipline are welcome; no technical background needed. Contact the lab or attend a Critical Inquiry event.",
+      "contact_person_id": "jason-mohaghegh",
+      "last_updated": "2026-07-13",
+      "image": "assets/live/fruit-circuit-board-450x450.jpg",
+      "icon": "assets/babson/icons/icon-45.svg"
+    },
+    {
+      "id": "work-futures",
+      "slug": "work-futures",
+      "name": "Work Futures",
+      "short_name": "Work Futures",
+      "tagline": "Researching and Designing New Ways to Organize Work in the Age of AI",
+      "pin_position": 3,
+      "focus_questions": [
+        "What forms of collaborative work between humans and AI are possible and desirable?",
+        "What human skills and competences will new forms of work require?",
+        "How do we support companies and entrepreneurs to develop forms of human/AI collaboration that are beneficial to all stakeholders?"
+      ],
+      "impacts": [
+        "New AI-courses",
+        "Cutting-edge industry research",
+        "Pedagogical innovation",
+        "Groundbreaking scholarly research",
+        "Ethical counsel for programs and faculty",
+        "Theme leadership at the Babson AI Generator Annual Conference"
+      ],
+      "leader_ids": [
+        "sebastian-fixson"
+      ],
+      "initiatives": [],
+      "artifacts": [
+        {
+          "title": "Transform with Design: Creating New Innovation Capabilities with Design Thinking (Rotman/U Toronto Press, 2023)",
+          "type": "book",
+          "url": null
+        },
+        {
+          "title": "Four Skills Tomorrow's Innovation Workforce Will Need",
+          "type": "paper",
+          "url": null
+        }
+      ],
+      "intern_roles": [
+        {
+          "title": "Generator Work Futures AI Research Intern",
+          "body": "Will support the design and execution of research projects on the effects of AI on tasks, jobs, careers, skills, worker satisfaction and well-being."
+        },
+        {
+          "title": "Generator Work Futures AI Design Intern",
+          "body": "Will support design futuring projects to explore possible futures of work, and how to make them a reality."
+        },
+        {
+          "title": "Generator Work Futures AI Communications Intern",
+          "body": "Will support the lab with communications, primarily on social media and professional networks."
+        }
+      ],
+      "get_involved": "Students: three internship tracks (research, design futuring, communications). Companies and entrepreneurs: partner with the lab on human/AI collaboration research.",
+      "contact_person_id": "sebastian-fixson",
+      "last_updated": "2026-07-13",
+      "image": "assets/live/finger-on-code-450x450.jpg",
+      "icon": "assets/babson/icons/icon-39.svg"
+    },
+    {
+      "id": "ai-experiential-learning",
+      "slug": "ai-and-experiential-learning",
+      "name": "AI & Experiential Learning",
+      "short_name": "Experiential Learning",
+      "tagline": "Advancing Entrepreneurship Education Through AI-Powered Experiential Learning",
+      "pin_position": 4,
+      "focus_questions": [
+        "How can teaching with AI foster critical thinking and problem-solving in entrepreneurship education and beyond?",
+        "How can teaching with AI cultivate an entrepreneurial mindset?",
+        "How can generative AI help tailor courses to specific learning needs?",
+        "How can AI enhance assessment and provide targeted actionable feedback?",
+        "How can AI support student teams in peer learning and collaboration?",
+        "How can AI assist in teaching complex entrepreneurial concepts and strategies?"
+      ],
+      "impacts": [
+        "Personalized AI-driven learning paths for individual needs",
+        "Interdisciplinary AI integration across various disciplines",
+        "AI-enhanced personalized student support and mentoring",
+        "Inclusive AI learning experiences for diverse backgrounds",
+        "Continuous AI-driven curriculum innovation and refinement",
+        "AI-powered tools for enhanced classroom experiences",
+        "State-of-the-art AI assessment tools for deeper insights",
+        "Cutting-edge pedagogical research in AI education",
+        "AI-enriched remote asynchronous learning innovation",
+        "Theme leadership at the Babson AI Generator Annual Conference"
+      ],
+      "leader_ids": [
+        "jonathan-sims",
+        "ruth-gilleran"
+      ],
+      "initiatives": [],
+      "artifacts": [
+        {
+          "title": "Community interactions at crowd scale: hybrid crowds on the GitHub platform (Innovation, 2020)",
+          "type": "paper",
+          "url": null
+        },
+        {
+          "title": "Write Code, Save Lives: How a Community Uses Open Innovation to Address a Societal Challenge (R&D Management, 2019)",
+          "type": "paper",
+          "url": null
+        }
+      ],
+      "intern_roles": [],
+      "get_involved": "Faculty: this lab is the front door for AI in your teaching — workshops, course-design help, and the AI Teaching Training Program. Students: participate in AI-enhanced pilot courses and pedagogy research.",
+      "contact_person_id": "jonathan-sims",
+      "last_updated": "2026-07-13",
+      "image": "assets/live/leaves-450x450.jpg",
+      "icon": "assets/babson/icons/icon-12.svg"
+    },
+    {
+      "id": "prototyping-ai",
+      "slug": "prototyping-with-ai",
+      "name": "Prototyping with AI",
+      "short_name": "Prototyping",
+      "tagline": "Bringing Entrepreneurial Ideas to Life Through AI-powered Prototyping",
+      "pin_position": 5,
+      "focus_questions": [
+        "How can entrepreneurs leverage AI assistants to facilitate ideation and rapidly validate design concepts?",
+        "How can AI tools enhance prototyping capabilities and streamline the design process?",
+        "In what ways can AI-driven analytics tools provide deeper insights to inform our prototype iterations?"
+      ],
+      "impacts": [
+        "AI-supported idea generation and enriched rapid prototyping",
+        "Startup MVP acceleration",
+        "AI & Prototyping courses",
+        "Pedagogical innovation, combining physical and digital creation",
+        "Theme leadership at the Babson AI Generator Annual Conference"
+      ],
+      "leader_ids": [
+        "jonathan-griffiths"
+      ],
+      "initiatives": [],
+      "artifacts": [
+        {
+          "title": "The Weissman Foundry — Babson's cross-college makerspace",
+          "type": "space",
+          "url": null
+        }
+      ],
+      "intern_roles": [],
+      "get_involved": "Students: bring an idea to the Weissman Foundry and prototype it with AI tools — no prior experience needed. Entrepreneurs: MVP acceleration support.",
+      "contact_person_id": "jonathan-griffiths",
+      "last_updated": "2026-07-13",
+      "image": "assets/live/voxel-landscape-450x450.jpg",
+      "icon": "assets/babson/icons/icon-28.svg"
+    },
+    {
+      "id": "ai-ml-empowerment",
+      "slug": "ai-and-ml-empowerment",
+      "name": "AI & ML Empowerment",
+      "short_name": "AI/ML Empowerment",
+      "tagline": "Cultivating Conceptual Understanding of How AI/ML Methods Work Under the Hood",
+      "pin_position": 6,
+      "focus_questions": [
+        "How can the technical concepts underpinning AI & Machine Learning be made intuitive and understandable for entrepreneurs and educators from diverse disciplines and backgrounds?",
+        "In what ways can we make learning technical AI & ML concepts inclusive and engaging?",
+        "What is AI's potential for analytical and affective competencies?",
+        "How can we use AI to enhance — rather than limit — our originality, creativity, and critical thinking?"
+      ],
+      "impacts": [
+        "Conducting interdisciplinary, niche research projects in collaboration with students",
+        "Investigating the reasoning and affective potential of modern AI",
+        "Building connections with leaders in AI/ML and bringing that knowledge to Babson through a speaker series",
+        "Advancing pedagogical innovation through the design and development of educational technology",
+        "Fostering creative, interdisciplinary collaborations across labs"
+      ],
+      "leader_ids": [
+        "davit-khachatryan"
+      ],
+      "initiatives": [
+        {
+          "title": "Speaker Series in AI/ML",
+          "body": "Industry leaders — content creators, best-selling authors, data scientists, machine learning engineers — demystify how AI and machine learning tools function under the hood, making complex concepts accessible while highlighting practical and ethical implications."
+        },
+        {
+          "title": "Research Internships",
+          "body": "Cutting-edge niche research grounding student inquiry in rigor: analyzing human dreams with modern AI, testing the logical reasoning of large language models against classical conundrums, and applying machine learning to the relationship between Vincent van Gogh's mental state and the evolving themes in his art."
+        }
+      ],
+      "artifacts": [
+        {
+          "title": "Playmeans — inclusive data science education web app using live Spotify data",
+          "type": "app",
+          "url": null
+        },
+        {
+          "title": "Playmeans: Inclusive and Engaging Data Science through Music (JSDSE, 2023)",
+          "type": "paper",
+          "url": null
+        }
+      ],
+      "intern_roles": [],
+      "get_involved": "All AI & ML Empowerment intern positions are currently filled — check back in September. Anyone curious about how AI actually works is welcome at the Speaker Series; no technical background assumed.",
+      "contact_person_id": "davit-khachatryan",
+      "last_updated": "2026-07-13",
+      "image": "assets/live/ai-ml-empowerment-450x450.jpg",
+      "icon": "assets/babson/icons/icon-51.svg"
+    },
+    {
+      "id": "ai-research-writing",
+      "slug": "ai-research-and-writing",
+      "name": "AI for Research & Writing",
+      "short_name": "Research & Writing",
+      "tagline": "Crafting an Expansive and Equitable Future for Written Expression with AI",
+      "pin_position": 7,
+      "focus_questions": [
+        "How do we establish writing processes that utilize generative AI in support of learning rather than replacing it?",
+        "In what ways can AI augment human creativity, voice, and rhetorical effectiveness across academic, business, and public communication?",
+        "How do we design AI-integrated writing experiences that are ethical, equitable, and inclusive of diverse linguistic and cultural practices?"
+      ],
+      "impacts": [
+        "Curriculum Innovation",
+        "Scholarly Research",
+        "Faculty Development & Campus Programming",
+        "Student Engagement & Experiential Learning",
+        "Ethical AI & Critical Literacy",
+        "Interdisciplinary Collaboration",
+        "Public Scholarship & Thought Leadership",
+        "Regional and National Leadership",
+        "Resource Development & Knowledge Sharing"
+      ],
+      "leader_ids": [
+        "kristi-girdharry"
+      ],
+      "initiatives": [
+        {
+          "title": "Writing and AI Symposium Series",
+          "body": "An invitational symposium, run twice so far, convening writing faculty from over 40 southern New England institutions to explore generative AI in writing instruction, literacy, and pedagogy — participatory, values-driven, and focused on community building and collaborative leadership."
+        },
+        {
+          "title": "\"Writing with Robots\" course",
+          "body": "An undergraduate course where students write with and about AI to reflect on authorship, ethics, and digital identity — genre-based experiments plus group research projects on AI ethics, modeling curiosity, critique, and (sometimes) joy in the face of technological change."
+        }
+      ],
+      "artifacts": [
+        {
+          "title": "Meaningful Writing in the Age of Generative Artificial Intelligence (Double Helix, 2024)",
+          "type": "paper",
+          "url": null
+        },
+        {
+          "title": "Teaching With AI: A Journey Through Grief",
+          "type": "essay",
+          "url": null
+        },
+        {
+          "title": "2025 EDUCAUSE Horizon Report — Teaching and Learning Edition (recommended resource)",
+          "type": "resource",
+          "url": null
+        }
+      ],
+      "intern_roles": [],
+      "get_involved": "Writing faculty across New England: the Symposium Series is the door in. Students: take Writing with Robots or visit the Writing Center. Skeptics explicitly welcome — critical AI literacy is the lab's core.",
+      "contact_person_id": "kristi-girdharry",
+      "last_updated": "2026-07-13",
+      "image": "assets/live/code-1-450x450.jpg",
+      "icon": "assets/babson/icons/icon-57.svg"
+    },
+    {
+      "id": "ai-arts-media-performance",
+      "slug": "ai-arts-and-performance",
+      "name": "AI Arts, Media & Performance",
+      "short_name": "Arts & Performance",
+      "tagline": "Fusing Artistry with Technology to Explore the Creative Potentials of AI",
+      "pin_position": 8,
+      "focus_questions": [
+        "How can AI enhance and amplify creative expression across various artistic disciplines?",
+        "How can AI serve as a valuable tool for educators in instructing, directing, and mentoring the next generation of artists?",
+        "What are synergies between AI and different artistic realms such as theater, visual art, music, and film — and how can interdisciplinary approaches be utilized to explore them?"
+      ],
+      "impacts": [
+        "New AI-courses",
+        "Partnerships between Babson and arts organizations",
+        "Pedagogical materials and trainings",
+        "Ongoing demonstrations in theater and gallery spaces",
+        "Theme leadership at the Babson AI Generator Annual Conference"
+      ],
+      "leader_ids": [
+        "beth-wynstra",
+        "xinghua-li"
+      ],
+      "initiatives": [],
+      "artifacts": [
+        {
+          "title": "Vows, Veils, and Masks: The Performance of Marriage in the Plays of Eugene O'Neill (U Iowa Press, 2023)",
+          "type": "book",
+          "url": null
+        }
+      ],
+      "intern_roles": [],
+      "get_involved": "Artists, performers, and media-makers — students or faculty — are the lab's core community. Co-leader Xinghua Li also studies how NOT to use AI and AI's environmental cost; critical perspectives are part of the work here, not an afterthought.",
+      "contact_person_id": "beth-wynstra",
+      "last_updated": "2026-07-13",
+      "image": "assets/live/glass-sculpture-450x450.jpg",
+      "icon": "assets/babson/icons/icon-59.svg"
+    }
+  ]
+}

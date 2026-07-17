@@ -1,0 +1,294 @@
+/* ==========================================================================
+   Babson Design System — Colors & Type
+   Extracted from "Exploring AI in Practice" master deck + theme1.xml
+   Theme name: "Babson Brand Palette - Digital"
+   ========================================================================== */
+
+/* -- Web fonts ------------------------------------------------------------ */
+/* Babson's master deck uses Arial Narrow (headings) and Arial (body).
+   For web, we use Google Fonts as the nearest substitute:
+   - "Playfair Display"  → approximates the Babson wordmark serif (TRAJAN-like)
+   - "Barlow Condensed"  → web substitute for Arial Narrow (display / sub-heads)
+   - "Inter"             → clean sans for UI body copy (sharper than Arial)
+   FLAG: The original uses Trajan (logo) + Arial/Arial Narrow (copy).
+   If you have the true Babson brand fonts, drop them in /fonts/ and
+   rewrite @font-face below. */
+
+/* All-sans-serif type system. Single family (Inter) for the entire deck.
+   Original system used display serif + condensed sans + serif body; per
+   brand guidance update, everything is now sans-serif. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  /* ========================================================================
+     COLORS — Babson Brand Palette (Digital)
+     Source: theme1.xml → clrScheme "Babson Brand Palette - Digital"
+     ======================================================================== */
+
+  /* --- Primary brand ---------------------------------------------------- */
+  --babson-green:         #006643;   /* dk1  — the Babson green, primary */
+  --babson-green-deep:    #00634F;   /* logo green (BB mark)            */
+  --babson-green-dark:    #004A30;   /* press / hover deeper            */
+  --babson-mist:          #E6F0F0;   /* pale teal tint — paper surface  */
+  --babson-mist-deep:     #CFE1E1;   /* deeper mist for contrast        */
+  --babson-cream:         #E6F0F0;   /* ALIAS → mist (kept for compat)  */
+  --babson-white:         #FEFFFF;   /* lt2                              */
+
+  /* --- Secondary -------------------------------------------------------- */
+  --babson-olive:         #69913A;   /* dk2  — living olive             */
+  --babson-sage:          #9EB28F;   /* accent2 — soft sage             */
+  --babson-sage-pale:     #C7D28A;   /* accent5                          */
+  --babson-teal:          #35807F;   /* accent1 — heritage teal         */
+  --babson-teal-pale:     #7FB0B0;   /* tint of teal                    */
+
+  /* --- Accents ---------------------------------------------------------- */
+  --babson-gold:          #DDD055;   /* accent4 — academic gold         */
+  --babson-gold-deep:     #B8A840;   /* deeper gold for text on cream   */
+  --babson-navy:          #005171;   /* accent6 — reserved navy         */
+  --babson-link:          #33B3EC;   /* hlink — interactive blue        */
+  --babson-link-visited:  #005172;   /* folHlink                         */
+
+  /* --- Neutrals --------------------------------------------------------- */
+  --babson-ink:           #1A1F1C;   /* near-black, warm                */
+  --babson-gray-900:      #2E332F;
+  --babson-gray-700:      #4A4F4C;
+  --babson-gray-500:      #6C6F70;   /* accent3 — official gray         */
+  --babson-gray-300:      #B5B8B6;
+  --babson-gray-200:      #D6D8D2;
+  --babson-gray-100:      #EBEEEE;   /* faint teal-tinted surface      */
+  --babson-gray-50:       #F4F7F7;
+
+  /* ========================================================================
+     SEMANTIC TOKENS — use these in components, not the raw palette
+     ======================================================================== */
+
+  /* Surfaces */
+  --bg:                   var(--babson-white);
+  --bg-alt:               var(--babson-mist);
+  --bg-inverse:           var(--babson-green);
+  --bg-subtle:            var(--babson-gray-50);
+  --surface-card:         #FFFFFF;
+  --surface-sunken:       var(--babson-gray-100);
+
+  /* Foreground */
+  --fg1:                  var(--babson-ink);            /* primary text  */
+  --fg2:                  var(--babson-gray-700);       /* secondary     */
+  --fg3:                  var(--babson-gray-500);       /* tertiary/meta */
+  --fg-inverse:           var(--babson-white);
+  --fg-brand:             var(--babson-green);
+
+  /* Borders & dividers */
+  --border:               rgba(0, 102, 67, 0.14);       /* green tinted */
+  --border-strong:        rgba(0, 102, 67, 0.30);
+  --border-neutral:       var(--babson-gray-200);
+
+  /* State */
+  --interactive:          var(--babson-green);
+  --interactive-hover:    var(--babson-green-dark);
+  --focus-ring:           var(--babson-gold);
+  --success:              var(--babson-olive);
+  --warning:              var(--babson-gold-deep);
+  --danger:               #8E2B2B;                      /* muted brick  */
+  --info:                 var(--babson-teal);
+
+  /* ========================================================================
+     TYPE SYSTEM
+     ======================================================================== */
+
+  /* All four roles now resolve to the same sans stack — kept as separate
+     vars so existing component CSS continues to work without rewrites. */
+  --font-display:   "Inter", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --font-serif:     "Inter", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --font-condensed: "Inter", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --font-sans:      "Inter", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --font-mono:      ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* Type scale — clamped to 20px maximum per brand guidance. */
+  --fs-xs:    11px;
+  --fs-sm:    12px;
+  --fs-base:  14px;
+  --fs-md:    15px;
+  --fs-lg:    16px;
+  --fs-xl:    17px;
+  --fs-2xl:   18px;
+  --fs-3xl:   19px;
+  --fs-4xl:   20px;
+  --fs-5xl:   20px;
+
+  /* Line heights */
+  --lh-tight:  1.08;
+  --lh-snug:   1.22;
+  --lh-normal: 1.45;
+  --lh-loose:  1.65;
+
+  /* Tracking */
+  --tr-tighter: -0.02em;
+  --tr-tight:   -0.01em;
+  --tr-normal:  0;
+  --tr-wide:    0.04em;
+  --tr-wider:   0.12em;   /* for SMALL CAPS / eyebrows */
+
+  /* ========================================================================
+     SPACING / RADII / SHADOWS
+     ======================================================================== */
+
+  --s-0:   0;
+  --s-1:   4px;
+  --s-2:   8px;
+  --s-3:   12px;
+  --s-4:   16px;
+  --s-5:   24px;
+  --s-6:   32px;
+  --s-7:   48px;
+  --s-8:   64px;
+  --s-9:   96px;
+  --s-10: 128px;
+
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+  --radius-xl: 22px;
+  --radius-pill: 999px;
+
+  --shadow-xs:  0 1px 2px rgba(0, 70, 45, 0.06);
+  --shadow-sm:  0 2px 6px rgba(0, 70, 45, 0.08);
+  --shadow-md:  0 6px 18px rgba(0, 70, 45, 0.10), 0 1px 3px rgba(0,70,45,.06);
+  --shadow-lg:  0 14px 40px rgba(0, 70, 45, 0.14), 0 2px 6px rgba(0,70,45,.06);
+  --shadow-inset: inset 0 1px 0 rgba(255,255,255,0.6);
+
+  /* Rule lines — Babson uses these a lot */
+  --rule-thin:    1px solid var(--border);
+  --rule-strong:  2px solid var(--babson-green);
+  --rule-gold:    2px solid var(--babson-gold);
+}
+
+/* ==========================================================================
+   SEMANTIC TYPE CLASSES — apply directly to elements
+   ========================================================================== */
+
+.t-eyebrow {
+  font-family: var(--font-condensed);
+  font-size:   var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: var(--tr-wider);
+  text-transform: uppercase;
+  color: var(--babson-green);
+  line-height: var(--lh-snug);
+}
+
+.t-display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size:   var(--fs-5xl);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tr-tighter);
+  color: var(--fg-brand);
+}
+
+.t-h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size:   var(--fs-3xl);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tr-tight);
+  color: var(--fg-brand);
+}
+
+.t-h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size:   var(--fs-2xl);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tr-tight);
+  color: var(--fg1);
+}
+
+.t-h3 {
+  font-family: var(--font-condensed);
+  font-weight: 600;
+  font-size:   var(--fs-xl);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tr-normal);
+  color: var(--fg1);
+  text-transform: none;
+}
+
+.t-h4 {
+  font-family: var(--font-condensed);
+  font-weight: 600;
+  font-size:   var(--fs-lg);
+  line-height: var(--lh-snug);
+  color: var(--fg1);
+}
+
+.t-lede {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size:   var(--fs-lg);
+  line-height: var(--lh-normal);
+  color: var(--fg2);
+}
+
+.t-body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size:   var(--fs-base);
+  line-height: var(--lh-normal);
+  color: var(--fg1);
+}
+
+.t-small {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size:   var(--fs-sm);
+  line-height: var(--lh-normal);
+  color: var(--fg2);
+}
+
+.t-caption {
+  font-family: var(--font-condensed);
+  font-weight: 500;
+  font-size:   var(--fs-xs);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tr-wide);
+  text-transform: uppercase;
+  color: var(--fg3);
+}
+
+.t-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size:   var(--fs-xl);
+  line-height: var(--lh-normal);
+  color: var(--babson-green);
+}
+
+.t-stat {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size:   var(--fs-4xl);
+  line-height: 0.95;
+  letter-spacing: var(--tr-tighter);
+  color: var(--babson-green);
+  font-feature-settings: "tnum";
+}
+
+.t-mono {
+  font-family: var(--font-mono);
+  font-size:   var(--fs-sm);
+  color: var(--fg2);
+}
+
+/* ==========================================================================
+   UTILITIES
+   ========================================================================== */
+
+.u-rule-top    { border-top: var(--rule-strong); padding-top: var(--s-4); }
+.u-rule-gold   { border-top: var(--rule-gold);   padding-top: var(--s-4); }
+.u-rule-thin   { border-top: var(--rule-thin);   padding-top: var(--s-3); }
+
+.u-bg-cream   { background: var(--babson-cream); }
+.u-bg-green   { background: var(--babson-green); color: var(--fg-inverse); }
+.u-bg-paper   { background: var(--babson-gray-50); }

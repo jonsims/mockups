@@ -1,0 +1,172 @@
+{
+  "_schema": "Community programs directory. Fields: id, name, expanded_name (acronyms spelled out on first contact — newcomer requirement), summary (from live-site copy), details[] (bullet specifics), audience[] (controlled vocab, same as events), cta {label, href}, external_url (live babson.edu page). filter_tags: the simple 4-term audience filter (Students/Faculty/Entrepreneurs/Business Owners).",
+  "last_updated": "2026-07-13",
+  "programs": [
+    {
+      "id": "big-ideas",
+      "name": "Big Ideas — the Explorers",
+      "expanded_name": "Student co-leadership of The Generator",
+      "summary": "The Generator is co-led by Babson's best and brightest students — visionaries, entrepreneurs, technologists, strategists, coders and prototypers. We call them Explorers.",
+      "details": [
+        "Explorers lead AI programming in partnership with business owners, entrepreneurs, corporate partners, VCs, technologists, and futurists",
+        "Explorers organize the large-scale Entrepreneurship & AI Buildathons with Microsoft Research, engaging Babson, Stanford, Olin, and Wellesley students",
+        "Explorer-led initiatives focus on themes from the eight Specialty Labs",
+        "Buildathon winners Terraflex — an AI-powered adaptive prosthetic built by Olin and Stanford students — took the $2,500 first prize and the $60,000 Nature-Inspired Design Prize"
+      ],
+      "audience": [
+        "Students"
+      ],
+      "cta": {
+        "label": "See upcoming Explorer-led events",
+        "href": "../events/"
+      },
+      "external_url": "https://www.babson.edu/thegenerator/community/big-ideas/",
+      "image": "assets/img/community-explorers.jpg",
+      "filter_tags": [
+        "Students",
+        "Entrepreneurs"
+      ]
+    },
+    {
+      "id": "ai-credits",
+      "name": "AI Credits",
+      "expanded_name": "Free AI compute for entrepreneurial projects",
+      "summary": "Two pathways to secure free credits for AI projects — real money for real builds.",
+      "details": [
+        "$1,000 in AI compute from Babson: one-time student grants with a fast turnaround process",
+        "$1,000–$25,000 in AI credits via the Microsoft for Startups Founders Hub partnership",
+        "Promising ventures may receive $5,000 in AI compute without meeting the incorporation requirement"
+      ],
+      "audience": [
+        "Students"
+      ],
+      "cta": {
+        "label": "How to apply",
+        "href": "https://www.babson.edu/thegenerator/community/ai-credits/"
+      },
+      "external_url": "https://www.babson.edu/thegenerator/community/ai-credits/",
+      "image": null,
+      "filter_tags": [
+        "Students",
+        "Entrepreneurs"
+      ]
+    },
+    {
+      "id": "brain",
+      "name": "B.R.A.I.N.",
+      "expanded_name": "The Babson Regional AI Network",
+      "summary": "Unites industry and higher education to explore the entrepreneurial, social and ethical dimensions of AI. Periodic meetups throughout New England connect leaders, business owners, entrepreneurs, technologists, and AI researchers.",
+      "details": [
+        "Driving economic growth through AI-powered entrepreneurship",
+        "Supporting small business owners to leverage AI for business growth",
+        "Understanding the ethical dimensions of AI",
+        "A big tent: Babson alumni particularly welcome, but anyone can attend"
+      ],
+      "audience": [
+        "Community",
+        "Small Business Owners"
+      ],
+      "cta": {
+        "label": "Join a meetup",
+        "href": "https://www.babson.edu/thegenerator/community/brain/"
+      },
+      "external_url": "https://www.babson.edu/thegenerator/community/brain/",
+      "image": "assets/img/event-meetup.jpg",
+      "filter_tags": [
+        "Entrepreneurs",
+        "Business Owners"
+      ]
+    },
+    {
+      "id": "bootcamp",
+      "name": "AI Innovators Bootcamp",
+      "expanded_name": "Training 1,000 small business owners in AI",
+      "summary": "A 1-day deep dive into AI taught by Babson's award-winning faculty, delivered in partnership with Babson's top students. 93% of small business owners say they are not prepared for the AI-age; this program is the answer.",
+      "details": [
+        "Core concepts in AI, no prerequisites — built for owners starting from zero",
+        "Hands-on-keys activities supported by Babson faculty and students",
+        "AI complexities, ethics and risks included, not glossed over",
+        "Ends with an AI-networking cocktail reception and a cohort community of 30+ owners"
+      ],
+      "audience": [
+        "Small Business Owners",
+        "Community"
+      ],
+      "cta": {
+        "label": "Register for the next bootcamp",
+        "href": "https://www.babson.edu/thegenerator/community/ai-innovators-bootcamp/"
+      },
+      "external_url": "https://www.babson.edu/thegenerator/community/ai-innovators-bootcamp/",
+      "image": "assets/live/weissman-foundry-1-450x450.jpg",
+      "filter_tags": [
+        "Business Owners",
+        "Entrepreneurs"
+      ]
+    },
+    {
+      "id": "interns",
+      "name": "Intern Opportunities",
+      "expanded_name": "Paid student roles inside the Specialty Labs",
+      "summary": "Labs post research, design, and communications internships — from multilingual AI models to design futuring to Republic 2.0, the Ethics lab's city of the future.",
+      "details": [
+        "AI Entrepreneurship & Business Innovation: Multilingual AI Models Intern, Social Media Intern",
+        "Work Futures: Research, Design, and Communications interns",
+        "AI Ethics & Society: Future Cities (Republic 2.0) Research and Design Intern",
+        "AI & ML Empowerment: positions currently filled — check back in September"
+      ],
+      "audience": [
+        "Students"
+      ],
+      "cta": {
+        "label": "Browse roles and apply",
+        "href": "https://www.babson.edu/thegenerator/community/intern-opportunities/"
+      },
+      "external_url": "https://www.babson.edu/thegenerator/community/intern-opportunities/",
+      "image": null,
+      "filter_tags": [
+        "Students"
+      ]
+    },
+    {
+      "id": "collaboratorai",
+      "name": "CollaboratorAI",
+      "expanded_name": "AI-assisted research-collaboration finder for faculty",
+      "summary": "A tool that helps Babson faculty identify common research interests and explore collaboration opportunities using AI. It may not always be completely accurate or up-to-date — verify important information independently.",
+      "details": [],
+      "audience": [
+        "Faculty"
+      ],
+      "cta": {
+        "label": "Try CollaboratorAI",
+        "href": "https://www.babson.edu/thegenerator/community/collaboratorai/"
+      },
+      "external_url": "https://www.babson.edu/thegenerator/community/collaboratorai/",
+      "image": null,
+      "filter_tags": [
+        "Faculty"
+      ]
+    },
+    {
+      "id": "leadership",
+      "name": "Leadership",
+      "expanded_name": "The faculty team behind The Generator",
+      "summary": "The Generator is led by an interdisciplinary Babson faculty team which oversees its research, experimentation, programming, and partnerships — the same faculty who lead the eight Specialty Labs.",
+      "details": [],
+      "audience": [
+        "Community",
+        "Faculty",
+        "Students"
+      ],
+      "cta": {
+        "label": "Meet the leaders (lab pages)",
+        "href": "../index.html#labs"
+      },
+      "external_url": "https://www.babson.edu/thegenerator/community/leadership/",
+      "image": null,
+      "filter_tags": [
+        "Faculty",
+        "Students"
+      ]
+    }
+  ]
+}

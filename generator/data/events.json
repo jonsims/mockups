@@ -1,0 +1,378 @@
+{
+  "_schema": "Events. Fields: id, title, start/end (ISO-8601 with offset; tz name in tz), location, audience[] (controlled vocab: Students | Faculty | Community | Small Business Owners — always spelled out), lab_ids[] -> labs.json ([] + org_wide:true for whole-Generator events), themes[] (controlled vocab: Innovation | Critical Inquiry | Ethics & Policy | Hands-On), beginner_friendly (bool — renders a 'No AI experience needed' badge), description (verbatim from live site), reassurance (one-line, only where true per source), registration_url|null, recording_url|null, materials_url|null, contact, sample (bool — true = illustrative future event for prototype demo, badged 'Sample' in UI; NEVER true on harvested real events).",
+  "tz": "America/New_York",
+  "last_updated": "2026-07-13",
+  "events": [
+    {
+      "id": "how-ai-will-take-your-job",
+      "title": "How AI Will Take Your Job",
+      "start": "2026-02-04T18:00:00-05:00",
+      "end": "2026-02-04T20:00:00-05:00",
+      "location": "The Weissman Foundry",
+      "audience": [
+        "Students"
+      ],
+      "lab_ids": [
+        "work-futures"
+      ],
+      "themes": [
+        "Critical Inquiry"
+      ],
+      "beginner_friendly": true,
+      "description": "The workforce is shifting — and AI is writing the rules. A panel exploring how automation is transforming roles across industries, from marketing and finance to operations and creative work. Babson students and industry voices break down real-world examples of AI displacement, then flip the script: How do you adapt? What skills matter when machines can do the work?",
+      "reassurance": null,
+      "registration_url": null,
+      "recording_url": null,
+      "materials_url": null,
+      "contact": "thegenerator@babson.edu",
+      "sample": false,
+      "image": null
+    },
+    {
+      "id": "faculty-open-house-feb-2026",
+      "title": "The Generator Open House for Babson Faculty",
+      "start": "2026-02-10T16:00:00-05:00",
+      "end": "2026-02-10T18:30:00-05:00",
+      "location": "The Weissman Foundry",
+      "audience": [
+        "Faculty"
+      ],
+      "lab_ids": [],
+      "org_wide": true,
+      "themes": [
+        "Innovation"
+      ],
+      "beginner_friendly": true,
+      "description": "Informal conversations about AI in education and research, with wine/beer and light catering. Connect about your AI-related experimentation in teaching and research, engaging with the 8 interdisciplinary Specialty Labs, upcoming Generator AI initiatives, and the future of AI at Babson.",
+      "reassurance": "Whether you are deeply immersed in AI or simply curious, we hope to see you.",
+      "registration_url": null,
+      "recording_url": null,
+      "materials_url": null,
+      "contact": "Erik Noyes",
+      "sample": false,
+      "image": null
+    },
+    {
+      "id": "can-ai-be-creative",
+      "title": "Can AI be Creative?",
+      "start": "2026-02-18T18:00:00-05:00",
+      "end": "2026-02-18T20:00:00-05:00",
+      "location": "Knight Auditorium",
+      "audience": [
+        "Students"
+      ],
+      "lab_ids": [
+        "ai-arts-media-performance"
+      ],
+      "themes": [
+        "Hands-On",
+        "Critical Inquiry"
+      ],
+      "beginner_friendly": true,
+      "description": "An immersive event exploring how AI can expand artistic expression across the creative arts — from music and visual art to design and digital media. Participants experiment with AI as a creative partner, producing original works of their own, culminating in a gallery walk where their pieces are shared and celebrated.",
+      "reassurance": null,
+      "registration_url": null,
+      "recording_url": null,
+      "materials_url": null,
+      "contact": "thegenerator@babson.edu",
+      "sample": false,
+      "image": null
+    },
+    {
+      "id": "ai-valentines-matchmaking",
+      "title": "AI Valentines Day Matchmaking",
+      "start": "2026-02-21T17:30:00-05:00",
+      "end": "2026-02-21T20:30:00-05:00",
+      "location": "Roger's Pub",
+      "audience": [
+        "Students"
+      ],
+      "lab_ids": [
+        "ai-ml-empowerment"
+      ],
+      "themes": [
+        "Hands-On"
+      ],
+      "beginner_friendly": true,
+      "description": "Let the algorithm play cupid! Submit your preferences, quirks, and deal-breakers — our AI matchmaking system handles the rest. Whether you're looking for a study-buddy, co-founder, or something more, see if machine learning can find your match. A lighthearted experiment in compatibility, connection, and letting AI into your love life (just a little!).",
+      "reassurance": null,
+      "registration_url": null,
+      "recording_url": null,
+      "materials_url": null,
+      "contact": "thegenerator@babson.edu",
+      "sample": false,
+      "image": null
+    },
+    {
+      "id": "multi-agent-workflows",
+      "title": "Being the CEO of your Life: Creating Multi-agent Workflows",
+      "start": "2026-03-04T18:00:00-05:00",
+      "end": "2026-03-04T20:00:00-05:00",
+      "location": "The Weissman Foundry",
+      "audience": [
+        "Students"
+      ],
+      "lab_ids": [
+        "prototyping-ai",
+        "ai-entrepreneurship"
+      ],
+      "themes": [
+        "Hands-On",
+        "Innovation"
+      ],
+      "beginner_friendly": false,
+      "description": "What if you could delegate your busywork to AI? A hands-on workshop exploring how multi-agent systems can automate repetitive student tasks. Live demos of AI-powered workflows: mass emailing and outreach, personalized study agents, networking automation, and custom task builders. From n8n pipelines to agent frameworks, leave with practical tools to reclaim hours of your week.",
+      "reassurance": null,
+      "registration_url": null,
+      "recording_url": null,
+      "materials_url": null,
+      "contact": "thegenerator@babson.edu",
+      "sample": false,
+      "image": null
+    },
+    {
+      "id": "mindful-ai-playground",
+      "title": "Mindful AI Playground",
+      "start": "2026-03-27T10:00:00-04:00",
+      "end": "2026-03-27T15:00:00-04:00",
+      "location": "Rullo Classroom, HELV",
+      "audience": [
+        "Students",
+        "Faculty",
+        "Community"
+      ],
+      "lab_ids": [
+        "ai-ml-empowerment",
+        "ai-research-writing"
+      ],
+      "themes": [
+        "Critical Inquiry",
+        "Ethics & Policy",
+        "Hands-On"
+      ],
+      "beginner_friendly": true,
+      "description": "How to use AI without having it use us? Curious minds gather, play, and think together — enthusiastic adopters, cautious skeptics, and everyone in between. What does 'mindful AI use' look like in real life? How can we use AI in ways that preserve authenticity and originality? How do we stay in the driver's seat — using AI as a tool for thinking and making, rather than outsourcing our voice, judgment, and agency? Speaker session, student panel, prompting workshop, and a hands-on activity.",
+      "reassurance": "All are welcome, regardless of discipline, background, or prior experience with AI.",
+      "registration_url": null,
+      "recording_url": null,
+      "materials_url": null,
+      "contact": "Kristi Girdharry or Davit Khachatryan",
+      "sample": false,
+      "image": null
+    },
+    {
+      "id": "ai-innovators-bootcamp-apr-2026",
+      "title": "AI Innovators Bootcamp for Small Business Leaders",
+      "start": "2026-04-10T09:30:00-04:00",
+      "end": "2026-04-10T18:30:00-04:00",
+      "location": "The Weissman Foundry, Babson College, Wellesley MA",
+      "audience": [
+        "Small Business Owners"
+      ],
+      "lab_ids": [
+        "ai-entrepreneurship"
+      ],
+      "themes": [
+        "Hands-On",
+        "Innovation"
+      ],
+      "beginner_friendly": true,
+      "description": "A 1-day deep dive into AI taught by Babson's award-winning faculty, delivered in partnership with Babson's top students/AI-minds. Working in cohorts, small business owners learn core concepts in AI, how AI is shaping innovation and competition across industries, hands-on-keys work with cutting-edge AI tools, and AI complexities, ethics and risks. Followed by an AI networking cocktail reception (4:30–6:30pm).",
+      "reassurance": "Built for owners starting from zero — core concepts first, hands-on with support at every step.",
+      "registration_url": null,
+      "recording_url": null,
+      "materials_url": null,
+      "contact": "thegenerator@babson.edu",
+      "sample": false,
+      "image": "assets/live/weissman-foundry-1-450x450.jpg"
+    },
+    {
+      "id": "buildathon-3",
+      "title": "Generator-Microsoft AI and Entrepreneurship 3rd Buildathon",
+      "start": "2026-04-11T09:00:00-04:00",
+      "end": "2026-04-11T20:00:00-04:00",
+      "location": "The Weissman Foundry",
+      "audience": [
+        "Students"
+      ],
+      "lab_ids": [
+        "ai-entrepreneurship",
+        "prototyping-ai"
+      ],
+      "themes": [
+        "Hands-On",
+        "Innovation"
+      ],
+      "beginner_friendly": true,
+      "description": "An energizing one-day AI hackathon at The Weissman Foundry. In partnership with Microsoft Research, this event challenges Babson, Olin, and Wellesley students to build innovative AI solutions. Whether you're a tech enthusiast or an aspiring entrepreneur, come ready to ideate, create, and pitch your AI-powered ventures.",
+      "reassurance": "No prior coding experience required — bring your entrepreneurial spirit and creative mindset!",
+      "registration_url": null,
+      "recording_url": null,
+      "materials_url": null,
+      "contact": "Cole Collins or Spencer Karns",
+      "sample": false,
+      "image": "assets/live/microsoft-babson-450x450.jpg"
+    },
+    {
+      "id": "sample-summer-office-hours",
+      "title": "Summer Office Hours: AI for Your Fall Syllabus",
+      "start": "2026-07-15T10:00:00-04:00",
+      "end": "2026-07-15T11:30:00-04:00",
+      "location": "Virtual (Webex)",
+      "audience": [
+        "Faculty"
+      ],
+      "lab_ids": [
+        "ai-experiential-learning"
+      ],
+      "themes": [
+        "Hands-On"
+      ],
+      "beginner_friendly": true,
+      "description": "Drop-in help redesigning a fall assignment or syllabus with (or deliberately without) AI. Bring one course artifact; leave with a concrete revision and a policy language starter.",
+      "reassurance": "No AI experience needed — this session exists for exactly that.",
+      "registration_url": null,
+      "recording_url": null,
+      "materials_url": null,
+      "contact": "thegenerator@babson.edu",
+      "sample": true,
+      "image": null
+    },
+    {
+      "id": "sample-brain-summer-meetup",
+      "title": "B.R.A.I.N. Summer Meetup: AI in New England Small Business",
+      "start": "2026-07-16T18:00:00-04:00",
+      "end": "2026-07-16T20:00:00-04:00",
+      "location": "Boston (venue TBA)",
+      "audience": [
+        "Community",
+        "Small Business Owners"
+      ],
+      "lab_ids": [
+        "ai-entrepreneurship"
+      ],
+      "themes": [
+        "Innovation"
+      ],
+      "beginner_friendly": true,
+      "description": "A Babson Regional AI Network meetup for leaders, business owners, entrepreneurs, technologists, and AI researchers to get connected and imagine business innovation in the AI-age. Babson alumni particularly welcome; anyone can attend.",
+      "reassurance": null,
+      "registration_url": null,
+      "recording_url": null,
+      "materials_url": null,
+      "contact": "thegenerator@babson.edu",
+      "sample": true,
+      "image": "assets/img/event-meetup.jpg"
+    },
+    {
+      "id": "sample-speaker-series-llms",
+      "title": "AI/ML Speaker Series: How Large Language Models Actually Work",
+      "start": "2026-09-17T17:00:00-04:00",
+      "end": "2026-09-17T18:30:00-04:00",
+      "location": "Knight Auditorium",
+      "audience": [
+        "Students",
+        "Faculty",
+        "Community"
+      ],
+      "lab_ids": [
+        "ai-ml-empowerment"
+      ],
+      "themes": [
+        "Hands-On",
+        "Critical Inquiry"
+      ],
+      "beginner_friendly": true,
+      "description": "An industry machine-learning engineer demystifies what happens under the hood of the AI tools everyone is using — no math background required, practical and ethical implications included.",
+      "reassurance": "Designed for the AI-curious with no technical background.",
+      "registration_url": null,
+      "recording_url": null,
+      "materials_url": null,
+      "contact": "Davit Khachatryan",
+      "sample": true,
+      "image": null
+    },
+    {
+      "id": "sample-writing-ai-symposium-3",
+      "title": "Writing and AI Symposium III",
+      "start": "2026-10-09T09:30:00-04:00",
+      "end": "2026-10-09T15:30:00-04:00",
+      "location": "Babson College",
+      "audience": [
+        "Faculty",
+        "Community"
+      ],
+      "lab_ids": [
+        "ai-research-writing"
+      ],
+      "themes": [
+        "Critical Inquiry",
+        "Ethics & Policy"
+      ],
+      "beginner_friendly": true,
+      "description": "The third invitational symposium convening writing faculty from across southern New England to explore generative AI in writing instruction, literacy, and pedagogy — participatory, values-driven, community-building.",
+      "reassurance": null,
+      "registration_url": null,
+      "recording_url": null,
+      "materials_url": null,
+      "contact": "Kristi Girdharry",
+      "sample": true,
+      "image": null
+    },
+    {
+      "id": "sample-republic-2-showcase",
+      "title": "Republic 2.0: A City of the Future — Gallery Showcase",
+      "start": "2026-10-22T17:00:00-04:00",
+      "end": "2026-10-22T20:00:00-04:00",
+      "location": "Babson College (gallery space)",
+      "audience": [
+        "Students",
+        "Faculty",
+        "Community"
+      ],
+      "lab_ids": [
+        "ai-ethics-society"
+      ],
+      "themes": [
+        "Critical Inquiry",
+        "Ethics & Policy"
+      ],
+      "beginner_friendly": true,
+      "description": "A public showcase of Republic 2.0 — the AI Ethics & Society Lab's hypothetical city of the future, tracing the most radical transformations in society, technology, and culture on the horizon. Walk the gallery, question the futures on display.",
+      "reassurance": null,
+      "registration_url": null,
+      "recording_url": null,
+      "materials_url": null,
+      "contact": "Jason Mohaghegh",
+      "sample": true,
+      "image": null
+    },
+    {
+      "id": "sample-buildathon-4",
+      "title": "4th Generator-Microsoft Entrepreneurship & AI Buildathon",
+      "start": "2026-11-14T09:00:00-05:00",
+      "end": "2026-11-14T20:00:00-05:00",
+      "location": "The Weissman Foundry",
+      "audience": [
+        "Students"
+      ],
+      "lab_ids": [
+        "ai-entrepreneurship",
+        "prototyping-ai"
+      ],
+      "themes": [
+        "Hands-On",
+        "Innovation"
+      ],
+      "beginner_friendly": true,
+      "description": "The Buildathon returns: a one-day AI hackathon in partnership with Microsoft Research, challenging students to identify entrepreneurial opportunities enabled by AI, form teams, build, and pitch.",
+      "reassurance": "No prior coding experience required — bring your entrepreneurial spirit and creative mindset!",
+      "registration_url": null,
+      "recording_url": null,
+      "materials_url": null,
+      "contact": "thegenerator@babson.edu",
+      "sample": true,
+      "image": "assets/live/microsoft-babson-450x450.jpg"
+    }
+  ]
+}

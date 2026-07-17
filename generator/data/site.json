@@ -1,0 +1,194 @@
+{
+  "_schema": "Site-level content: org identity, hero, stat band (each stat carries a source reference — no unsourced numbers), Questions Worth Asking rail (Critical-Inquiry content given a standing home at parity with news), quick actions per audience.",
+  "last_updated": "2026-07-13",
+  "org": {
+    "name": "The Generator",
+    "full_name": "The Generator at the C. Dean Metropoulos Institute for Technology and Entrepreneurship",
+    "parent": "Babson College",
+    "email": "thegenerator@babson.edu",
+    "giving_url": "https://www.givecampus.com/campaigns/5869/donations/new?designation=thegeneratorailab&",
+    "live_site": "https://www.babson.edu/thegenerator/"
+  },
+  "hero": {
+    "lede_prefix": "We are an interdisciplinary AI lab reimagining the future of",
+    "rotating_words": [
+      "tech entrepreneurship",
+      "work",
+      "teaching & learning",
+      "creative expression",
+      "writing",
+      "society"
+    ],
+    "mission": "We empower innovators to explore, teach, and research the transformative potential of AI in education, business, and society.",
+    "what_is_this": "The Generator is Babson College's interdisciplinary artificial intelligence lab, part of the C. Dean Metropoulos Institute for Technology and Entrepreneurship. Faculty, students, and partners explore what AI makes possible — and what it puts at risk — in education, business, and society. Everyone is welcome here: enthusiasts, skeptics, and the simply curious, no AI experience required.",
+    "image": "assets/live/code-3-1920x1920.jpg",
+    "video": "assets/live/hero-loop.mp4"
+  },
+  "stats": [
+    {
+      "value": "8",
+      "label": "interdisciplinary Specialty Labs",
+      "href": "index.html#labs",
+      "source": "Specialty Labs directory"
+    },
+    {
+      "value": "220+",
+      "label": "students from 12 universities at the last Buildathon",
+      "href": "labs/ai-entrepreneurship-and-business-innovation.html#initiatives",
+      "source": "2nd Entrepreneurship & AI Buildathon, April 2025"
+    },
+    {
+      "value": "50%+",
+      "label": "of Babson faculty peer-trained in AI concepts and tools",
+      "href": "https://www.babson.edu/thegenerator/news/over-50-of-babsons-faculty-have-been-peer-trained-in-ai-concepts-and-ai-tools/",
+      "source": "AI Teaching Training Program (AITTP)"
+    },
+    {
+      "value": "40+",
+      "label": "institutions convened by the Writing and AI Symposium",
+      "href": "labs/ai-research-and-writing.html#initiatives",
+      "source": "Writing and AI Symposium Series"
+    },
+    {
+      "value": "1,000",
+      "label": "small business owners in AI training — a goal in progress",
+      "href": "community/#bootcamp",
+      "source": "AI Innovators Bootcamp"
+    }
+  ],
+  "questions_worth_asking": {
+    "intro": "An AI lab that only cheerleads isn't doing its job. These questions — from our own faculty and events — stay open on purpose.",
+    "items": [
+      {
+        "quote": "How do you use AI without having it use us?",
+        "attribution": "Mindful AI Playground — AI/ML Empowerment & AI for Research & Writing Labs",
+        "href": "events/#mindful-ai-playground"
+      },
+      {
+        "quote": "Maybe instead of problem-solving, we should teach students to define problems, configure problems, and create problems. Be a problem creator, rather than a problem solver.",
+        "attribution": "Xinghua Li, Co-leader, AI Arts, Media & Performance Lab",
+        "href": "labs/ai-arts-and-performance.html#leaders"
+      },
+      {
+        "quote": "How might AI either intensify totalitarianism or propel resistance movements in an age of surveillance, empire, and cyber-warfare?",
+        "attribution": "AI Ethics & Society Lab — focus question",
+        "href": "labs/ai-ethics-and-society.html"
+      },
+      {
+        "quote": "What human skills and competences will new forms of work require?",
+        "attribution": "Work Futures Lab — focus question",
+        "href": "labs/work-futures.html"
+      }
+    ]
+  },
+  "quick_actions": {
+    "_note": "Audience keys drive the homepage audience-selector reordering. Each card: concrete value + status + single CTA (student-panel requirement).",
+    "cards": [
+      {
+        "id": "start-here",
+        "audiences": [
+          "new"
+        ],
+        "title": "New to AI? Start here",
+        "value": "A 10-minute on-ramp: what The Generator is, one video, and the one event this season built for beginners.",
+        "status": "Always open",
+        "cta": {
+          "label": "Find your starting point",
+          "href": "#find-your-lab"
+        }
+      },
+      {
+        "id": "ai-credits",
+        "audiences": [
+          "students"
+        ],
+        "title": "AI Credits — free compute",
+        "value": "$1,000 grants from Babson (fast turnaround) or $1,000–$25,000 via Microsoft for Startups for your venture.",
+        "status": "Applications open",
+        "cta": {
+          "label": "How to apply",
+          "href": "community/#ai-credits"
+        }
+      },
+      {
+        "id": "interns",
+        "audiences": [
+          "students"
+        ],
+        "title": "Lab internships",
+        "value": "Research, design, and communications roles inside the labs — multilingual AI, future-of-work research, Republic 2.0.",
+        "status": "6 roles posted",
+        "cta": {
+          "label": "Browse roles",
+          "href": "community/#interns"
+        }
+      },
+      {
+        "id": "bootcamp",
+        "audiences": [
+          "community"
+        ],
+        "title": "AI Innovators Bootcamp",
+        "value": "A 1-day, no-prerequisites AI deep dive for small business owners, taught by Babson faculty with students at your side.",
+        "status": "Next cohort: registration open",
+        "cta": {
+          "label": "About the bootcamp",
+          "href": "community/#bootcamp"
+        }
+      },
+      {
+        "id": "brain",
+        "audiences": [
+          "community"
+        ],
+        "title": "B.R.A.I.N. — the Babson Regional AI Network",
+        "value": "Meetups across New England connecting business owners, technologists, and researchers around entrepreneurial AI.",
+        "status": "Meetups ongoing",
+        "cta": {
+          "label": "Join the network",
+          "href": "community/#brain"
+        }
+      },
+      {
+        "id": "subscribe",
+        "audiences": [
+          "faculty"
+        ],
+        "title": "Stay in the loop",
+        "value": "Subscribe once: the faculty events calendar feed, or the digest email. The site comes to you.",
+        "status": "Calendar feed available",
+        "cta": {
+          "label": "Subscribe",
+          "href": "events/#subscribe"
+        }
+      },
+      {
+        "id": "collaboratorai",
+        "audiences": [
+          "faculty"
+        ],
+        "title": "CollaboratorAI",
+        "value": "Find Babson faculty with overlapping research interests — an AI-assisted collaboration finder.",
+        "status": "Live for Babson faculty",
+        "cta": {
+          "label": "Try it",
+          "href": "community/#collaboratorai"
+        }
+      },
+      {
+        "id": "give",
+        "audiences": [
+          "community",
+          "faculty"
+        ],
+        "title": "Support The Generator",
+        "value": "Gifts fund student AI credits, the Buildathons, and the labs' public programming.",
+        "status": "",
+        "cta": {
+          "label": "Give to The Generator",
+          "href": "https://www.givecampus.com/campaigns/5869/donations/new?designation=thegeneratorailab&"
+        }
+      }
+    ]
+  }
+}

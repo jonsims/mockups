@@ -1,0 +1,160 @@
+{
+  "_schema": "Find-your-lab matcher. Transparent, data-driven: Q1 forks by role; Q2 options carry per-lab weights; Q3 selects an engagement next-step per role. Result = top-2 labs by summed weight (pin_position breaks ties) + role-specific 'how to engage' CTA. The methodology note is rendered in the UI — no black box. Weights auditable: every role path can reach ai-ethics-society and work-futures (anti-bias requirement from design review).",
+  "last_updated": "2026-07-13",
+  "methodology_note": "How this works: your answers add simple, fixed weights to each lab (shown in this file — data/matcher.json). The two highest-scoring labs are recommended. No AI involved; just an honest lookup table.",
+  "q1": {
+    "question": "Which describes you best?",
+    "options": [
+      {
+        "id": "student",
+        "label": "I'm a student"
+      },
+      {
+        "id": "faculty",
+        "label": "I'm faculty / an educator"
+      },
+      {
+        "id": "community",
+        "label": "I run a business / I'm from the community"
+      },
+      {
+        "id": "exploring",
+        "label": "Just exploring — I'm new to all of this"
+      }
+    ]
+  },
+  "q2": {
+    "question": "What draws you in most?",
+    "options": [
+      {
+        "id": "build",
+        "label": "Building things — ventures, prototypes, projects",
+        "weights": {
+          "ai-entrepreneurship": 3,
+          "prototyping-ai": 3,
+          "ai-ml-empowerment": 1
+        }
+      },
+      {
+        "id": "understand",
+        "label": "Understanding how AI actually works under the hood",
+        "weights": {
+          "ai-ml-empowerment": 3,
+          "ai-research-writing": 1,
+          "work-futures": 1
+        }
+      },
+      {
+        "id": "question",
+        "label": "Questioning AI — ethics, risks, what it does to society and work",
+        "weights": {
+          "ai-ethics-society": 3,
+          "work-futures": 3,
+          "ai-research-writing": 1
+        }
+      },
+      {
+        "id": "teach",
+        "label": "Teaching and learning — AI in the classroom",
+        "weights": {
+          "ai-experiential-learning": 3,
+          "ai-research-writing": 2,
+          "ai-ml-empowerment": 1
+        }
+      },
+      {
+        "id": "create",
+        "label": "Creating — art, performance, media, writing",
+        "weights": {
+          "ai-arts-media-performance": 3,
+          "ai-research-writing": 2,
+          "ai-ethics-society": 1
+        }
+      },
+      {
+        "id": "work",
+        "label": "The future of work and careers",
+        "weights": {
+          "work-futures": 3,
+          "ai-entrepreneurship": 1,
+          "ai-ethics-society": 1
+        }
+      }
+    ]
+  },
+  "q3": {
+    "question": "How do you want to engage first?",
+    "options": [
+      {
+        "id": "events",
+        "label": "Show up to something — events, workshops, meetups"
+      },
+      {
+        "id": "hands-on",
+        "label": "Get my hands dirty — build, apply, intern"
+      },
+      {
+        "id": "read",
+        "label": "Read and watch first — ease me in"
+      }
+    ]
+  },
+  "next_steps": {
+    "student": {
+      "events": {
+        "label": "Student events this season",
+        "href": "events/?audience=Students"
+      },
+      "hands-on": {
+        "label": "Lab internships + AI Credits",
+        "href": "community/#interns"
+      },
+      "read": {
+        "label": "Browse the labs' open questions",
+        "href": "#labs"
+      }
+    },
+    "faculty": {
+      "events": {
+        "label": "Faculty events + open houses",
+        "href": "events/?audience=Faculty"
+      },
+      "hands-on": {
+        "label": "AI Teaching Training + CollaboratorAI",
+        "href": "community/#collaboratorai"
+      },
+      "read": {
+        "label": "Faculty AI-usage survey + teaching stories",
+        "href": "news/"
+      }
+    },
+    "community": {
+      "events": {
+        "label": "B.R.A.I.N. meetups near you",
+        "href": "community/#brain"
+      },
+      "hands-on": {
+        "label": "AI Innovators Bootcamp (no prerequisites)",
+        "href": "community/#bootcamp"
+      },
+      "read": {
+        "label": "News from The Generator",
+        "href": "news/"
+      }
+    },
+    "exploring": {
+      "events": {
+        "label": "Beginner-friendly events",
+        "href": "events/?beginner=1"
+      },
+      "hands-on": {
+        "label": "Hands-on workshops",
+        "href": "events/?theme=Hands-On"
+      },
+      "read": {
+        "label": "Start with the labs' open questions",
+        "href": "#labs"
+      }
+    }
+  }
+}

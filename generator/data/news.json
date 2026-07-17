@@ -1,0 +1,330 @@
+{
+  "_schema": "News. Fields: id (live-site slug), title (verbatim), dek (verbatim subtitle/byline where the live site shows one), lab_ids[] -> labs.json ([] + org_wide for whole-Generator stories), themes[] (Innovation | Critical Inquiry | Ethics & Policy | Hands-On | Research), url (live babson.edu URL), video (bool). Array order = live-site display order (newest first). Dates are not published on the live index and are deliberately NOT invented here. summary: 1-2 sentence prototype summary written from harvested babson.edu source copy (July 2026) — flagged as such in the UI. published: ESTIMATED dates (the live site publishes none) — date_estimated flags them; UI shows ~ and a footnote. source/audiences: derived for the prototype table. author: byline when known, else the website.",
+  "last_updated": "2026-07-13",
+  "news": [
+    {
+      "id": "over-50-of-babsons-faculty-have-been-peer-trained-in-ai-concepts-and-ai-tools",
+      "title": "Over 50% of Babson's Faculty Have Been Peer-trained in AI Concepts and AI Tools",
+      "dek": "The Generator leads Babson's AI Teaching Training Program (AITTP)",
+      "lab_ids": [
+        "ai-experiential-learning",
+        "ai-research-writing"
+      ],
+      "themes": [
+        "Innovation",
+        "Research"
+      ],
+      "url": "https://www.babson.edu/thegenerator/news/over-50-of-babsons-faculty-have-been-peer-trained-in-ai-concepts-and-ai-tools/",
+      "video": false,
+      "image": "assets/live/design-process450x450.jpg",
+      "summary": "More than half of Babson's faculty have completed peer-led training in AI concepts and tools through the AI Teaching Training Program (AITTP), which The Generator runs — one of the highest AI-training rates among business schools.",
+      "published": "2026-05-06",
+      "date_estimated": true,
+      "source": "babson.edu",
+      "audiences": [
+        "Faculty"
+      ],
+      "author": "babson.edu"
+    },
+    {
+      "id": "the-6-disciplines-companies-need-to-get-the-most-out-of-gen-ai",
+      "title": "The 6 Disciplines Companies Need to Get the Most Out of Gen AI",
+      "dek": "By Tom Davenport",
+      "lab_ids": [
+        "work-futures",
+        "ai-entrepreneurship"
+      ],
+      "themes": [
+        "Innovation"
+      ],
+      "url": "https://www.babson.edu/thegenerator/news/the-6-disciplines-companies-need-to-get-the-most-out-of-gen-ai/",
+      "video": false,
+      "image": "assets/live/davenport-article-450x450.jpg",
+      "summary": "Tom Davenport outlines six disciplines — spanning strategy, data, and workforce readiness — that companies need in place to capture real value from generative AI.",
+      "published": "2025-08-26",
+      "date_estimated": true,
+      "source": "babson.edu",
+      "audiences": [
+        "Community",
+        "Small Business Owners"
+      ],
+      "author": "Tom Davenport"
+    },
+    {
+      "id": "meaningful-writing-in-the-age-of-generative-artificial-intelligence",
+      "title": "Meaningful Writing in the Age of Generative Artificial Intelligence",
+      "dek": "By Kristi Girdharry and Davit Khachatryan",
+      "lab_ids": [
+        "ai-research-writing",
+        "ai-ml-empowerment"
+      ],
+      "themes": [
+        "Critical Inquiry",
+        "Research"
+      ],
+      "url": "https://www.babson.edu/thegenerator/news/meaningful-writing-in-the-age-of-generative-artificial-intelligence/",
+      "video": false,
+      "image": null,
+      "summary": "Kristi Girdharry and Davit Khachatryan on preserving meaningful student writing when generative AI can draft anything — published in Double Helix.",
+      "published": "2024-06-11",
+      "date_estimated": true,
+      "source": "Double Helix (journal)",
+      "audiences": [
+        "Faculty"
+      ],
+      "author": "Kristi Girdharry & Davit Khachatryan"
+    },
+    {
+      "id": "entrepreneurship-education-at-the-dawn-of-generative-artificial-intelligence",
+      "title": "Entrepreneurship Education at the Dawn of Generative Artificial Intelligence",
+      "dek": "By Erik Noyes",
+      "lab_ids": [
+        "ai-entrepreneurship",
+        "ai-experiential-learning"
+      ],
+      "themes": [
+        "Research"
+      ],
+      "url": "https://www.babson.edu/thegenerator/news/entrepreneurship-education-at-the-dawn-of-generative-artificial-intelligence/",
+      "video": false,
+      "image": null,
+      "summary": "Erik Noyes on how generative AI reshapes what and how we teach entrepreneurs, in Entrepreneurship Education & Pedagogy.",
+      "published": "2024-02-20",
+      "date_estimated": true,
+      "source": "EE&P (journal)",
+      "audiences": [
+        "Faculty"
+      ],
+      "author": "Erik Noyes"
+    },
+    {
+      "id": "ai-in-entrepreneurship-education-an-interdisciplinary-approach",
+      "title": "AI in Entrepreneurship Education: An Interdisciplinary Approach",
+      "dek": "Babson's Generator reimagines entrepreneurship education in the AI-age",
+      "lab_ids": [
+        "ai-entrepreneurship",
+        "ai-experiential-learning"
+      ],
+      "themes": [
+        "Innovation"
+      ],
+      "url": "https://www.babson.edu/thegenerator/news/ai-in-entrepreneurship-education-an-interdisciplinary-approach/",
+      "video": false,
+      "image": null,
+      "summary": "How The Generator's eight-lab, interdisciplinary model reimagines entrepreneurship education for the AI age.",
+      "published": "2023-11-07",
+      "date_estimated": true,
+      "source": "babson.edu",
+      "audiences": [
+        "Faculty",
+        "Community"
+      ],
+      "author": "babson.edu"
+    },
+    {
+      "id": "generator-microsoft-entrepreneurship-and-ai-buildathon",
+      "title": "The Generator-Microsoft Entrepreneurship & AI Buildathon",
+      "dek": "220+ students, 12 universities, 40+ teams — winners Terraflex built an AI-powered adaptive prosthetic",
+      "lab_ids": [
+        "ai-entrepreneurship",
+        "prototyping-ai"
+      ],
+      "themes": [
+        "Hands-On",
+        "Innovation"
+      ],
+      "url": "https://www.babson.edu/thegenerator/news/generator-microsoft-entrepreneurship-and-ai-buildathon/",
+      "video": false,
+      "image": null,
+      "summary": "The Generator–Microsoft Buildathons drew 200+ and then 220+ students from up to twelve universities. Winners Terraflex built an AI-powered adaptive prosthetic that took the $2,500 first prize and the $60,000 Nature-Inspired Design Prize.",
+      "published": "2025-04-08",
+      "date_estimated": true,
+      "source": "babson.edu",
+      "audiences": [
+        "Students"
+      ],
+      "author": "babson.edu"
+    },
+    {
+      "id": "babson-integrates-ai-wcvb",
+      "title": "Babson College Integrates AI into Wide Range of Studies",
+      "dek": "WCVB's David Bienick visits The Generator to see how students integrate AI into coursework",
+      "lab_ids": [],
+      "org_wide": true,
+      "themes": [
+        "Innovation"
+      ],
+      "url": "https://www.babson.edu/thegenerator/",
+      "video": true,
+      "image": "assets/live/wcvb-video.jpg",
+      "summary": "WCVB's David Bienick visits the Weissman Foundry to see how Babson students use AI across coursework — from ideation to venture pitches.",
+      "published": "2025-10-21",
+      "date_estimated": true,
+      "source": "WCVB",
+      "audiences": [
+        "Community"
+      ],
+      "author": "David Bienick, WCVB"
+    },
+    {
+      "id": "the-generator-hosts-ai-entrepreneurship--innovation-event",
+      "title": "The Generator Hosts “AI Entrepreneurship & Innovation” Event",
+      "dek": null,
+      "lab_ids": [
+        "ai-entrepreneurship"
+      ],
+      "themes": [
+        "Innovation"
+      ],
+      "url": "https://www.babson.edu/thegenerator/news/the-generator-hosts-ai-entrepreneurship--innovation-event/",
+      "video": false,
+      "image": null,
+      "summary": "Recap of The Generator's “AI Entrepreneurship & Innovation” event connecting founders, faculty, and students.",
+      "published": "2024-11-19",
+      "date_estimated": true,
+      "source": "babson.edu",
+      "audiences": [
+        "Students",
+        "Community"
+      ],
+      "author": "babson.edu"
+    },
+    {
+      "id": "the-generator-releases-its-first-survey-of-babson-faculty-ai-usage",
+      "title": "The Generator Releases its First Survey of Babson Faculty AI-Usage",
+      "dek": null,
+      "lab_ids": [
+        "ai-experiential-learning",
+        "work-futures"
+      ],
+      "themes": [
+        "Research"
+      ],
+      "url": "https://www.babson.edu/thegenerator/news/the-generator-releases-its-first-survey-of-babson-faculty-ai-usage/",
+      "video": false,
+      "image": null,
+      "summary": "The Generator's first survey of Babson faculty AI usage — baseline data on adoption, use cases, and concerns across the college.",
+      "published": "2025-02-18",
+      "date_estimated": true,
+      "source": "babson.edu",
+      "audiences": [
+        "Faculty"
+      ],
+      "author": "babson.edu"
+    },
+    {
+      "id": "the-generator-hosts-creative-options-to-leverage-ai-in-your-teaching",
+      "title": "The Generator Hosts “Creative Options to Leverage AI in Your Teaching”",
+      "dek": null,
+      "lab_ids": [
+        "ai-experiential-learning",
+        "ai-arts-media-performance"
+      ],
+      "themes": [
+        "Hands-On"
+      ],
+      "url": "https://www.babson.edu/thegenerator/news/the-generator-hosts-creative-options-to-leverage-ai-in-your-teaching/",
+      "video": false,
+      "image": null,
+      "summary": "A hands-on faculty session on creative ways to bring AI into course design and classroom activities.",
+      "published": "2024-11-05",
+      "date_estimated": true,
+      "source": "babson.edu",
+      "audiences": [
+        "Faculty"
+      ],
+      "author": "babson.edu"
+    },
+    {
+      "id": "the-generator-and-babsons-ai-club-co-sponsor-how-i-use-ai",
+      "title": "The Generator and Babson's AI Club Co-sponsor “How I Use AI”",
+      "dek": null,
+      "lab_ids": [
+        "ai-ml-empowerment"
+      ],
+      "themes": [
+        "Hands-On"
+      ],
+      "url": "https://www.babson.edu/thegenerator/news/the-generator-and-babsons-ai-club-co-sponsor-how-i-use-ai/",
+      "video": false,
+      "image": null,
+      "summary": "Co-sponsored with Babson's AI Club: students and faculty share the AI workflows they actually use.",
+      "published": "2024-10-03",
+      "date_estimated": true,
+      "source": "babson.edu",
+      "audiences": [
+        "Students"
+      ],
+      "author": "babson.edu"
+    },
+    {
+      "id": "the-generator-invited-to-microsoft-headquarters-to-present-on-ai--education",
+      "title": "The Generator Invited to Microsoft Headquarters to Present on AI & Education",
+      "dek": null,
+      "lab_ids": [
+        "ai-entrepreneurship",
+        "ai-experiential-learning"
+      ],
+      "themes": [
+        "Innovation"
+      ],
+      "url": "https://www.babson.edu/thegenerator/news/the-generator-invited-to-microsoft-headquarters-to-present-on-ai--education/",
+      "video": false,
+      "image": null,
+      "summary": "The Generator presented its approach to AI in education at Microsoft headquarters.",
+      "published": "2025-05-13",
+      "date_estimated": true,
+      "source": "babson.edu",
+      "audiences": [
+        "Faculty",
+        "Community"
+      ],
+      "author": "babson.edu"
+    },
+    {
+      "id": "the-generator-releases-its-first-survey-of-babson-undergraduate-ai-usage",
+      "title": "The Generator Releases its First Survey of Babson Undergraduate AI-Usage",
+      "dek": null,
+      "lab_ids": [
+        "ai-experiential-learning",
+        "work-futures"
+      ],
+      "themes": [
+        "Research"
+      ],
+      "url": "https://www.babson.edu/thegenerator/news/the-generator-releases-its-first-survey-of-babson-undergraduate-ai-usage/",
+      "video": false,
+      "image": null,
+      "summary": "The first survey of Babson undergraduate AI usage — how students actually use AI in classes and ventures.",
+      "published": "2024-12-10",
+      "date_estimated": true,
+      "source": "babson.edu",
+      "audiences": [
+        "Students",
+        "Faculty"
+      ],
+      "author": "babson.edu"
+    },
+    {
+      "id": "the-generator-an-interdisciplinary-ai-lab-launches-at-babson-college",
+      "title": "The Generator, an Interdisciplinary AI Lab, Launches at Babson College",
+      "dek": null,
+      "lab_ids": [],
+      "org_wide": true,
+      "themes": [
+        "Innovation"
+      ],
+      "url": "https://www.babson.edu/thegenerator/news/the-generator-an-interdisciplinary-ai-lab-launches-at-babson-college/",
+      "video": false,
+      "image": null,
+      "summary": "The founding announcement: The Generator launches as Babson's interdisciplinary AI lab, uniting faculty across disciplines with students and industry partners.",
+      "published": "2023-09-12",
+      "date_estimated": true,
+      "source": "babson.edu",
+      "audiences": [
+        "Community"
+      ],
+      "author": "babson.edu"
+    }
+  ]
+}

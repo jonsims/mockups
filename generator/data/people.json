@@ -1,0 +1,316 @@
+{
+  "_schema": "People. leaders[]: id, name, titles[] (verbatim), role_line (verbatim 'Leader of...' line), quote (verbatim), research_interests[] (verbatim), bio (verbatim, condensed), publications[] (verbatim titles), lab_ids[] -> labs.json. student_highlights[]: student-facing social proof for the homepage. photo: headshot pulled from the Babson faculty-profile page (assets/faculty/); profile_url: the live profile. email: derived from the Babson username in the faculty-profile path.",
+  "last_updated": "2026-07-13",
+  "leaders": [
+    {
+      "id": "erik-noyes",
+      "name": "Erik Noyes",
+      "titles": [
+        "Founding Director, The Generator",
+        "Associate Professor of Entrepreneurship & Artificial Intelligence",
+        "Michael London '92 and Stephen H. Kramer '92 Term Chair in Entrepreneurship"
+      ],
+      "role_line": "Leader of The Generator's AI Entrepreneurship & Business Innovation Specialty Lab",
+      "quote": "AI is the single most important technological, societal, ethical, and business innovation issue of our time. Leaders, entrepreneurs, and innovators of all kinds must understand both the opportunities and risks presented by the emerging AI-age.",
+      "research_interests": [
+        "AI for business innovation",
+        "AI for the rapid prototyping of entrepreneurial ideas",
+        "AI & experiential entrepreneurship education",
+        "AI and the future of innovation management"
+      ],
+      "bio": "Erik Noyes is an Associate Professor of Entrepreneurship & Artificial Intelligence at Babson College. An expert in innovation, growth strategy, and AI, Noyes teaches courses in entrepreneurial thinking, new venture creation, and business innovation. His research examines entrepreneurship, disruptive innovation, and AI in entrepreneurship and innovation. Prior to joining Babson, Noyes consulted with companies like Nokia, Motorola, BMW, and Hewlett-Packard Healthcare.",
+      "publications": [
+        "Entrepreneurship Education at the Dawn of Generative Artificial Intelligence — Entrepreneurship Education & Pedagogy (EE&P)"
+      ],
+      "lab_ids": [
+        "ai-entrepreneurship"
+      ],
+      "photo": "assets/faculty/erik-noyes.jpg",
+      "profile_url": "https://www.babson.edu/about/our-leaders-and-scholars/faculty-and-academic-divisions/faculty-profiles/erik-noyes/",
+      "email": "enoyes@babson.edu"
+    },
+    {
+      "id": "ruth-gilleran",
+      "name": "Ruth Gilleran",
+      "titles": [
+        "Professor of Practice, Operations and Information Management",
+        "Co-Director of Foundations of Management & Entrepreneurship (FME)"
+      ],
+      "role_line": "Co-leader of The Generator's AI Entrepreneurship & Business Innovation and AI & Experiential Learning Specialty Labs",
+      "quote": "AI has unleashed a digital workforce that can assist entrepreneurs at every stage of their entrepreneurial journey, from ideation to venture growth.",
+      "research_interests": [
+        "Gaining efficiencies using AI",
+        "Managing change amidst the AI digital workforce",
+        "Creating closed AI large language models",
+        "Training AI systems"
+      ],
+      "bio": "Ruth Gilleran is a Professor of Practice in the Operations and Information Management division. She teaches courses in digital technologies and entrepreneurship; her research sits at the intersection of the two. She co-leads Babson's year-long flagship entrepreneurship program. Prior to Babson, she was Assistant Vice President of Computer Associates' enterprise business and data analytics applications.",
+      "publications": [
+        "Supervised Machine Learning: An Experiential and Reflective Session"
+      ],
+      "lab_ids": [
+        "ai-entrepreneurship",
+        "ai-experiential-learning"
+      ],
+      "photo": "assets/faculty/ruth-gilleran.jpg",
+      "profile_url": "https://www.babson.edu/about/our-leaders-and-scholars/faculty-and-academic-divisions/faculty-profiles/ruth-gilleran/",
+      "email": "rgilleran@babson.edu"
+    },
+    {
+      "id": "vicky-zhu",
+      "name": "Vicky Zhu",
+      "titles": [
+        "Assistant Professor of Quantitative Methods, MAST"
+      ],
+      "role_line": "Co-leader of The Generator's AI Entrepreneurship & Business Innovation Specialty Lab",
+      "quote": "AI is transforming how we learn, create, and innovate. My goal is to help students build the literacy, intuition, and confidence to become thoughtful creators, critical thinkers, and responsible innovators in an AI-driven world.",
+      "research_interests": [
+        "Foundational AI concepts and literacy",
+        "Deep learning and AI applications in business",
+        "Human–AI coding collaboration",
+        "AI for teaching and classroom innovation"
+      ],
+      "bio": "Vicky Zhu is an Assistant Professor of Quantitative Methods at Babson College, focused on AI literacy, deep learning applications in business, and human–AI collaboration in the classroom.",
+      "publications": [],
+      "lab_ids": [
+        "ai-entrepreneurship"
+      ],
+      "photo": "assets/faculty/vicky-zhu.jpg",
+      "profile_url": "https://www.babson.edu/about/our-leaders-and-scholars/faculty-and-academic-divisions/faculty-profiles/vicky-r-zhu/",
+      "email": "vzhu@babson.edu"
+    },
+    {
+      "id": "sebastian-fixson",
+      "name": "Sebastian Fixson",
+      "titles": [
+        "Founding Faculty Director, DBA Program",
+        "Marla M Capozzi MBA '96 Term Chair in Design Thinking, Innovation, and Entrepreneurship",
+        "Professor of Innovation & Design"
+      ],
+      "role_line": "Leader of The Generator's Work Futures Specialty Lab",
+      "quote": "AI will have profound effects on what we do at work and how we work together. These are fascinating times to help shape these new forms of work.",
+      "research_interests": [
+        "AI and the Future of Work",
+        "AI in Innovation",
+        "AI in Design"
+      ],
+      "bio": "Dr. Fixson concentrates his work on helping people and organizations build innovation capabilities. His research investigates how structure and governance of innovation processes, practices like design thinking, and digital design tools affect the nature and outcome of innovation work.",
+      "publications": [
+        "Transform with Design: Creating New Innovation Capabilities with Design Thinking (Rotman/U Toronto Press, 2023)",
+        "The Transformation of the Innovation Process — Journal of Product Innovation Management (2021)",
+        "Four Skills Tomorrow's Innovation Workforce Will Need (2020)"
+      ],
+      "lab_ids": [
+        "work-futures"
+      ],
+      "photo": "assets/faculty/sebastian-fixson.jpg",
+      "profile_url": "https://www.babson.edu/about/our-leaders-and-scholars/faculty-and-academic-divisions/faculty-profiles/sebastian-fixson/",
+      "email": "sfixson@babson.edu"
+    },
+    {
+      "id": "jason-mohaghegh",
+      "name": "Jason Mohaghegh",
+      "titles": [
+        "Associate Professor of Comparative Literature"
+      ],
+      "role_line": "Leader of The Generator's AI Ethics & Society Specialty Lab",
+      "quote": "AI opens a Pandora's Box of possibilities and challenges for the future. The outer limits of its potentials remain unknown, and so we must imagine what it might mean to cross this point of no return.",
+      "research_interests": [
+        "AI and Cultural Movements",
+        "AI and Virtual Realities",
+        "AI and Philosophy (time, space, mind, body)",
+        "AI and the Ethics of the Future",
+        "AI and Existential Risk"
+      ],
+      "bio": "Jason Bahbak Mohaghegh is a philosopher, literary theorist, and Associate Professor of Comparative Literature at Babson College. His scholarly work explores concepts of chaos, illusion, violence, disappearance, delirium, silence, secrecy, and apocalypse. He has published nine books to date, including The Chaotic Imagination (2010), Inflictions: The Writing of Violence (2012), and The Radical Unspoken (2013).",
+      "publications": [
+        "The Chaotic Imagination (2010)",
+        "Inflictions: The Writing of Violence (2012)",
+        "The Radical Unspoken (2013)"
+      ],
+      "lab_ids": [
+        "ai-ethics-society"
+      ],
+      "photo": "assets/faculty/jason-mohaghegh.jpg",
+      "profile_url": "https://www.babson.edu/about/our-leaders-and-scholars/faculty-and-academic-divisions/faculty-profiles/jason-mohaghegh/",
+      "email": "jmohaghegh@babson.edu"
+    },
+    {
+      "id": "jonathan-sims",
+      "name": "Jonathan Sims",
+      "titles": [
+        "Associate Professor of Strategic Management"
+      ],
+      "role_line": "Leader of The Generator's AI & Experiential Learning Specialty Lab",
+      "quote": "For the curious, AI has made this the most exciting time in a generation to be a teacher. AI is already changing the way our students learn; it's up to us to make sure we use it to improve the way we teach.",
+      "research_interests": [
+        "AI for accelerated learning",
+        "AI for creating teaching pedagogy",
+        "AI for starting new ventures",
+        "AI and the future of open innovation"
+      ],
+      "bio": "Jonathan Sims is an Associate Professor of Entrepreneurship at Babson College. A scholar of strategy and innovation, Sims teaches courses in strategy, problem-solving, and moonshot innovations. His research examines open innovation, entrepreneurship, and teaching pedagogy.",
+      "publications": [
+        "Community interactions at crowd scale: hybrid crowds on the GitHub platform — Innovation (2020)",
+        "Write Code, Save Lives: How a Community Uses Open Innovation to Address a Societal Challenge — R&D Management (2019)",
+        "Alleviating the Plunging-In Bias, Elevating Strategic Problem-Solving — Academy of Management Learning & Education (2018)"
+      ],
+      "lab_ids": [
+        "ai-experiential-learning"
+      ],
+      "photo": "assets/faculty/jonathan-sims.jpg",
+      "profile_url": "https://www.babson.edu/about/our-leaders-and-scholars/faculty-and-academic-divisions/faculty-profiles/jonathan-sims/",
+      "email": "jsims@babson.edu"
+    },
+    {
+      "id": "davit-khachatryan",
+      "name": "Davit Khachatryan",
+      "titles": [
+        "Associate Professor, MAST"
+      ],
+      "role_line": "Leader of The Generator's AI & ML Empowerment Specialty Lab",
+      "quote": "The ML tools underlying AI are technical but can be made intuitive and accessible to users. Gaining an intuitive understanding of what happens under the hood of AI technology will empower humans as AI continues to permeate our daily lives.",
+      "research_interests": [
+        "AI and Machine Learning",
+        "AI pedagogy",
+        "Generative AI"
+      ],
+      "bio": "Davit Khachatryan is a data scientist specializing in machine learning and natural language processing. His pedagogical innovations include Playmeans, a web app for inclusive data science education using live data from Spotify. Before Babson, he was a Senior Associate at PricewaterhouseCoopers focusing on predictive modeling and advanced data analytics.",
+      "publications": [
+        "Meaningful Writing in the Age of Generative Artificial Intelligence — Double Helix (2024)",
+        "Playmeans: Inclusive and Engaging Data Science through Music — JSDSE (2023)",
+        "Tumor heterogeneity estimation for radiomics in cancer — Statistics in Medicine (2020)"
+      ],
+      "lab_ids": [
+        "ai-ml-empowerment"
+      ],
+      "photo": "assets/faculty/davit-khachatryan.jpg",
+      "profile_url": "https://www.babson.edu/about/our-leaders-and-scholars/faculty-and-academic-divisions/faculty-profiles/davit-khachatryan/",
+      "email": "dkhachatryan@babson.edu"
+    },
+    {
+      "id": "jonathan-griffiths",
+      "name": "Jonathan Griffiths",
+      "titles": [
+        "Director, The Weissman Foundry"
+      ],
+      "role_line": "Leader of The Generator's Prototyping with AI Specialty Lab",
+      "quote": "AI has made it possible to create at a pace and depth that has not been possible before. It has and will continue to enable entrepreneurs and innovators the opportunity to develop new solutions to high-value problems much more rapidly and with less skill-building than ever before. It will change how we view creation.",
+      "research_interests": [
+        "Generative AI for rapid prototyping new products and ideas",
+        "Ethical considerations in AI-driven prototyping",
+        "Human-AI collaboration in prototyping"
+      ],
+      "bio": "Jonathan is an educator and leader with nearly two decades of experience dedicated to innovation, technology, and fostering inquisitiveness. He leads the Weissman Foundry at Babson College, a transformative cross-college initiative and makerspace that empowers students to create with purpose, embrace entrepreneurship, and make their ideas a reality.",
+      "publications": [],
+      "lab_ids": [
+        "prototyping-ai"
+      ],
+      "photo": null,
+      "profile_url": null,
+      "email": null
+    },
+    {
+      "id": "kristi-girdharry",
+      "name": "Kristi Girdharry",
+      "titles": [
+        "Associate Teaching Professor of English",
+        "Director of the Writing Center"
+      ],
+      "role_line": "Leader of The Generator's AI for Research & Writing Specialty Lab",
+      "quote": "To 'be better than a robot' (my favorite phrase), we need to critically and ethically understand the possibilities of AI as a tool that supports our human inquiry as opposed to letting it dictate or limit our perspectives and creativity.",
+      "research_interests": [
+        "AI for enhancing writing pedagogy and research",
+        "AI and ethical communication",
+        "AI as a tool for equity",
+        "AI and the evolution of rhetorical practices"
+      ],
+      "bio": "Kristi Girdharry is an Associate Teaching Professor of English and Director of the Writing Center at Babson College. Her research interests include teaching-for-transfer, community engagement, inclusive pedagogies, and how AI is enhancing or disrupting each of these areas. She serves on the Executive Committee for the Association for Writing Across the Curriculum.",
+      "publications": [
+        "Teaching With AI: A Journey Through Grief",
+        "Meaningful Writing in the Age of Generative Artificial Intelligence (w/ Davit Khachatryan)",
+        "Ethics and AI Assemblages: A Heuristic Analysis of Undergraduate Business Student Perspectives (w/ Stephen McElroy)"
+      ],
+      "lab_ids": [
+        "ai-research-writing"
+      ],
+      "photo": "assets/faculty/kristi-girdharry.jpg",
+      "profile_url": "https://www.babson.edu/about/our-leaders-and-scholars/faculty-and-academic-divisions/faculty-profiles/kristi-girdharry/",
+      "email": "kgirdharry@babson.edu"
+    },
+    {
+      "id": "beth-wynstra",
+      "name": "Beth Wynstra",
+      "titles": [
+        "Associate Professor of English",
+        "Faculty Director, Center for Engaged Learning and Teaching",
+        "Founding Artistic Director of The Empty Space Theater"
+      ],
+      "role_line": "Co-leader of The Generator's AI Arts, Media & Performance Specialty Lab",
+      "quote": "I am interested in courageous collaborations between artists/practitioners and AI. I am also interested in how AI can inspire bold classroom activities, assignments, and assessments. I've observed how such pedagogical innovations can cultivate creativity and critical thinking, while preparing students to thrive in a world outside the university.",
+      "research_interests": [
+        "AI for performance and improvisation",
+        "AI and pedagogy",
+        "AI and public discourse"
+      ],
+      "bio": "Beth Wynstra is Associate Professor of English and Faculty Director of the Center for Engaged Learning and Teaching at Babson College. She teaches Dramatic Literature, Theater History, Acting, and Public Speaking, and regularly directs plays and musicals. Her book Vows, Veils, and Masks: The Performance of Marriage in the Plays of Eugene O'Neill was published in 2023.",
+      "publications": [
+        "Vows, Veils, and Masks: The Performance of Marriage in the Plays of Eugene O'Neill (U Iowa Press, 2023)",
+        "The Heart/Roots Project and a Pandemic Pivot — Journal of American Drama and Theater (2023)"
+      ],
+      "lab_ids": [
+        "ai-arts-media-performance"
+      ],
+      "photo": "assets/faculty/beth-wynstra.jpg",
+      "profile_url": "https://www.babson.edu/about/our-leaders-and-scholars/faculty-and-academic-divisions/faculty-profiles/beth-wynstra/",
+      "email": "bwynstra@babson.edu"
+    },
+    {
+      "id": "xinghua-li",
+      "name": "Xinghua Li",
+      "titles": [
+        "Associate Professor of Media Studies"
+      ],
+      "role_line": "Co-leader of The Generator's AI Arts, Media & Performance Specialty Lab",
+      "quote": "AI is the embodiment of the problem-solving mindset that has been dominating modern science, engineering, and industrial capitalism. This mindset had long prioritized productivity, efficiency, and surveillance over smallness, slowness, and introspection … Maybe instead of problem-solving, we should teach students to define problems, configure problems, and create problems. Be a problem creator, rather than a problem solver.",
+      "research_interests": [
+        "How NOT to use AI",
+        "AI and the environment",
+        "Global Comparative AI Cultures"
+      ],
+      "bio": "Xinghua Li is Associate Professor of Media Studies at Babson College. She teaches critical media theory, consumer culture, and environmental sustainability. Her research investigates the intersections of media, consumerism, and the environment under global capitalism, with an emphasis on cross-cultural, comparative, and historical analysis.",
+      "publications": [
+        "Moving Heaven and Earth: Visualizing Socialist Construction Campaigns in Mao-Era Propaganda Posters — Advertising & Society Quarterly (2026)",
+        "The 'Useless' Sustainability: Chinese and American Discourses of Eco-Fashion — Recherches en Communication (2023)"
+      ],
+      "lab_ids": [
+        "ai-arts-media-performance"
+      ],
+      "photo": "assets/faculty/xinghua-li.jpg",
+      "profile_url": "https://www.babson.edu/about/our-leaders-and-scholars/faculty-and-academic-divisions/faculty-profiles/xinghua-li/",
+      "email": "xli8@babson.edu"
+    }
+  ],
+  "student_highlights": [
+    {
+      "id": "explorers",
+      "title": "The Generator is co-led by students — the Explorers",
+      "body": "Babson students who live on the cutting-edge of AI: visionaries, entrepreneurs, technologists, strategists, coders and prototypers. Explorers lead AI programming in partnership with business owners, entrepreneurs, corporate partners, VCs, technologists, and futurists — including the large-scale Entrepreneurship & AI Buildathons.",
+      "cta": {
+        "label": "Meet the Explorers — Big Ideas",
+        "href": "/community/#big-ideas"
+      },
+      "image": "assets/img/community-explorers.jpg"
+    },
+    {
+      "id": "terraflex",
+      "title": "Buildathon winners: Terraflex",
+      "body": "An AI-powered prosthetic foot attachment that dynamically adapts to uneven terrain, inspired by the zygodactyl feet of roadrunner birds — built by four Olin students and one Stanford undergraduate. Winner of the $2,500 first prize and the $60,000 Nature-Inspired Design Prize at the 2nd Entrepreneurship & AI Buildathon.",
+      "cta": {
+        "label": "About the Buildathon",
+        "href": "/labs/ai-entrepreneurship-and-business-innovation.html#initiatives"
+      },
+      "image": "assets/live/microsoft-babson-450x450.jpg"
+    }
+  ]
+}
